@@ -1,8 +1,9 @@
 # LeetCode
 
 ## About
-LeetCodeで解いた問題のスクリプト
-一行目コメントに問題のURLリンク記載
+script for leetcode problems
+
+URL link in first-line comment
 
 ## Language
-Python3
+Python
