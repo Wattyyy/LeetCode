@@ -6,27 +6,26 @@
 #         self.val = x
 #         self.next = None
 
-from heapq import *
+import heapq
 class Solution:
     def mergeKLists(self, lists):
         if not lists:
             return None
-        if len(lists)==1:
-            return lists[0]
-        
-        head = ListNode(0)
-        tail = head
-        h = []
-        for l in lists:
-            if l is not None:
-                heappush(h, (l.val, id(l), l))
-    
-        while h:
-            val, _, node = heappop(h)
-            if node.next is not None:
-                heappush(h, (node.next.val, id(node.next), node.next))
-            tail.next = node
-            tail = node
-            
-        return head.next
-            
+        min_heap = []
+        heapq.heapify(min_heap)
+        for i, node in enumerate(lists):
+            cur = node
+            while cur:
+                heapq.heappush(min_heap, (cur.val, i))
+                cur = cur.next
+        if not min_heap:
+            return None
+        head_val, _ = heapq.heappop(min_heap)
+        head = ListNode(head_val)
+        cur = head
+        while min_heap:
+            node_val, _ = heapq.heappop(min_heap)
+            cur.next = ListNode(node_val)
+            cur = cur.next
+        return head
+
