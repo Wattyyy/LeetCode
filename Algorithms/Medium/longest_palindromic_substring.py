@@ -1,28 +1,24 @@
 # https://leetcode.com/problems/longest-palindromic-substring/
 
-from collections import defaultdict
 class Solution:
     def longestPalindrome(self, s):
         N = len(s)
-        if N==0:
-            return ""
-        
-        dp = defaultdict(bool)
+        dp = [[False for _ in range(N)] for __ in range(N)]
         for i in range(N):
-            dp[(i, i)] = True
-            if (i+1 < N) and (s[i] == s[i+1]):
-                dp[(i, i+1)] = True
+            dp[i][i] = True
+        for l in reversed(range(N-1)):
+            for r in range(l+1, N):
+                if (r - l == 1) and (s[l] == s[r]):
+                    dp[l][r] = True
+                elif (s[l] == s[r]) and dp[l+1][r-1]:
+                    dp[l][r] = True
         
-        for i in reversed(range(N-2)):
-            for j in range(i+2, N):
-                if (dp[(i+1, j-1)]) and (s[i] == s[j]):
-                    dp[(i, j)] = True
-        
-        max_len = 0
-        res = ""
-        for i in range(N):
-            for j in range(i, N):
-                if (dp[(i, j)]) and (max_len < j-i+1):
-                    max_len = j-i+1
-                    res = s[i:j+1]
-        return res
+        ans = [0, '']
+        for l in range(N):
+            for r in range(l, N):
+                if dp[l][r] and (ans[0] < r - l + 1):
+                    ans[0] = r - l + 1
+                    ans[1] = s[l:r+1]
+        return ans[1]
+                
+                    
