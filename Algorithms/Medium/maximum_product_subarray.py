@@ -1,19 +1,39 @@
-# https://leetcode.com/problems/maximum-product-subarray/
+# https://leetcode.com/problems/maximum-product-subarray/ 
 
+import sys
+sys.setrecursionlimit(10 ** 6)
 class Solution:
+    def merge(self, l, m, r, nums):
+        l_min, l_max = 0, 0
+        l_prod = 1
+        for i in reversed(range(l, m + 1)):
+            l_prod *= nums[i]
+            l_min = min(l_prod, l_min)
+            l_max = max(l_prod, l_max)
+        
+        r_min, r_max = 0, 0
+        r_prod = 1
+        for i in range(m + 1, r + 1):
+            r_prod *= nums[i]
+            r_min = min(r_prod, r_min)
+            r_max = max(r_prod, r_max)
+        
+        res = max(l_min * r_min, l_max * r_max)
+        return res
+            
+
+    def divide_and_conquer(self, l, r, nums):
+        if l == r:
+            return nums[l]
+        m = (l + r) // 2
+        l_val = self.divide_and_conquer(l, m, nums)
+        r_val = self.divide_and_conquer(m+1, r, nums)
+        merge_val = self.merge(l, m, r, nums)
+        return max(l_val, r_val, merge_val)
+        
+        
     def maxProduct(self, nums):
         if not nums:
             return 0
-        max_dp = [nums[0] for _ in range(len(nums))]
-        min_dp = [nums[0] for _ in range(len(nums))]
-        ans = nums[0]
-        for i in range(1, len(nums)):
-            if nums[i]>0:
-                max_dp[i] = max(max_dp[i-1]*nums[i], nums[i])
-                min_dp[i] = min(min_dp[i-1]*nums[i], nums[i])
-            else:
-                max_dp[i] = max(min_dp[i-1]*nums[i], nums[i])
-                min_dp[i] = min(max_dp[i-1]*nums[i], nums[i])
-            ans = max(ans, max_dp[i])
-        return ans
-            
+        res = self.divide_and_conquer(0, len(nums)-1, nums)
+        return res
