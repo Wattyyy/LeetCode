@@ -1,38 +1,42 @@
 # https://leetcode.com/problems/binary-tree-maximum-path-sum/
 
 # Definition for a binary tree node.
-# class TreeNode:
-#     def __init__(self, x):
-#         self.val = x
-#         self.left = None
-#         self.right = None
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution:
-    def maxPathSum(self, root):
-        if not root:
-            return 0
-        self.ans = -float('inf')
-        def dp(node):
-            if node.left and node.right:
-                l_val, r_val = dp(node.left), dp(node.right)
-                self.ans = max(self.ans, l_val + r_val + node.val, l_val + node.val, r_val + node.val, node.val)
-                res = max(l_val + node.val, r_val + node.val, node.val)
-            elif node.left and not node.right:
-                l_val = dp(node.left)
-                self.ans = max(self.ans, l_val + node.val, node.val)
-                res = max(l_val + node.val, node.val)
-            elif not node.left and node.right:
-                r_val = dp(node.right)
-                self.ans = max(self.ans, r_val + node.val, node.val)
-                res = max(r_val + node.val, node.val)
-            else:
-                self.ans = max(self.ans, node.val)
-                res = node.val
+    def __init__(self):
+        self.max = -float('inf')
+
+    def calc_sum(self, node):
+        if (not node.left) and (not node.right):
+            self.max = max(self.max, node.val)
+            return node.val
+
+        elif node.left and not node.right:
+            left_val = self.calc_sum(node.left)
+            res = max(left_val + node.val, node.val)
+            self.max = max(self.max, res)
+            return res
+
+        elif not node.left and node.right:
+            right_val = self.calc_sum(node.right)
+            res = max(node.val + right_val, node.val)
+            self.max = max(self.max, res)
             return res
         
-        dp(root)
-        return self.ans
+        else:
+            left_val, right_val = self.calc_sum(node.left), self.calc_sum(node.right)
+            res = max(left_val + node.val, node.val, node.val + right_val)
+            self.max = max(self.max, res, left_val + node.val + right_val)
+            return res
+    
+    def maxPathSum(self, root):
+        _ = self.calc_sum(root)
+        return self.max
+
         
-            
-        
-        
+
