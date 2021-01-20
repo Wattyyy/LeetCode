@@ -1,7 +1,7 @@
 # LeetCode
 
 ## About
-- script for leetcode problems
+- Script for leetcode problems
 
 - URL link in first-line comment
 
