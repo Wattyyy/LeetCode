@@ -1,12 +1,8 @@
-# LeetCode
-
 ## About
-- Scripts for leetcode problems
-
-- URL link in first-line
+- Leetcode Submissions
+- Crawled by [world177's Downloader](https://github.com/world177/Leetcode-Downloader-for-Submissions)
 
 ## Account
 - https://leetcode.com/wattyyy/
 
-## Language
-- Python
+
