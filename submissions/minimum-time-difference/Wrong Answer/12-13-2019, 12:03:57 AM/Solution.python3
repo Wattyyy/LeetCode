@@ -1,0 +1,25 @@
+// https://leetcode.com/problems/minimum-time-difference
+
+class Solution:
+    def findMinDifference(self, timePoints: List[str]) -> int:
+        ans_list = []
+        str1, str2 = timePoints[0], timePoints[1]
+        num1 = int(str1[0:2])*60 + int(str1[3:])
+        num2 = int(str2[0:2])*60 + int(str2[3:])
+        
+        if num1>num2:
+            ans_list.append(num1 - num2)
+            num3 = (int(str2[0:2]) + 24)*60  + int(str2[3:])
+            ans_list.append(num3 - num1)
+            return min(ans_list)
+        
+        else:
+            ans_list.append(num2 - num1)
+            num3 = (int(str1[0:2]) + 24)*60 + int(str1[3:])
+            ans_list.append(num3 - num2)
+            return min(ans_list)
+            
+            
+            
+        
+            

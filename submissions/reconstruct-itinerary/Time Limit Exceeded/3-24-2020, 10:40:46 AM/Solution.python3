@@ -1,0 +1,31 @@
+// https://leetcode.com/problems/reconstruct-itinerary
+
+from collections import defaultdict, Counter
+from copy import deepcopy
+import sys
+sys.setrecursionlimit(10 ** 7)
+
+class Solution:
+    def findItinerary(self, tickets):
+        graph = defaultdict(list)
+        edge_counter = Counter()
+        for f, t in tickets:
+            graph[f].append(t)
+            edge_counter[(f, t)] += 1
+
+        output = []
+        def backtrack(node='JFK', current=['JFK']):
+            if any([edge_counter[(node, nx)] != 0 for nx in graph[node]]):
+                for nx in graph[node]:
+                    if edge_counter[(node, nx)] != 0:
+                        current.append(nx)
+                        edge_counter[(node, nx)] -= 1
+                        backtrack(nx, current)
+                        current.pop()
+                        edge_counter[(node, nx)] += 1
+            else:
+                if all([edge_counter[key] == 0 for key in edge_counter.keys()]):
+                    output.append(deepcopy(current))
+        backtrack()
+        output = sorted(output)
+        return output[0]

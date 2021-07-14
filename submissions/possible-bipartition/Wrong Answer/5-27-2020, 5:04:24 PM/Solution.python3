@@ -1,0 +1,27 @@
+// https://leetcode.com/problems/possible-bipartition
+
+from collections import defaultdict, deque
+class Solution:
+    def possibleBipartition(self, N, dislikes):
+        if dislikes == [[]]:
+            return True
+        graph = defaultdict(list)
+        for u, v in dislikes:
+            graph[u].append(v)
+            graph[v].append(u)
+
+        visited = set()
+        for i in range(1, N+1):
+            if i in visited:
+                continue
+            queue = deque([i])
+            while queue:
+                v = queue.popleft()
+                if v in visited:
+                    return False
+                visited.add(v)
+                for nv in graph[v]:
+                    if nv not in visited:
+                        queue.append(nv)
+        return True
+

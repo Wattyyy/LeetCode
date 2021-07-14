@@ -1,0 +1,40 @@
+// https://leetcode.com/problems/replace-words
+
+from collections import defaultdict
+class Trie:
+    def __init__(self):
+        self.childrenMap = defaultdict(Trie)
+        self.isWord = False
+
+class Solution:
+    def replaceWords(self, dict, sentence):
+        sentence_list = sentence.split()
+        
+        # initialize Trie
+        root = Trie()
+        for word in dict:
+            cur = root
+            for i in range(len(word)):
+                char = word[i]
+                cur = cur.childrenMap[char]
+            cur.isWord = True
+            
+        for i in range(len(sentence_list)):
+            item = sentence_list[i]
+            cur = root
+            for j in range(len(item)):
+                char = item[j]
+                if char not in cur.childrenMap.keys():
+                    break
+                if cur.childrenMap[char].isWord:
+                    sentence_list[i] = item[:j+1]
+                    break
+                cur = cur.childrenMap[char]
+                
+        return " ".join(sentence_list)
+            
+        
+        
+            
+        
+        

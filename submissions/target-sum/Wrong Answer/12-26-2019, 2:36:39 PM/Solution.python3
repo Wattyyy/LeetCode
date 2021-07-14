@@ -1,0 +1,20 @@
+// https://leetcode.com/problems/target-sum
+
+
+class Solution:
+    def findTargetSumWays(self, nums, S):
+        if not nums:
+            return 0
+        ans = 0
+        N = len(nums)
+        for i in range(2**N):
+            res = 0
+            for j in range(N):
+                if (i>>j) & 1:
+                    res += nums[j-1]
+                else:
+                    res += nums[j] * (-1)
+            if res == S:
+                ans += 1
+    
+        return ans

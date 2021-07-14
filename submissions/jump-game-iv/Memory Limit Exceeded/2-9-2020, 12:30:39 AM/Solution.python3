@@ -1,0 +1,36 @@
+// https://leetcode.com/problems/jump-game-iv
+
+from collections import defaultdict
+class Solution:
+    def minJumps(self, arr):
+        N = len(arr)
+        if N==1:
+            return 0
+        
+        val2ids = defaultdict(list)
+        for i in range(N):
+            val2ids[arr[i]].append(i)
+        
+        graph = defaultdict(set)
+        for i in range(N):
+            if i==0:
+                graph[i].add(i+1)
+            elif i==N-1:
+                graph[i].add(i-1)
+            else:
+                graph[i].add(i+1)
+                graph[i].add(i-1)
+            for item in val2ids[arr[i]]:
+                graph[i].add(item)
+        
+        # bfs
+        dist = [float("inf") for _ in range(N)]
+        dist[0] = 0
+        queue = [0]
+        while queue:
+            idx = queue.pop(0)
+            for next_idx in graph[idx]:
+                if dist[idx]+1 < dist[next_idx]:
+                    dist[next_idx] = dist[idx] + 1
+                    queue.append(next_idx)
+        return dist[-1]

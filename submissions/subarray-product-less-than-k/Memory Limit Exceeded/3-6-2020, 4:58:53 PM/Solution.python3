@@ -1,0 +1,16 @@
+// https://leetcode.com/problems/subarray-product-less-than-k
+
+from bisect import bisect_left
+class Solution:
+    def numSubarrayProductLessThanK(self, nums, k):
+        cum_products = [1]
+        ans = 0
+        for num in nums:
+            cum_products.append(cum_products[-1] * num)
+        for i, c_num in enumerate(cum_products):
+            target = k * c_num
+            idx = bisect_left(cum_products, target)
+            ans += max(0, idx - i - 1)
+        return ans 
+
+

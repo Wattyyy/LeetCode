@@ -1,0 +1,32 @@
+// https://leetcode.com/problems/lru-cache
+
+from collections import deque
+class LRUCache:
+    def __init__(self, capacity):
+        self.cache = deque([])
+        self.capacity = capacity
+        self.dic = {}
+        
+    def get(self, key):
+        if key in self.dic.keys():
+            return self.dic[key]
+        else:
+            return -1
+        
+    def put(self, key, value):
+        if key in self.dic.keys():
+            return
+        if len(self.cache) == self.capacity:
+            evicted_key = self.cache.pop()
+            del self.dic[evicted_key]
+            self.cache.appendleft(key)
+            self.dic[key] = value
+        else:
+            self.cache.append(key)
+            self.dic[key] = value
+
+
+# Your LRUCache object will be instantiated and called as such:
+# obj = LRUCache(capacity)
+# param_1 = obj.get(key)
+# obj.put(key,value)

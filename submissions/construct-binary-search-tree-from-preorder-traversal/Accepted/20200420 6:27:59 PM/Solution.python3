@@ -1,0 +1,31 @@
+// https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal
+
+# Definition for a binary tree node.
+class TreeNode:
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution:
+    def bstFromPreorder(self, preorder):
+        root = TreeNode(preorder[0])
+        for v in preorder[1:]:
+            cur = root
+            while True:
+                if cur.val < v and not cur.right:
+                    cur.right = TreeNode(v)
+                    break
+                elif cur.val < v and cur.right:
+                    cur = cur.right
+                elif v < cur.val and not cur.left:
+                    cur.left = TreeNode(v)
+                    break
+                else:
+                    cur = cur.left
+        return root
+                
+                    
+            
+        
+        

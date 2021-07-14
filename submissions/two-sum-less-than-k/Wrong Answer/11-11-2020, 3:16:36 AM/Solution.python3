@@ -1,0 +1,15 @@
+// https://leetcode.com/problems/two-sum-less-than-k
+
+from bisect import bisect_right
+class Solution:
+    def twoSumLessThanK(self, A, K):
+        A = sorted(A)
+        ans = -1
+        for i, v in enumerate(A):
+            res_idx = bisect_right(A, K - v)
+            if i < res_idx:
+                ans = max(ans, v + A[res_idx - 1])
+        return ans 
+
+            
+        

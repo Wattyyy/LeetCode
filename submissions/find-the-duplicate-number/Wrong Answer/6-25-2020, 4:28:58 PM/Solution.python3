@@ -1,0 +1,9 @@
+// https://leetcode.com/problems/find-the-duplicate-number
+
+class Solution:
+    def findDuplicate(self, nums):
+        N = len(nums)
+        raw_sum = sum(nums)
+        correct_sum = N * (N - 1) // 2
+        return raw_sum - correct_sum
+        

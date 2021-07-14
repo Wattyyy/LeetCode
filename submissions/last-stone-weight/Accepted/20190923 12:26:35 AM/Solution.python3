@@ -1,0 +1,20 @@
+// https://leetcode.com/problems/last-stone-weight
+
+import heapq
+class Solution:
+    def lastStoneWeight(self, stones):
+        for i in range(len(stones)):
+            stones[i] = stones[i]*(-1)
+        heapq.heapify(stones)
+        while len(stones)>1:
+            x = abs(heapq.heappop(stones))
+            y = abs(heapq.heappop(stones))
+            if x==y:
+                continue
+            else:
+                dif = abs(x - y)
+                heapq.heappush(stones, dif*(-1))
+        if not stones:
+            return 0
+        ans = heapq.heappop(stones)
+        return abs(ans)

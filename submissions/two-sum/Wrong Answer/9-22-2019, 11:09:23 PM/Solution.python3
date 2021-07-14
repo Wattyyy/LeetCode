@@ -1,0 +1,24 @@
+// https://leetcode.com/problems/two-sum
+
+import bisect
+def index(a, x):
+    'Locate the leftmost value exactly equal to x'
+    i = bisect.bisect_left(a, x)
+    if i != len(a) and a[i] == x:
+        return i
+    else:
+        return -1
+    
+class Solution:
+    def twoSum(self, nums, target):
+        N = len(nums)
+        nums = sorted(nums)
+        for i in range(N):
+            val = target - nums[i]
+            idx = index(nums, val)
+            if idx!=-1 and idx!=i:
+                ans = sorted([idx, i])
+                return ans
+            else:
+                continue
+        

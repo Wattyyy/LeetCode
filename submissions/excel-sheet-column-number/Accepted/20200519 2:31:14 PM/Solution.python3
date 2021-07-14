@@ -1,0 +1,10 @@
+// https://leetcode.com/problems/excel-sheet-column-number
+
+class Solution:
+    def titleToNumber(self, s):
+        ans = 0
+        for i, char in enumerate(s):
+            ans += (ord(char) - 64) * 26 ** (len(s) - 1 - i)
+        return ans
+            
+        

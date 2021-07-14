@@ -1,0 +1,18 @@
+// https://leetcode.com/problems/random-point-in-non-overlapping-rectangles
+
+import random
+class Solution:
+    def __init__(self, rects):
+        self.rects = rects
+       
+    def pick(self):
+        idx = random.randint(0, len(self.rects) - 1)
+        x1, y1, x2, y2 = self.rects[idx]
+        x = random.randint(x1, x2)
+        y = random.randint(y1, y2)
+        return [x, y]
+
+
+# Your Solution object will be instantiated and called as such:
+# obj = Solution(rects)
+# param_1 = obj.pick()

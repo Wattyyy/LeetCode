@@ -1,0 +1,14 @@
+// https://leetcode.com/problems/number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold
+
+class Solution:
+    def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
+        N = len(arr)
+        ans = 0
+        for i in range(N):
+            if i+k-1 > N-1:
+                break
+            avg = sum(arr[i:i+k]) / k
+            if threshold <= avg:
+                ans += 1
+        return ans
+        

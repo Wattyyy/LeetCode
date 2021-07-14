@@ -1,0 +1,24 @@
+// https://leetcode.com/problems/longest-increasing-subsequence
+
+from bisect import bisect_left
+class Solution:
+    def lengthOfLIS(self, nums):
+        dp = [float('inf')] * len(nums)
+        ans = 0
+        tail_idx = -1
+        for num in nums:
+            idx = bisect_left(dp, num)
+            if tail_idx < idx:
+                dp[idx] = num
+                ans = max(ans, idx + 1)
+                tail_idx = idx
+            elif num < dp[idx]:
+                dp[idx] = num
+        return ans
+
+            
+
+            
+        
+        
+        

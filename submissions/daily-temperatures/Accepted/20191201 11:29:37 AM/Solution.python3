@@ -1,0 +1,27 @@
+// https://leetcode.com/problems/daily-temperatures
+
+class Solution:
+    def dailyTemperatures(self, T):
+        val_stack, idx_stack = [], []
+        ans = [0 for _ in range(len(T))]
+        val_stack.append(T[0])
+        idx_stack.append(0)
+        
+        for i in range(1, len(T)):    
+            if val_stack[-1] > T[i]:
+                val_stack.append(T[i])
+                idx_stack.append(i)
+                continue
+
+            while len(val_stack)>0:
+                if val_stack[-1] < T[i]:
+                    top_val = val_stack.pop()
+                    top_idx = idx_stack.pop()
+                    ans[top_idx] = i - top_idx
+                else:
+                    break
+            val_stack.append(T[i])
+            idx_stack.append(i)
+            
+        return ans
+        

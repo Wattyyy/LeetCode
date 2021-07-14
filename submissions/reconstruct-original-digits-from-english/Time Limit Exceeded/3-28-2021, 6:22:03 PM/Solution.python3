@@ -1,0 +1,32 @@
+// https://leetcode.com/problems/reconstruct-original-digits-from-english
+
+from collections import Counter
+class Solution:
+    def originalDigits(self, s: str) -> str:
+        counter = Counter(list(s))
+        str2num = {
+            'zero':'0',
+            'one': '1',
+            'two': '2',
+            'three': '3',
+            'four': '4',
+            'five': '5',
+            'six': '6',
+            'seven': '7',
+            'eight': '8',
+            'nine': '9'
+            }
+        ret = []
+        while counter:
+            for string, num in str2num.items():
+                if all([1 <= counter[char] for char in string]):
+                    for char in string:
+                        counter[char] -= 1
+                        if counter[char] == 0:
+                            del counter[char]
+                    ret.append(num)
+        ret = sorted(ret)
+        return ''.join(ret)
+
+
+        

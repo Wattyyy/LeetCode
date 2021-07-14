@@ -1,0 +1,21 @@
+// https://leetcode.com/problems/move-zeroes
+
+class Solution:
+    def moveZeroes(self, nums):
+        if not nums:
+            return []
+        N = len(nums)
+        for i in range(N):
+            if nums[i] != 0:
+                continue    
+            j = i + 1
+            while j < N:
+                if nums[j] != 0:
+                    nums[i], nums[j] = nums[j], nums[i]
+                    break
+                else:
+                    j += 1
+        return nums
+
+        
+        

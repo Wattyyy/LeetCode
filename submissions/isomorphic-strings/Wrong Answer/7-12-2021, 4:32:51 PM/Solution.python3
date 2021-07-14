@@ -1,0 +1,14 @@
+// https://leetcode.com/problems/isomorphic-strings
+
+class Solution:
+    def isIsomorphic(self, s: str, t: str) -> bool:
+        mapping = {}
+        for s_char, t_char in zip(s, t):
+            if s_char not in mapping:
+                mapping[s_char] = t_char
+            elif mapping[s_char] != t_char:
+                return False
+        return True
+                
+                
+        

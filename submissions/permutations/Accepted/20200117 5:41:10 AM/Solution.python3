@@ -1,0 +1,12 @@
+// https://leetcode.com/problems/permutations
+
+from itertools import permutations
+class Solution:
+    def permute(self, nums):
+        if not nums:
+            return [[]]
+        ans = []
+        for elem in permutations(nums):
+            ans.append(list(elem))
+        return ans
+        

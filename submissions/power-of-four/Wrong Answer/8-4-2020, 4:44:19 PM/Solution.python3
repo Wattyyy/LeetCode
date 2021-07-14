@@ -1,0 +1,19 @@
+// https://leetcode.com/problems/power-of-four
+
+class Solution:
+    def isPowerOfFour(self, num):
+        if num <= 0:
+            return False
+        if num == 1:
+            return True
+        if num & 1:
+            return False
+        while num:
+            num = num >> 1
+            if num & 1:
+                return False
+            num = num >> 1
+        return True
+            
+                
+            

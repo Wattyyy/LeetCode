@@ -1,0 +1,11 @@
+// https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string
+
+class Solution:
+    def removeDuplicates(self, s: str) -> str:
+        stack = []
+        for char in s:
+            if 0 < len(stack) and stack[-1] == char:
+                stack.pop()
+            else:
+                stack.append(char)
+        return ''.join(stack)

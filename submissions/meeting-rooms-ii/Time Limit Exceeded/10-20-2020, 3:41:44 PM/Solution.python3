@@ -1,0 +1,15 @@
+// https://leetcode.com/problems/meeting-rooms-ii
+
+import sys
+class Solution:
+    def minMeetingRooms(self, intervals):
+        if not intervals:
+            return 0
+        max_val = -sys.maxsize
+        for _, y in intervals:
+            max_val = max(max_val, y)
+        arr = [0] * (max_val + 1)
+        for x, y in intervals:
+            for i in range(x, y):
+                arr[i] += 1
+        return max(arr)

@@ -1,0 +1,22 @@
+// https://leetcode.com/problems/3sum
+
+class Solution:
+    def threeSum(self, nums):
+        ans = []
+        for i in range(len(nums)):
+            target = 0 - nums[i]
+            n_nums = nums[:]
+            n_nums.pop(i)
+            dic = {}
+            for j in range(len(n_nums)):
+                if n_nums[j] not in dic.keys():
+                    dic[target - n_nums[j]] = n_nums[j]
+                else:
+                    li = sorted([nums[i], n_nums[j], target - n_nums[j]])
+                    if li not in ans:
+                        ans.append(li)
+                        
+                    
+        
+        return ans
+        

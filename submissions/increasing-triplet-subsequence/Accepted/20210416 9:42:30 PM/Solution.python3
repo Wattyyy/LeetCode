@@ -1,0 +1,14 @@
+// https://leetcode.com/problems/increasing-triplet-subsequence
+
+from bisect import bisect_left
+class Solution:
+    def increasingTriplet(self, nums):
+        arr = [float('inf')] * len(nums)
+        val = 0
+        for i, num in enumerate(nums):
+            idx = bisect_left(arr, num)
+            val = max(val, idx + 1)
+            arr[idx] = num
+        return 3 <= val
+            
+        

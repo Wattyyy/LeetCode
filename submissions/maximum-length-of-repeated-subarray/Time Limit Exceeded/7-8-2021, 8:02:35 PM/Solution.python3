@@ -1,0 +1,24 @@
+// https://leetcode.com/problems/maximum-length-of-repeated-subarray
+
+class Solution:
+    def findLength(self, nums1: List[int], nums2: List[int]) -> int:
+        st1 = set()
+        for i in range(len(nums1)):
+            for j in range(i, len(nums1)):
+                st1.add( tuple(nums1[i:j+1]) )
+        st2 = set()
+        for i in range(len(nums2)):
+            for j in range(i, len(nums2)):
+                st2.add( tuple(nums2[i:j+1]) )
+        
+        ans = 0
+        for item1 in st1:
+            if item1 in st2:
+                ans = max(ans, len(item1))
+        return ans
+                
+                
+            
+        
+        
+        

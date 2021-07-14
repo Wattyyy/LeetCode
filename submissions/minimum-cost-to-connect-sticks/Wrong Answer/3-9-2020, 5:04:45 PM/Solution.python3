@@ -1,0 +1,96 @@
+// https://leetcode.com/problems/minimum-cost-to-connect-sticks
+
+class SegSumTree:
+    
+    def __init__(self, nums):
+        if len(nums)>0:
+            self.length = len(nums)
+            self.tree = [0 for _ in range(2*self.length)]
+            
+            # build tree 
+            n = self.length
+            i = n
+            j = 0
+            while i<2*n:
+                self.tree[i] = nums[j]
+                i += 1
+                j += 1
+            for i in range(n-1, 0, -1):
+                self.tree[i] = self.tree[i*2] + self.tree[i*2 + 1]
+
+    def update(self, pos, val):
+        # 0 <= pos < n
+        n = self.length
+        pos += n
+        self.tree[pos] = val
+        while (pos > 0):
+            left = pos
+            right = pos
+            if pos%2==0:
+                right = pos + 1
+            else:
+                left = pos - 1
+            self.tree[pos//2] = self.tree[left] + self.tree[right]
+            pos //= 2
+        
+    def sumRange(self, l, r):
+        if l > r:
+            l, r = r, l
+        # 0 <= l,r < n
+        n = self.length
+        l += n
+        r += n
+        res = 0
+        while l<=r:
+            # check l is right child
+            if l%2==1:
+                res += self.tree[l]
+                l += 1
+            # check r is left child
+            if r%2==0:
+                res += self.tree[r]
+                r -= 1
+            l //= 2
+            r //= 2
+        return res
+    
+    
+class Solution:
+    def connectSticks(self, sticks):
+        seg_tree = SegSumTree(sticks)
+        N = len(sticks)
+        self.memo = [[-1 for _ in range(N)] for __ in range(N)]
+        for l in range(N):
+            for r in range(N):
+                if l == r: self.memo[l][r] = 0
+                if r - l == 1: self.memo[l][r] = sticks[l] + sticks[r]
+
+        def dp(l, r):
+            if self.memo[l][r] != -1:
+                return self.memo[l][r]
+            ans = float('inf')
+            for i in range(l, r+1):
+                if i == l:
+                    val = sticks[l] + seg_tree.sumRange(l+1, r) + dp(l+1, r)
+                elif i == r:
+                    val = seg_tree.sumRange(l, r-1) + dp(l, r-1) + sticks[r]
+                else:
+                    # tmp_val = seg_tree.sumRange(l, i-1) + dp(l, i-1) + sticks[i] + seg_tree.sumRange(i+1, r) + dp(i+1, r)
+                    dpcost = dp(l, i-1) + dp(i+1, r)
+                    intg_cost = min( 
+                        (seg_tree.sumRange(l, i-1) + sticks[i]) * 2 + seg_tree.sumRange(i+1, r), 
+                        seg_tree.sumRange(l, i-1) + (sticks[i] + seg_tree.sumRange(i+1, r)) * 2,
+                        (seg_tree.sumRange(l, i-1) + seg_tree.sumRange(i+1, r)) * 2 + sticks[i]
+                    ) 
+                    val = dpcost + intg_cost
+                ans = min(ans, val)
+                self.memo[l][r] = ans
+            return ans
+                
+        res = dp(0, N-1)
+        return res
+        
+                    
+
+
+        

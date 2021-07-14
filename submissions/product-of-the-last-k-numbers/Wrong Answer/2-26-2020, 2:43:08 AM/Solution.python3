@@ -1,0 +1,28 @@
+// https://leetcode.com/problems/product-of-the-last-k-numbers
+
+class ProductOfNumbers:
+
+    def __init__(self):
+        self.prefix = [1]
+        self.max_zero_idx = float("inf")
+
+    def add(self, num):
+        if num == 0:
+            self.max_zero_idx = len(self.prefix)
+            self.prefix.append(self.prefix[-1] * 1)
+        else:
+            self.prefix.append(self.prefix[-1] * num)
+
+    def getProduct(self, k):
+        N = len(self.prefix)
+        if N - k > self.max_zero_idx:
+            return self.prefix[N-1] // self.prefix[N-1-k]
+        else:
+            return 0
+        
+
+
+# Your ProductOfNumbers object will be instantiated and called as such:
+# obj = ProductOfNumbers()
+# obj.add(num)
+# param_2 = obj.getProduct(k)

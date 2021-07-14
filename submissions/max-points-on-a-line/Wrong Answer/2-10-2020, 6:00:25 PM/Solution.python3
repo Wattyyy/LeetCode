@@ -1,0 +1,49 @@
+// https://leetcode.com/problems/max-points-on-a-line
+
+from collections import defaultdict, Counter
+import math
+
+class Solution:
+    def maxPoints(self, points):
+        sys.setrecursionlimit(10**6) 
+        N = len(points)
+        if N == 1 or N == 0: 
+            return N
+        # (coef, intercept) -> points list
+        d = defaultdict(set)
+        # detect duplicate
+        c = Counter([tuple(point) for point in points])
+        keys = []
+        for key in c:
+            if c[key] <= 1: 
+                keys.append(key)
+        for key in keys:
+            del c[key]
+
+        for i in range(N):
+            for j in range(i+1, N):
+                x1, y1 = points[i]
+                x2, y2 = points[j]
+                # calc coef and intercept
+                l = (x2 - x1)
+                m = -(y2 - y1)
+                n = (x1 * y2) - (y1 * x2)
+                if l == 0 and m == 0 and n == 0:
+                    d[(l, m, n)].add((x1, y1))
+                    d[(l, m, n)].add((x2, y2))
+                else:
+                    gcd1 = math.gcd(l, m)
+                    gcd2 = math.gcd(gcd1, n)
+                    l, m, n = l/gcd2, m/gcd2, n/gcd2
+                    d[(l, m, n)].add((x1, y1))
+                    d[(l, m, n)].add((x2, y2))
+                    
+        ans = 1
+        for key, p_set in d.items():
+            tmp_val = 0
+            for c_key in c:
+                if c_key in p_set:
+                    tmp_val += (c[c_key] - 1)   
+            ans = max(ans, len(d[key]) + tmp_val)
+        return ans
+        

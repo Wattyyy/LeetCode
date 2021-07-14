@@ -1,0 +1,17 @@
+// https://leetcode.com/problems/reorder-data-in-log-files
+
+class Solution:
+    
+    def reorderLogFiles(self, logs):
+        let = []
+        dig = []
+        for log in logs:
+            if log[:3] == "dig":
+                dig.append(log)
+            else:
+                let.append([log[5:], log[:4]])
+        let = sorted(let)
+        tmp_let = [l[1] + " " + l[0] for l in let]
+        return tmp_let + dig
+                
+        

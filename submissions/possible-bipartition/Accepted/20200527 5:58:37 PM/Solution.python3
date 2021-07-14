@@ -1,0 +1,29 @@
+// https://leetcode.com/problems/possible-bipartition
+
+class Solution:
+    def dfs(self, v, prev_color):
+        if not self.ans:
+            return
+        if prev_color == 0 or prev_color == -1:
+            self.color_arr[v] = 1
+        else:
+            self.color_arr[v] = -1
+        for nv in self.graph[v]:
+            if self.color_arr[nv] == 0:
+                self.dfs(nv, self.color_arr[v])
+            elif self.color_arr[nv] == self.color_arr[v]:
+                self.ans = False
+                
+    def possibleBipartition(self, N, dislikes):
+        self.graph = defaultdict(list)
+        self.ans = True
+        for u, v in dislikes:
+            self.graph[u-1].append(v-1)
+            self.graph[v-1].append(u-1)
+        self.color_arr = [0] * N
+        for i in range(N):
+            if self.color_arr[i] == 1 or self.color_arr[i] == -1 or not self.ans:
+                continue
+            self.dfs(i, 0)
+        return self.ans
+

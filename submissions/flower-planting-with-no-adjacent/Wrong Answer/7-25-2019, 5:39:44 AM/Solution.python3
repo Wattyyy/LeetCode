@@ -1,0 +1,7 @@
+// https://leetcode.com/problems/flower-planting-with-no-adjacent
+
+class Solution:
+    def gardenNoAdj(self, N: int, paths: List[List[int]]) -> List[int]:
+        arr = [1,2,3,4]
+        return arr[:N]
+        

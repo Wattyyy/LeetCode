@@ -1,0 +1,55 @@
+// https://leetcode.com/problems/all-paths-from-source-lead-to-destination
+
+from collections import defaultdict, deque
+class Solution:
+    def __init__(self):
+        self.ans = True
+    
+
+    def topological_sort(self, N, graph):
+        inorder = [0] * N
+        for i in range(N):
+            for j in graph[i]:
+                inorder[j] += 1
+        queue = deque([])
+        for i, v in enumerate(inorder):
+            if v == 0:
+                queue.append(i)
+        cnt = 0
+        while queue:
+            v = queue.popleft()
+            for nv in graph[v]:
+                inorder[nv] -= 1
+                if inorder[nv] == 0:
+                    queue.append(nv)
+            cnt += 1
+        return cnt == N
+
+
+    def dfs(self, v, target, graph):
+        if v == target:
+            if not graph[v]:
+                return 
+            self.ans = False
+            return
+        
+        if not graph[v]:
+            self.ans = False
+            return
+        
+        for nv in graph[v]:
+            self.dfs(nv, target, graph)
+                
+
+    def leadsToDestination(self, n, edges, source, destination):
+        if edges == [[]]:
+            return source == destination
+        graph = defaultdict(list)
+        for u, v in edges:
+            graph[u].append(v)
+        if not self.topological_sort(n, graph):
+            return False
+        self.dfs(source, destination, graph)
+        return self.ans
+
+        

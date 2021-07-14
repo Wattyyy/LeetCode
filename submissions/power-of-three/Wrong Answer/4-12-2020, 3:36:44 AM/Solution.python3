@@ -1,0 +1,12 @@
+// https://leetcode.com/problems/power-of-three
+
+from math import log
+class Solution:
+    def isPowerOfThree(self, n):
+        if n == 0:
+            return False
+        log_num = log(n, 3)
+        return int(log_num) == log_num
+        
+        
+        

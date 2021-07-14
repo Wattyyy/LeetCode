@@ -1,0 +1,16 @@
+// https://leetcode.com/problems/is-subsequence
+
+from collections import deque
+class Solution:
+    def isSubsequence(self, s, t):
+        N = len(t)
+        q = deque(list(s))
+        for i in range(N):
+            if not q:
+                return True
+            if q[0]==t[i]:
+                q.popleft()
+        if not q:
+            return True
+        else:
+            return False

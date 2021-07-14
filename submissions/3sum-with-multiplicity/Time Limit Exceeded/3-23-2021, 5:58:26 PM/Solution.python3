@@ -1,0 +1,26 @@
+// https://leetcode.com/problems/3sum-with-multiplicity
+
+from collections import defaultdict
+
+class Solution:
+    def threeSumMulti(self, arr: List[int], target: int) -> int:
+        MOD = 10 ** 9 + 7
+        num2indices = defaultdict(set)
+        for idx, num in enumerate(arr):
+            num2indices[num].add(idx)
+        N = len(arr)
+        ret = 0
+        for idx1 in range(N):
+            num2indices[arr[idx1]].remove(idx1)
+            used = []
+            for idx2 in range(idx1 + 1, N):
+                num2indices[arr[idx2]].remove(idx2)
+                used.append(idx2)
+                t = target - arr[idx1] - arr[idx2]
+                ret += len(num2indices[t])
+                ret = ret % MOD
+            for idx in used:
+                num2indices[arr[idx]].add(idx)
+                
+        return ret
+        

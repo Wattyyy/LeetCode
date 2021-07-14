@@ -1,0 +1,27 @@
+// https://leetcode.com/problems/flower-planting-with-no-adjacent
+
+class Solution:
+    def gardenNoAdj(self, N, paths):
+        if N==1:
+            return [1]
+        
+        graph, color_dic = {}, {}
+        color_set = set([1,2,3,4])
+        for v in range(1, N+1):
+            color_dic[v], graph[v] = 0, []
+        for path in paths:
+            elm1, elm2 = path[0], path[1]
+            graph[elm1].append(elm2)
+            graph[elm2].append(elm1)
+        
+        for v in range(1, N+1):
+            neighbors = graph[v]
+            tmp_set = set()
+            for vertex in neighbors:
+                tmp_set.add(color_dic[vertex])
+            color_dic[v] = list(color_set - tmp_set)[0]
+        
+        ans = []
+        for v in range(1, N+1):
+            ans.append(color_dic[v])
+        return ans

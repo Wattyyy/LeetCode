@@ -1,0 +1,54 @@
+// https://leetcode.com/problems/prefix-and-suffix-search
+
+from typing import List
+class Trie:
+    def __init__(self) -> None:
+        self.children = {}
+        self.indices = set()
+    
+
+class WordFilter:
+    def __init__(self, words: List[str]):
+        self.prefix_trie = Trie()
+        for i, word in enumerate(words):
+            cur = self.prefix_trie
+            for char in word:
+                if char not in cur.children:
+                    cur.children[char] = Trie()
+                cur = cur.children[char]
+                cur.indices.add(i)
+        
+        self.suffix_trie = Trie()
+        for i, word in enumerate(words):
+            cur = self.suffix_trie
+            for char in reversed(word):
+                if char not in cur.children:
+                    cur.children[char] = Trie()
+                cur = cur.children[char]
+                cur.indices.add(i)
+        
+
+    def f(self, prefix: str, suffix: str) -> int:
+        pre_cur = self.prefix_trie
+        for char in prefix:
+            if char not in pre_cur.children:
+                return -1
+            pre_cur = pre_cur.children[char]
+        
+        suf_cur = self.suffix_trie
+        for char in suffix:
+            if char not in suf_cur.children:
+                return -1
+            suf_cur = suf_cur.children[char]
+        
+        tmp = suf_cur.indices.intersection(pre_cur.indices)
+        if len(tmp) == 0:
+            return -1
+        return min(tmp)
+        
+        
+
+
+# Your WordFilter object will be instantiated and called as such:
+# obj = WordFilter(words)
+# param_1 = obj.f(prefix,suffix)

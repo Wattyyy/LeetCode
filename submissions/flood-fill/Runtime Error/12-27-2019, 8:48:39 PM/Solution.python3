@@ -1,0 +1,18 @@
+// https://leetcode.com/problems/flood-fill
+
+class Solution:
+    def floodFill(self, image, sr, sc, newColor):
+        R, C = len(image), len(image[0])
+        def fill(sr, sc, old, new):
+            image[sr][sc] = new
+            dr = [sr+1, sr-1, sr, sr]
+            dc = [sc, sc, sc+1, sc-1]
+            for i in range(4):
+                if 0<=dr[i] and dr[i]<R and 0<=dc[i] and dc[i]<C and image[dr[i]][dc[i]]==old:
+                    fill(dr[i], dc[i], old, new)
+                    
+        oldColor = image[sr][sc]
+        fill(sr, sc, oldColor, newColor)
+        return image
+            
+        

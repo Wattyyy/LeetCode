@@ -1,0 +1,26 @@
+// https://leetcode.com/problems/3sum
+
+from collections import defaultdict
+class Solution:
+    def threeSum(self, nums):
+        d = defaultdict(list)
+        N = len(nums)
+        for i in range(N):
+            for j in range(N):
+                if i == j:
+                    continue
+                key = 0 - nums[i] - nums[j]
+                d[key].append([i, j])
+        
+        ans_set = set()
+        for i in range(N):
+            key = nums[i]
+            for item in d[key]:
+                idx_list = [i] + item
+                if len(set(idx_list)) == 3:
+                    val_list = sorted([nums[idx] for idx in idx_list])
+                    ans_set.add(tuple(val_list))
+        
+        ans_list = [list(item) for item in ans_set]
+        return ans_list
+

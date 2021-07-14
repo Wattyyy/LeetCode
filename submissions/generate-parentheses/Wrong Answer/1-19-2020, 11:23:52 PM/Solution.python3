@@ -1,0 +1,29 @@
+// https://leetcode.com/problems/generate-parentheses
+
+class Solution:
+    def enclose(self, string):
+        return "(" + string + ")"
+    
+    def append(self, string):
+        res1 = "()" + string
+        res2 = string + "()"
+        return res1, res2
+    
+    def generateParenthesis(self, n):
+        if n==1:
+            return ["()"]
+        ans_set = set()
+        ans_set.add("()")
+        for i in range(2, n+1):
+            tmp_set = set()
+            for item in ans_set:
+                res1 = self.enclose(item)
+                res2, res3 = self.append(item)
+                tmp_set.add(res1)
+                tmp_set.add(res2)
+                tmp_set.add(res3)
+            ans_set = tmp_set
+        return list(ans_set)
+                
+            
+        

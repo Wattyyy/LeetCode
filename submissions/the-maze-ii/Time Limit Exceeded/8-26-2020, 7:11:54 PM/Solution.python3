@@ -1,0 +1,71 @@
+// https://leetcode.com/problems/the-maze-ii
+
+from collections import defaultdict
+from bisect import bisect_left
+import sys
+
+class Solution:
+    def dfs(self, y, x, maze, dist_list, cnt):
+        dist_list[y][x] = cnt
+        
+        # move right
+        idx = bisect_left(self.row_walls[y], x)
+        next_x = self.row_walls[y][idx] - 1 
+        next_cnt = abs(next_x - x) + cnt
+        if next_cnt < dist_list[y][next_x]:
+            self.dfs(y, next_x, maze, dist_list, next_cnt)
+        
+        # move left
+        idx = bisect_left(self.row_walls[y], x)
+        next_x = self.row_walls[y][idx-1] + 1 
+        next_cnt = abs(next_x - x) + cnt
+        if next_cnt < dist_list[y][next_x]:
+            self.dfs(y, next_x, maze, dist_list, next_cnt)
+
+        # move up
+        idx = bisect_left(self.col_walls[x], y)
+        next_y = self.col_walls[x][idx-1] + 1 
+        next_cnt = abs(next_y - y) + cnt
+        if next_cnt < dist_list[next_y][x]:
+            self.dfs(next_y, x, maze, dist_list, next_cnt)
+        
+        # move down
+        idx = bisect_left(self.col_walls[x], y)
+        next_y = self.col_walls[x][idx] - 1 
+        next_cnt = abs(next_y - y) + cnt
+        if next_cnt < dist_list[next_y][x]:
+            self.dfs(next_y, x, maze, dist_list, next_cnt)
+        
+
+    def shortestDistance(self, maze: List[List[int]], start: List[int], destination: List[int]) -> int:
+        INF = sys.maxsize
+        row_walls, col_walls = defaultdict(list), defaultdict(list)
+        R, C = len(maze), len(maze[0])
+        dist_list = [[INF for _ in range(C)] for __ in range(R)]
+        for r in range(R):
+            for c in range(C):
+                if c == 0:
+                    row_walls[r].append(-1)
+                if maze[r][c] == 1:
+                    row_walls[r].append(c)
+                if c == C - 1:
+                    row_walls[r].append(C)
+        
+        for c in range(C):
+            for r in range(R):
+                if r == 0:
+                    col_walls[c].append(-1)
+                if maze[r][c] == 1:
+                    col_walls[c].append(r)
+                if r == R - 1:
+                    col_walls[c].append(R)
+        
+        self.row_walls, self.col_walls = row_walls, col_walls
+        self.dfs(start[0], start[1], maze, dist_list, 0)
+        
+        if dist_list[destination[0]][destination[1]] != INF:
+            return dist_list[destination[0]][destination[1]] 
+        else:
+            return -1
+
+                

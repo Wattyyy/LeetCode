@@ -1,0 +1,14 @@
+// https://leetcode.com/problems/bitwise-ors-of-subarrays
+
+class Solution:
+    def subarrayBitwiseORs(self, A):
+        st = set()
+        for i, a in enumerate(A):
+            new = set()
+            for v in st:
+                new.add(v | a)
+            new.add(a)
+            st = new
+        return len(st)
+                
+        

@@ -1,0 +1,50 @@
+// https://leetcode.com/problems/parallel-courses
+
+from collections import defaultdict, deque
+class Solution:
+    def __init__(self):
+        self.ans = 0
+        
+
+    def topological_sort(self, n, graph):
+        in_order = [0 for _ in range(n)]
+        for i in graph:
+            for j in graph[i]:
+                in_order[j] += 1
+        queue = deque([])
+        for i in range(n):
+            if in_order[i] == 0:
+                queue.append(i)
+        cnt = 0
+        while queue:
+            v = queue.popleft()
+            for neighbor in graph[v]:
+                in_order[neighbor] -= 1
+                if in_order[neighbor] == 0:
+                    queue.append(neighbor)
+            cnt += 1
+        if cnt != n:
+            return -1
+        return 1
+
+    
+    def dfs(self, node, count, graph):
+        if not graph[node]:
+            self.ans = max(self.ans, count)
+            return
+        for next_node in graph[node]:
+            self.dfs(next_node, count+1, graph)
+            
+        
+    def minimumSemesters(self, N, relations):
+        graph = defaultdict(list)
+        for u, v in relations:
+            graph[u - 1].append(v - 1)
+        val = self.topological_sort(N, graph)
+        if val == -1:
+            return -1
+        
+        for node in range(N):
+            self.dfs(node, 1, graph)
+        return self.ans
+        

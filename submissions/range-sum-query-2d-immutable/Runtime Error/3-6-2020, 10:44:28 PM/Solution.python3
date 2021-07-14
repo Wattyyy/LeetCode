@@ -1,0 +1,35 @@
+// https://leetcode.com/problems/range-sum-query-2d-immutable
+
+class NumMatrix:
+    
+    def __init__(self, matrix):
+        self.mat = matrix
+        if matrix != [[]]:   
+            R, C = len(self.mat), len(self.mat[0])
+            for r in range(R):
+                for c in range(1, C):
+                    self.mat[r][c] += self.mat[r][c-1]
+            for c in range(C):
+                for r in range(1, R):
+                    self.mat[r][c] += self.mat[r-1][c]
+            
+
+        
+    def sumRegion(self, row1, col1, row2, col2):
+        if self.mat == [[]]:
+            return 0
+        if row1 == row2 == 0:
+            return self.mat[row2][col2]
+        elif row1 == 0 and col1 != 0:
+            return self.mat[row2][col2] - self.mat[row2][col1-1]
+        elif row1 != 0 and col1 == 0:
+            return self.mat[row2][col2] - self.mat[row1-1][col2]
+        else:
+            return self.mat[row2][col2] + self.mat[row1-1][col1-1] - self.mat[row2][col1-1] - self.mat[row1-1][col2]
+               
+        
+
+
+# Your NumMatrix object will be instantiated and called as such:
+# obj = NumMatrix(matrix)
+# param_1 = obj.sumRegion(row1,col1,row2,col2)

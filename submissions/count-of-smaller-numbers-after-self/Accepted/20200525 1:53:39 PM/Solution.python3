@@ -1,0 +1,52 @@
+// https://leetcode.com/problems/count-of-smaller-numbers-after-self
+
+from collections import deque
+
+class BST:
+    def __init__(self, val):
+        self.val = val
+        self.l = None
+        self.r = None
+        self.l_cnt = 0
+        self.cnt = 1
+        
+class Solution:
+    def countSmaller(self, nums):
+        if not nums:
+            return []
+        nums = nums[::-1]
+        ans = [0]
+        root = BST(nums[0])
+        for i, v in enumerate(nums):
+            if i == 0:
+                continue
+            res = 0
+            cur = root
+            while True:
+                if cur == v:
+                    cur.cnt += 1
+                    res += cur.l_cnt
+                    ans.append(res)
+                    break
+                elif cur.val < v:
+                    res += cur.l_cnt + cur.cnt
+                    if cur.r:
+                        cur = cur.r
+                    else:
+                        cur.r = BST(v)
+                        ans.append(res)
+                        break
+                else:
+                    cur.l_cnt += 1
+                    if cur.l:
+                        cur = cur.l
+                    else:
+                        cur.l = BST(v)
+                        ans.append(res)
+                        break
+
+        return ans[::-1]
+                        
+                
+
+        

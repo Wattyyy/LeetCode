@@ -1,0 +1,29 @@
+// https://leetcode.com/problems/remove-all-occurrences-of-a-substring
+
+class Solution:
+    def removeOccurrences(self, s: str, part: str) -> str:
+        if len(part) == 1:
+            st = []
+            for char in s:
+                if char != part:
+                    st.append(char)
+            return ''.join(st)
+        
+        st = []
+        idx = 0
+        for char in s:
+            st.append(char)
+            if st[-1] == part[idx]:
+                idx += 1
+                
+            if idx == len(part):
+                idx = 0
+                for _ in range(len(part)):
+                    st.pop()
+                if 0 < len(st) and st[-1] == part[idx]:
+                    idx += 1
+        
+        return ''.join(st)
+                    
+            
+            

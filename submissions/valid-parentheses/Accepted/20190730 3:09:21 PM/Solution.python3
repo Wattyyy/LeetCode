@@ -1,0 +1,32 @@
+// https://leetcode.com/problems/valid-parentheses
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if len(s)==0:
+           return True
+        if len(s)==1:
+           return False
+
+        stack = []
+        stack.append(s[0])
+        
+        for i in range(1,len(s)):
+            tmp_char = s[i]
+            
+            
+            if len(stack)==0:
+                stack.append(tmp_char)
+                
+            else:
+                top = stack[-1]
+                if ( top=="(" and tmp_char==")" ) or ( top=="{" and tmp_char=="}" ) or ( top=="[" and tmp_char=="]" ):
+                    stack.pop()
+                else:
+                    stack.append(tmp_char)
+        
+        if len(stack)==0:
+            return True
+        else:
+            return False
+        
+            

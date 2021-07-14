@@ -1,0 +1,26 @@
+// https://leetcode.com/problems/minimum-size-subarray-sum
+
+class Solution:
+    def minSubArrayLen(self, s: int, nums: List[int]) -> int:
+        if sum(nums) < s: return 0
+        if len(nums)==1: return 1
+        N = len(nums)
+        lp, rp = 0, 0
+        ans = N
+        cur_sum = nums[0]
+        
+        while (lp<=rp) and rp<N:
+            if cur_sum<s:
+                rp += 1
+                # avoid index error
+                if rp>=N: break
+                cur_sum += nums[rp]
+            else:
+                ans = min(ans, rp - lp + 1)
+                cur_sum -= nums[lp]
+                lp += 1
+
+        return ans
+        
+        
+        

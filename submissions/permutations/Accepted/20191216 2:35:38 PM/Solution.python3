@@ -1,0 +1,20 @@
+// https://leetcode.com/problems/permutations
+
+class Solution:
+    def permute(self, nums):
+        if not nums:
+            return []
+        visited = set()
+        subset = []
+        res = []
+        def backtracking(visited, subset, nums):
+            if len(subset) == len(nums):
+                res.append(subset)
+            for i in range(len(nums)):
+                if i not in visited:
+                    visited.add(i)
+                    backtracking(visited, subset+[nums[i]], nums)
+                    visited.remove(i)
+        
+        backtracking(visited, subset, nums)
+        return res
