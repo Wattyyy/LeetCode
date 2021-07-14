@@ -3,11 +3,24 @@ import shutil
 import glob
 
 # problems = os.listdir('submissions')
+# notuse = ['Output Limit Exceeded', 'Compile Error', 'Memory Limit Exceeded']
 # for name in problems:
 #     if name == '.DS_Store':
 #         continue
-#     if not os.path.exists(os.path.join('submissions', name, 'Accepted')):
-#         shutil.rmtree(os.path.join('submissions', name))
+#     for rm_dir in notuse:
+#         if os.path.exists( os.path.join('submissions', name, rm_dir) ):
+#             shutil.rmtree( os.path.join('submissions', name, rm_dir) )
+
+st = set()
+problems = os.listdir('submissions')
+for name in problems:
+    if name == '.DS_Store':
+        continue
+    for fname in os.listdir('submissions/' + name):
+        st.add(fname)
+print(st)
+    
+
 
 
 # problems = os.listdir('submissions')
@@ -54,13 +67,13 @@ import glob
 #                 continue
         
 
-problems = os.listdir('submissions')
-for name in problems:
-    if name == '.DS_Store':
-        continue
-    path = os.path.join('submissions', name, 'Accepted')
-    for file in glob.glob( path + '/Solution*' ):
-        shutil.move(file, os.path.join('submissions', name))
+# problems = os.listdir('submissions')
+# for name in problems:
+#     if name == '.DS_Store':
+#         continue
+#     path = os.path.join('submissions', name, 'Accepted')
+#     for file in glob.glob( path + '/Solution*' ):
+#         shutil.move(file, os.path.join('submissions', name))
         
 
 
