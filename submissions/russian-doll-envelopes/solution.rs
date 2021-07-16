@@ -1,34 +1,34 @@
 use std::collections::VecDeque;
 
-fn topological_sort(N: usize, graph: &Vec<Vec<usize>>) -> Vec<usize> {
-    let mut indegree = vec![0; N];
-    let mut queue = VecDeque::new();
-    for i in 0..N {
-        for j in graph[i].iter() {
-            indegree[*j] += 1;
-        }
-    }
-    for i in 0..N {
-        if indegree[i] == 0 {
-            queue.push_back(i);
-        }
-    }
-    
-    let mut res = Vec::new();
-    while 0 < queue.len() {
-        let u = queue.pop_front().unwrap();
-        res.push(u);
-        for v in graph[u].iter() {
-            indegree[*v] -= 1;
-            if indegree[*v] == 0 {
-                queue.push_back(*v)
+impl Solution {
+    pub fn topological_sort(N: usize, graph: &Vec<Vec<usize>>) -> Vec<usize> {
+        let mut indegree = vec![0; N];
+        let mut queue = VecDeque::new();
+        for i in 0..N {
+            for j in graph[i].iter() {
+                indegree[*j] += 1;
             }
         }
-    }
-    return res    
-}
+        for i in 0..N {
+            if indegree[i] == 0 {
+                queue.push_back(i);
+            }
+        }
 
-impl Solution {
+        let mut res = Vec::new();
+        while 0 < queue.len() {
+            let u = queue.pop_front().unwrap();
+            res.push(u);
+            for v in graph[u].iter() {
+                indegree[*v] -= 1;
+                if indegree[*v] == 0 {
+                    queue.push_back(*v)
+                }
+            }
+        }
+        return res    
+    }
+    
     pub fn max_envelopes(envelopes: Vec<Vec<i32>>) -> i32 {
         let N = envelopes.len();
         let mut graph = vec![vec![]; N];
@@ -45,7 +45,7 @@ impl Solution {
             }
         }
         
-        let order = topological_sort(N, &graph);
+        let order = Self::topological_sort(N, &graph);
         let mut dist = vec![-1; N];
         for u in order.iter() {
             if dist[*u] != -1 {
