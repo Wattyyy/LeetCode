@@ -1,22 +1,27 @@
-// https://leetcode.com/problems/trapping-rain-water
-
 class Solution:
-    def trap(self, height):
-        if not height:
+    def trap(self, height: List[int]) -> int:
+        if sum(height) == 0:
             return 0
-        N = len(height)
-        ans = 0
-        lp, rp = 0, N-1
-        l_max_h, r_max_h = height[lp], height[rp]
-        while lp < rp:
-            if height[lp] < height[rp]:
-                lp += 1
-                ans += max(0, l_max_h - height[lp])
-                l_max_h = max(l_max_h, height[lp])
+        water = [0] * len(height)
+        for i, h in enumerate(height):
+            if 0 < h:
+                l_height, l_idx, st = h, i, i
+                break
+                
+        for i, h in enumerate(height):
+            if i <= st:
+                continue
+            if h < l_height:
+                water[i] = l_height - h
             else:
-                rp -= 1
-                ans += max(0, r_max_h - height[rp])
-                r_max_h = max(r_max_h, height[rp])
-        return ans
-
+                l_height, l_idx = h, i
         
+        r_height, r_idx = height[len(height) - 1], len(height) - 1
+        for i in reversed(range(l_idx+1, len(height))):
+            if height[i] < r_height:
+                water[i] = r_height - height[i]
+            else:
+                r_height, r_idx = height[i], i
+                water[i] = 0
+                
+        return sum(water)
