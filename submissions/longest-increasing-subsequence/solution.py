@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-increasing-subsequence
+# https://leetcode.com/problems/longest-increasing-subsequence
 
 from bisect import bisect_left
 class Solution:

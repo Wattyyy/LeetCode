@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-trees-with-factors
+# https://leetcode.com/problems/binary-trees-with-factors
 
 from math import sqrt
 from collections import defaultdict

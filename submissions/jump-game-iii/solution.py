@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/jump-game-iii
+# https://leetcode.com/problems/jump-game-iii
 
 from collections import defaultdict
 class Solution:

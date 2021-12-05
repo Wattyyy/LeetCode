@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/consecutive-numbers-sum
+# https://leetcode.com/problems/consecutive-numbers-sum
 
 from math import sqrt
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/prime-palindrome
+# https://leetcode.com/problems/prime-palindrome
 
 class Solution:
     def backtrack(self, i, end):

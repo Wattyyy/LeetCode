@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/partition-list
+# https://leetcode.com/problems/partition-list
 
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:

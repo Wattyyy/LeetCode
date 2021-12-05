@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-number
+# https://leetcode.com/problems/valid-number
 
 class Solution:
     def isNumber(self, s: str) -> bool:

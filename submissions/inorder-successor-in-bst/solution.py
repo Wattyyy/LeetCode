@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/inorder-successor-in-bst
+# https://leetcode.com/problems/inorder-successor-in-bst
 
 # Definition for a binary tree node.
 # class TreeNode:

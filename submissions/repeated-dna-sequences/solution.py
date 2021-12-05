@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/repeated-dna-sequences
+# https://leetcode.com/problems/repeated-dna-sequences
 
 class Solution:
     def findRepeatedDnaSequences(self, s):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid
+# https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid
 
 from typing import List
 

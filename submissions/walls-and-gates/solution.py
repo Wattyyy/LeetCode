@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/walls-and-gates
+# https://leetcode.com/problems/walls-and-gates
 
 from collections import deque
 class Solution:

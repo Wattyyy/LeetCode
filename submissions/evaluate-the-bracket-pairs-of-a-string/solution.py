@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string
+# https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string
 
 from collections import defaultdict
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-parentheses
+# https://leetcode.com/problems/valid-parentheses
 
 from collections import deque
 class Solution:

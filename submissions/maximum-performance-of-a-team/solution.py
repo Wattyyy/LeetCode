@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-performance-of-a-team
+# https://leetcode.com/problems/maximum-performance-of-a-team
 
 from typing import List
 import heapq

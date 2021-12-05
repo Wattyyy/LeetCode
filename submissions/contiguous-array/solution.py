@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/contiguous-array
+# https://leetcode.com/problems/contiguous-array
 
 from itertools import accumulate
 from collections import defaultdict

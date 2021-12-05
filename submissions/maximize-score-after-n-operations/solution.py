@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximize-score-after-n-operations
+# https://leetcode.com/problems/maximize-score-after-n-operations
 
 from itertools import combinations
 from math import gcd

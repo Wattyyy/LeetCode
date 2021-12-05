@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/bitwise-ors-of-subarrays
+# https://leetcode.com/problems/bitwise-ors-of-subarrays
 
 class Solution:
     def subarrayBitwiseORs(self, A):

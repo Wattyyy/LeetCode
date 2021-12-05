@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/2-keys-keyboard
+# https://leetcode.com/problems/2-keys-keyboard
 
 class Solution:
     def minSteps(self, n):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-pivot-index
+# https://leetcode.com/problems/find-pivot-index
 
 class Solution:
     def pivotIndex(self, nums):

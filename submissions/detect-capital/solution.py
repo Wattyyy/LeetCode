@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/detect-capital
+# https://leetcode.com/problems/detect-capital
 
 class Solution:
     def detectCapitalUse(self, word):

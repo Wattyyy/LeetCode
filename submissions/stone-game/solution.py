@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/stone-game
+# https://leetcode.com/problems/stone-game
 
 from typing import List
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/stone-game-vi
+# https://leetcode.com/problems/stone-game-vi
 
 class Solution:
     def stoneGameVI(self, aliceValues: List[int], bobValues: List[int]) -> int:

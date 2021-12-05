@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-parenthesis-string
+# https://leetcode.com/problems/valid-parenthesis-string
 
 class Solution:
     def checkValidString(self, s):

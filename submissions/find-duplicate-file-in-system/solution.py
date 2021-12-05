@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-duplicate-file-in-system
+# https://leetcode.com/problems/find-duplicate-file-in-system
 
 from typing import List
 from collections import defaultdict

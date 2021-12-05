@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-time-difference
+# https://leetcode.com/problems/minimum-time-difference
 
 class Solution:
     def convertTime(self, time_str):

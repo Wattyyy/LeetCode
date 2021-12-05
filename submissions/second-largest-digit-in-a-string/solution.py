@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/second-largest-digit-in-a-string
+# https://leetcode.com/problems/second-largest-digit-in-a-string
 
 class Solution:
     def secondHighest(self, s: str) -> int:

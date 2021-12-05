@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/happy-number
+# https://leetcode.com/problems/happy-number
 
 class Solution:
     def isHappy(self, n):

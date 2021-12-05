@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/determine-color-of-a-chessboard-square
+# https://leetcode.com/problems/determine-color-of-a-chessboard-square
 
 class Solution:
     def squareIsWhite(self, coordinates: str) -> bool:

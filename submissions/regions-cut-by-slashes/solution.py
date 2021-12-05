@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/regions-cut-by-slashes
+# https://leetcode.com/problems/regions-cut-by-slashes
 
 class UnionFind():
     def __init__(self, N):

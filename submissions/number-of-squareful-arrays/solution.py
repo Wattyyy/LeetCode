@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-squareful-arrays
+# https://leetcode.com/problems/number-of-squareful-arrays
 
 class Solution:
     def __init__(self):

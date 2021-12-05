@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-the-town-judge
+# https://leetcode.com/problems/find-the-town-judge
 
 from collections import defaultdict
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/zigzag-conversion
+# https://leetcode.com/problems/zigzag-conversion
 
 class Solution:
     def convert(self, s, n):

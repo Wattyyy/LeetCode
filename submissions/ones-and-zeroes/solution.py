@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/ones-and-zeroes
+# https://leetcode.com/problems/ones-and-zeroes
 
 from collections import defaultdict
 class Solution:

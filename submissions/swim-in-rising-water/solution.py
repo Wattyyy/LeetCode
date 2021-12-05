@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/swim-in-rising-water
+# https://leetcode.com/problems/swim-in-rising-water
 
 from collections import deque
 from typing import List

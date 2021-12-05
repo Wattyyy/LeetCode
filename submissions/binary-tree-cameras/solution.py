@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-tree-cameras
+# https://leetcode.com/problems/binary-tree-cameras
 
 class Solution(object):
     def minCameraCover(self, root):

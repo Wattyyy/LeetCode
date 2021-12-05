@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-of-smaller-numbers-after-self
+# https://leetcode.com/problems/count-of-smaller-numbers-after-self
 
 from sortedcontainers import SortedList
 from collections import deque

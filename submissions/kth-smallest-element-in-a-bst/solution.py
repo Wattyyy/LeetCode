@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/kth-smallest-element-in-a-bst
+# https://leetcode.com/problems/kth-smallest-element-in-a-bst
 
 # Definition for a binary tree node.
 # class TreeNode:

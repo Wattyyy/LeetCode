@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/jump-game-vi
+# https://leetcode.com/problems/jump-game-vi
 
 from typing import List
 from collections import deque

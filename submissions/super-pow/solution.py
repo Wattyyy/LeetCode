@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/super-pow
+# https://leetcode.com/problems/super-pow
 
 class Solution:
     def superPow(self, a, b):

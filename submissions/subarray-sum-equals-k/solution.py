@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subarray-sum-equals-k
+# https://leetcode.com/problems/subarray-sum-equals-k
 
 from collections import defaultdict
 from itertools import accumulate

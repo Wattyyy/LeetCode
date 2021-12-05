@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-product-subarray
+# https://leetcode.com/problems/maximum-product-subarray
 
 import sys
 sys.setrecursionlimit(10 ** 6)

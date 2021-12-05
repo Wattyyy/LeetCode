@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/super-palindromes
+# https://leetcode.com/problems/super-palindromes
 
 class Solution:
     def __init__(self):

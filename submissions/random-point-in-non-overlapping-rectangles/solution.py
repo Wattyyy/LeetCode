@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/random-point-in-non-overlapping-rectangles
+# https://leetcode.com/problems/random-point-in-non-overlapping-rectangles
 
 import random
 from bisect import bisect_left

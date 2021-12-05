@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/decode-string
+# https://leetcode.com/problems/decode-string
 
 from collections import deque
 

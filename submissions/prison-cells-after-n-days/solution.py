@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/prison-cells-after-n-days
+# https://leetcode.com/problems/prison-cells-after-n-days
 
 from collections import defaultdict
 class Solution:

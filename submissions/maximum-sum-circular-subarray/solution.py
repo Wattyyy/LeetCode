@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-sum-circular-subarray
+# https://leetcode.com/problems/maximum-sum-circular-subarray
 
 class Solution(object):
     def maxSubarraySumCircular(self, A):

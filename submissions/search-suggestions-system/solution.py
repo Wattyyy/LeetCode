@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-suggestions-system
+# https://leetcode.com/problems/search-suggestions-system
 
 from collections import defaultdict
 from typing import List

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reorganize-string
+# https://leetcode.com/problems/reorganize-string
 
 from math import ceil
 from collections import Counter

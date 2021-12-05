@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/permutations
+# https://leetcode.com/problems/permutations
 
 class Solution:
     def permute(self, nums):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/n-ary-tree-preorder-traversal
+# https://leetcode.com/problems/n-ary-tree-preorder-traversal
 
 from typing import List
 import sys

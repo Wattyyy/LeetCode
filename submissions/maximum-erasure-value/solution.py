@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-erasure-value
+# https://leetcode.com/problems/maximum-erasure-value
 
 from collections import Counter
 from typing import List

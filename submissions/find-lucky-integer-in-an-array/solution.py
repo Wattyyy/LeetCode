@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-lucky-integer-in-an-array
+# https://leetcode.com/problems/find-lucky-integer-in-an-array
 
 from collections import Counter
 class Solution:

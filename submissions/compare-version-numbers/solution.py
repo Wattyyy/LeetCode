@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/compare-version-numbers
+# https://leetcode.com/problems/compare-version-numbers
 
 class Solution:
     def compareVersion(self, version1, version2):

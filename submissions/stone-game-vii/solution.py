@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/stone-game-vii
+# https://leetcode.com/problems/stone-game-vii
 
 from itertools import accumulate
 from typing import List

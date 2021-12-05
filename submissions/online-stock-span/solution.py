@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/online-stock-span
+# https://leetcode.com/problems/online-stock-span
 
 class StockSpanner(object):
     def __init__(self):

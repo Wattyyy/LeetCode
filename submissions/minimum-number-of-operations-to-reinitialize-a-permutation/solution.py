@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation
+# https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation
 
 from collections import defaultdict
 class Solution:

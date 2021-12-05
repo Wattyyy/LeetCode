@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-domino-rotations-for-equal-row
+# https://leetcode.com/problems/minimum-domino-rotations-for-equal-row
 
 class Solution:
     def minDominoRotations(self, A, B):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/backspace-string-compare
+# https://leetcode.com/problems/backspace-string-compare
 
 class Solution:
     def triming(self, string):

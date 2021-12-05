@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-binary-substrings
+# https://leetcode.com/problems/count-binary-substrings
 
 from collections import deque
 class Solution:

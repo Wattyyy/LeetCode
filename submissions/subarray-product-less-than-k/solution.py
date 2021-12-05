@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subarray-product-less-than-k
+# https://leetcode.com/problems/subarray-product-less-than-k
 
 from bisect import bisect_left
 from math import log

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/all-paths-from-source-lead-to-destination
+# https://leetcode.com/problems/all-paths-from-source-lead-to-destination
 
 from collections import defaultdict, deque
 import sys

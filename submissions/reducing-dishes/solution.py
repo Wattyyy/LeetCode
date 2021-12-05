@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reducing-dishes
+# https://leetcode.com/problems/reducing-dishes
 
 class Solution:
     def maxSatisfaction(self, satisfaction):

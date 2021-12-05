@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/replace-words
+# https://leetcode.com/problems/replace-words
 
 class TrieNode:
     def __init__(self):

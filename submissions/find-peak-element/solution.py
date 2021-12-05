@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-peak-element
+# https://leetcode.com/problems/find-peak-element
 
 class Solution:
     def binSearch(self, l, r, arr):

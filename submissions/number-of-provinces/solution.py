@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-provinces
+# https://leetcode.com/problems/number-of-provinces
 
 class UnionFind():
     def __init__(self, N):

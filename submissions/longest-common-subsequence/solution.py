@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-common-subsequence
+# https://leetcode.com/problems/longest-common-subsequence
 
 class Solution:
     def longestCommonSubsequence(self, text1, text2):

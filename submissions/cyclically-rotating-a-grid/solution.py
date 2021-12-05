@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/cyclically-rotating-a-grid
+# https://leetcode.com/problems/cyclically-rotating-a-grid
 
 class Solution:
     def rotate(self, grid,  i, k):

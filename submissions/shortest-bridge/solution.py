@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/shortest-bridge
+# https://leetcode.com/problems/shortest-bridge
 
 from collections import defaultdict
 class Solution:

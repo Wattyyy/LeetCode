@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-consecutive-sequence
+# https://leetcode.com/problems/longest-consecutive-sequence
 
 from typing import List
 class UnionFind:

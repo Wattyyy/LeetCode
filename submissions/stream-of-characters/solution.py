@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/stream-of-characters
+# https://leetcode.com/problems/stream-of-characters
 
 from collections import defaultdict, deque
 

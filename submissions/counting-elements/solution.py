@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/counting-elements
+# https://leetcode.com/problems/counting-elements
 
 from collections import Counter
 class Solution:

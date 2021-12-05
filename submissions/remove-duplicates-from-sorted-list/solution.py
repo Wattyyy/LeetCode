@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-duplicates-from-sorted-list
+# https://leetcode.com/problems/remove-duplicates-from-sorted-list
 
 # Definition for singly-linked list.
 # class ListNode:

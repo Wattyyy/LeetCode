@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subarray-sums-divisible-by-k
+# https://leetcode.com/problems/subarray-sums-divisible-by-k
 
 from collections import defaultdict
 from bisect import bisect_right

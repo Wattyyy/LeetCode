@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-different-integers-in-a-string
+# https://leetcode.com/problems/number-of-different-integers-in-a-string
 
 class Solution:
     def numDifferentIntegers(self, word: str) -> int:

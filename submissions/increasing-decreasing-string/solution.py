@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/increasing-decreasing-string
+# https://leetcode.com/problems/increasing-decreasing-string
 
 import heapq
 from collections import Counter

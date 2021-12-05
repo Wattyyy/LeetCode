@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
+# https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
 
 class Solution:
     def findMaximumXOR(self, nums):

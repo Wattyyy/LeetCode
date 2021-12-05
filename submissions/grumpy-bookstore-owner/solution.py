@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/grumpy-bookstore-owner
+# https://leetcode.com/problems/grumpy-bookstore-owner
 
 from itertools import accumulate
 class Solution:

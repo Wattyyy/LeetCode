@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-gap
+# https://leetcode.com/problems/maximum-gap
 
 from typing import List
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-cost-tree-from-leaf-values
+# https://leetcode.com/problems/minimum-cost-tree-from-leaf-values
 
 from collections import defaultdict
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/continuous-subarray-sum
+# https://leetcode.com/problems/continuous-subarray-sum
 
 from itertools import accumulate
 from collections import defaultdict

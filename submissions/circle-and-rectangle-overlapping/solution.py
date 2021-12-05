@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/circle-and-rectangle-overlapping
+# https://leetcode.com/problems/circle-and-rectangle-overlapping
 
 from math import sqrt
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/arranging-coins
+# https://leetcode.com/problems/arranging-coins
 
 class Solution:
     def arrangeCoins(self, n):

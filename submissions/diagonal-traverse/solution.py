@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/diagonal-traverse
+# https://leetcode.com/problems/diagonal-traverse
 
 class Solution:
     def findDiagonalOrder(self, matrix):

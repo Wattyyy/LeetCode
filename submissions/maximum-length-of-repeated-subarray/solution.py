@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-length-of-repeated-subarray
+# https://leetcode.com/problems/maximum-length-of-repeated-subarray
 
 class Solution:
     def findLength(self, nums1: List[int], nums2: List[int]) -> int:

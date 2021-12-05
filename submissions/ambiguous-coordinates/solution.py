@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/ambiguous-coordinates
+# https://leetcode.com/problems/ambiguous-coordinates
 
 from itertools import product
 

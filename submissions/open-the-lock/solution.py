@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/open-the-lock
+# https://leetcode.com/problems/open-the-lock
 
 from typing import List
 from collections import defaultdict, deque

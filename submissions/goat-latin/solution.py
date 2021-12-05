@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/goat-latin
+# https://leetcode.com/problems/goat-latin
 
 from collections import deque
 class Solution:

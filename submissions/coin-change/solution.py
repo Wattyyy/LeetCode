@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/coin-change
+# https://leetcode.com/problems/coin-change
 
 import sys
 class Solution:

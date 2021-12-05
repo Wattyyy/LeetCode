@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/optimize-water-distribution-in-a-village
+# https://leetcode.com/problems/optimize-water-distribution-in-a-village
 
 from collections import defaultdict
 import heapq

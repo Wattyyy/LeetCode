@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/first-unique-number
+# https://leetcode.com/problems/first-unique-number
 
 from collections import OrderedDict
 

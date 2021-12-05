@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list
+# https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list
 
 """
 # Definition for a Node.

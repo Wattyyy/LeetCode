@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/unique-word-abbreviation
+# https://leetcode.com/problems/unique-word-abbreviation
 
 from collections import defaultdict
 class ValidWordAbbr:

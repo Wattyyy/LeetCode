@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/largest-component-size-by-common-factor
+# https://leetcode.com/problems/largest-component-size-by-common-factor
 
 from typing import List, Union
 from collections import defaultdict

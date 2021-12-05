@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/partition-array-for-maximum-sum
+# https://leetcode.com/problems/partition-array-for-maximum-sum
 
 class Solution:
     def maxSumAfterPartitioning(self, A, K):

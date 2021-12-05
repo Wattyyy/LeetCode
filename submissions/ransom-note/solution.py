@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/ransom-note
+# https://leetcode.com/problems/ransom-note
 
 from collections import Counter
 class Solution:

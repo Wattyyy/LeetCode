@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/max-dot-product-of-two-subsequences
+# https://leetcode.com/problems/max-dot-product-of-two-subsequences
 
 class Solution:
     def maxDotProduct(self, nums1, nums2):

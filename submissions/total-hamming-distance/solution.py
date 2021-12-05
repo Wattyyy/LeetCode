@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/total-hamming-distance
+# https://leetcode.com/problems/total-hamming-distance
 
 from collections import Counter
 class Solution:

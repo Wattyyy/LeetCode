@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/counting-bits
+# https://leetcode.com/problems/counting-bits
 
 class Solution:
     def countBits(self, num):

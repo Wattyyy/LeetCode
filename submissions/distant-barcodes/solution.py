@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/distant-barcodes
+# https://leetcode.com/problems/distant-barcodes
 
 from collections import Counter
 import heapq

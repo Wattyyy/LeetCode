@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/perform-string-shifts
+# https://leetcode.com/problems/perform-string-shifts
 
 from collections import deque
 class Solution:

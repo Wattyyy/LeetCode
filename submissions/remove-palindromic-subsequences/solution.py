@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-palindromic-subsequences
+# https://leetcode.com/problems/remove-palindromic-subsequences
 
 class Solution:
     def removePalindromeSub(self, s: str) -> int:

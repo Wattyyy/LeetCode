@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/sudoku-solver
+# https://leetcode.com/problems/sudoku-solver
 
 from collections import defaultdict
 from typing import List

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/balanced-binary-tree
+# https://leetcode.com/problems/balanced-binary-tree
 
 class Solution:
     def isBalanced(self, root):

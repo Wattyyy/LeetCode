@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/brick-wall
+# https://leetcode.com/problems/brick-wall
 
 from collections import Counter
 from itertools import accumulate

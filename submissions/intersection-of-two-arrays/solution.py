@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/intersection-of-two-arrays
+# https://leetcode.com/problems/intersection-of-two-arrays
 
 class Solution:
     def intersection(self, nums1, nums2):

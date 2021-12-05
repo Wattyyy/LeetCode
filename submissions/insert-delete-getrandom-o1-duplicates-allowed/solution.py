@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed
+# https://leetcode.com/problems/insert-delete-getrandom-o1-duplicates-allowed
 
 from collections import defaultdict
 from random import choice

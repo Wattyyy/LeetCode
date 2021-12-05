@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-operations-to-make-network-connected
+# https://leetcode.com/problems/number-of-operations-to-make-network-connected
 
 class UnionFind:
     def __init__(self, N):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reconstruct-original-digits-from-english
+# https://leetcode.com/problems/reconstruct-original-digits-from-english
 
 from collections import Counter
 class Solution:

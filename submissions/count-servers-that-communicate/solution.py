@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-servers-that-communicate
+# https://leetcode.com/problems/count-servers-that-communicate
 
 class UnionFind:
     def __init__(self, node_list):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/n-queens-ii
+# https://leetcode.com/problems/n-queens-ii
 
 from collections import Counter
 

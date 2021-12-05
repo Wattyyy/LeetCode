@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/parallel-courses
+# https://leetcode.com/problems/parallel-courses
 
 from collections import defaultdict, deque
 class Solution:

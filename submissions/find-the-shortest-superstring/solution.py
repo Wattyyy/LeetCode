@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-the-shortest-superstring
+# https://leetcode.com/problems/find-the-shortest-superstring
 
 class Solution(object):
     def shortestSuperstring(self, A):

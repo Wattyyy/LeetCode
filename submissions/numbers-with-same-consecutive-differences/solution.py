@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/numbers-with-same-consecutive-differences
+# https://leetcode.com/problems/numbers-with-same-consecutive-differences
 
 class Solution:
     def __init__(self):

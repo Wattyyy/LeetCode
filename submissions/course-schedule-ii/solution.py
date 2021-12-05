@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/course-schedule-ii
+# https://leetcode.com/problems/course-schedule-ii
 
 from collections import deque, defaultdict
     

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters
+# https://leetcode.com/problems/substrings-of-size-three-with-distinct-characters
 
 class Solution:
     def countGoodSubstrings(self, s: str) -> int:

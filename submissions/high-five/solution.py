@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/high-five
+# https://leetcode.com/problems/high-five
 
 class Solution:
     def highFive(self, items: List[List[int]]) -> List[List[int]]:

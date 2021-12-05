@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/shortest-path-with-alternating-colors
+# https://leetcode.com/problems/shortest-path-with-alternating-colors
 
 from collections import defaultdict, deque
 class Solution:

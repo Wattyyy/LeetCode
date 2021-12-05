@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/max-points-on-a-line
+# https://leetcode.com/problems/max-points-on-a-line
 
 from collections import defaultdict, Counter
 from decimal import *

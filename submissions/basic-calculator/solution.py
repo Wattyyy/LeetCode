@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/basic-calculator
+# https://leetcode.com/problems/basic-calculator
 
 class Solution:
     def __init__(self):

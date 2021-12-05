@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/critical-connections-in-a-network
+# https://leetcode.com/problems/critical-connections-in-a-network
 
 from collections import defaultdict
 from typing import List

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/bulb-switcher
+# https://leetcode.com/problems/bulb-switcher
 
 from math import sqrt
 class Solution:

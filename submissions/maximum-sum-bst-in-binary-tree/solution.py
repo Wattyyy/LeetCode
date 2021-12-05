@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-sum-bst-in-binary-tree
+# https://leetcode.com/problems/maximum-sum-bst-in-binary-tree
 
 # Definition for a binary tree node.
 # class TreeNode:

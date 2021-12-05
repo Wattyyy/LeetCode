@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/design-circular-queue
+# https://leetcode.com/problems/design-circular-queue
 
 from collections import deque
 class MyCircularQueue:

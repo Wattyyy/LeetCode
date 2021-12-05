@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/the-maze-ii
+# https://leetcode.com/problems/the-maze-ii
 
 from collections import defaultdict, deque
 from bisect import bisect_left

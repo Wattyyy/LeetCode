@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/flood-fill
+# https://leetcode.com/problems/flood-fill
 
 class Solution:
     def dfs(self, image, y, x, oldColor, newColor):

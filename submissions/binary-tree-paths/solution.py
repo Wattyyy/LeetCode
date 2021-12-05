@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-tree-paths
+# https://leetcode.com/problems/binary-tree-paths
 
 # Definition for a binary tree node.
 # class TreeNode:

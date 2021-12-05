@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii
+# https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string-ii
 
 from collections import deque
 from typing import List

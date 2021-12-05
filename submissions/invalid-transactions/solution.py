@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/invalid-transactions
+# https://leetcode.com/problems/invalid-transactions
 
 from collections import defaultdict
 

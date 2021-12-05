@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/design-authentication-manager
+# https://leetcode.com/problems/design-authentication-manager
 
 from collections import defaultdict, Counter, deque
 

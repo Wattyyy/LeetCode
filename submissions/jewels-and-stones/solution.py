@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/jewels-and-stones
+# https://leetcode.com/problems/jewels-and-stones
 
 from collections import Counter
 class Solution:

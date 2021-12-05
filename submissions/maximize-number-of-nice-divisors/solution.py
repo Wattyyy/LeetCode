@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximize-number-of-nice-divisors
+# https://leetcode.com/problems/maximize-number-of-nice-divisors
 
 class Solution:
     def maxprod(self, n):

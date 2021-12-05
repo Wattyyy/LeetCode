@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/arithmetic-slices
+# https://leetcode.com/problems/arithmetic-slices
 
 class Solution:
     def numberOfArithmeticSlices(self, A):

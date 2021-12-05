@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-digit-one
+# https://leetcode.com/problems/number-of-digit-one
 
 class Solution:
     def countDigitOne(self, n):

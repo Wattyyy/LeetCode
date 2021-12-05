@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/reconstruct-itinerary
+# https://leetcode.com/problems/reconstruct-itinerary
 
 from collections import defaultdict, Counter
 from copy import deepcopy

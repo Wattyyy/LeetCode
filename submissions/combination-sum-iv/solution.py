@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/combination-sum-iv
+# https://leetcode.com/problems/combination-sum-iv
 
 from typing import List
 class Solution:

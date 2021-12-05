@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/k-closest-points-to-origin
+# https://leetcode.com/problems/k-closest-points-to-origin
 
 import heapq
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximum-size-subarray-sum-equals-k
+# https://leetcode.com/problems/maximum-size-subarray-sum-equals-k
 
 from collections import defaultdict
 class Solution:

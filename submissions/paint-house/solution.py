@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/paint-house
+# https://leetcode.com/problems/paint-house
 
 class Solution:
     def minCost(self, costs):

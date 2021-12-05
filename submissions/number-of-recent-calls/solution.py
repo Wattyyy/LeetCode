@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-recent-calls
+# https://leetcode.com/problems/number-of-recent-calls
 
 from bisect import bisect_left, bisect_right
 class RecentCounter:

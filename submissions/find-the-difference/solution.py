@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-the-difference
+# https://leetcode.com/problems/find-the-difference
 
 from collections import Counter
 class Solution:

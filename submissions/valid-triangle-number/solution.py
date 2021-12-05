@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/valid-triangle-number
+# https://leetcode.com/problems/valid-triangle-number
 
 from bisect import bisect_right
 class Solution:

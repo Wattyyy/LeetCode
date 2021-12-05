@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/angle-between-hands-of-a-clock
+# https://leetcode.com/problems/angle-between-hands-of-a-clock
 
 from math import *
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/mirror-reflection
+# https://leetcode.com/problems/mirror-reflection
 
 class Solution:
     def mirrorReflection(self, p, q):

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/redundant-connection
+# https://leetcode.com/problems/redundant-connection
 
 
 from typing import List

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/binary-search
+# https://leetcode.com/problems/binary-search
 
 from bisect import bisect_left
     

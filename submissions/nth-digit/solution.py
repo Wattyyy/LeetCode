@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/nth-digit
+# https://leetcode.com/problems/nth-digit
 
 class Solution:
     # 10 ~ 189th digit -> (10, 99)

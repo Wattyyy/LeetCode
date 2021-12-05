@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/range-addition
+# https://leetcode.com/problems/range-addition
 
 class Solution:
     def getModifiedArray(self, length, updates):

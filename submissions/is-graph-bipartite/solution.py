@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/is-graph-bipartite
+# https://leetcode.com/problems/is-graph-bipartite
 
 class UnionFind():
     def __init__(self, N):

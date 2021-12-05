@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/cinema-seat-allocation
+# https://leetcode.com/problems/cinema-seat-allocation
 
 from collections import defaultdict
 class Solution:

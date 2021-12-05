@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/sparse-matrix-multiplication
+# https://leetcode.com/problems/sparse-matrix-multiplication
 
 class Solution:
     def multiply(self, A, B):

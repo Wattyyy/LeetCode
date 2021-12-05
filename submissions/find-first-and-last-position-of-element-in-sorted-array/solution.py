@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
+# https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array
 
 from bisect import bisect_left, bisect_right
 from typing import List

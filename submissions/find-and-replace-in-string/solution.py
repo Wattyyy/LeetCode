@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/find-and-replace-in-string
+# https://leetcode.com/problems/find-and-replace-in-string
 
 class Solution:
     def is_src_valid(self, S, src, idx):

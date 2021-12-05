@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/tree-diameter
+# https://leetcode.com/problems/tree-diameter
 
 from collections import defaultdict
 class Solution:

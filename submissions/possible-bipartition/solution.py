@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/possible-bipartition
+# https://leetcode.com/problems/possible-bipartition
 
 from collections import defaultdict, deque
 class Solution:

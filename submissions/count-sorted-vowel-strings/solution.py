@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-sorted-vowel-strings
+# https://leetcode.com/problems/count-sorted-vowel-strings
 
 from collections import Counter
 class Solution:

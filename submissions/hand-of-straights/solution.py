@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/hand-of-straights
+# https://leetcode.com/problems/hand-of-straights
 
 from collections import OrderedDict
 class Solution:

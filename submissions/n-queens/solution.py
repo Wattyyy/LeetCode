@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/n-queens
+# https://leetcode.com/problems/n-queens
 
 from typing import List
 from collections import Counter

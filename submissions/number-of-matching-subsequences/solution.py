@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-matching-subsequences
+# https://leetcode.com/problems/number-of-matching-subsequences
 
 from collections import defaultdict, deque
 from typing import List

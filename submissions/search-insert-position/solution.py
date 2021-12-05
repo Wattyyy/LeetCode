@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/search-insert-position
+# https://leetcode.com/problems/search-insert-position
 
 from bisect import bisect_left
 class Solution:

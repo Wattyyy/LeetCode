@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/prefix-and-suffix-search
+# https://leetcode.com/problems/prefix-and-suffix-search
 
 from collections import defaultdict
 from typing import List

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/most-common-word
+# https://leetcode.com/problems/most-common-word
 
 from collections import Counter
 class Solution:

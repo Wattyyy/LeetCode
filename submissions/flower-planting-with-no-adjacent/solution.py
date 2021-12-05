@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/flower-planting-with-no-adjacent
+# https://leetcode.com/problems/flower-planting-with-no-adjacent
 
 from collections import defaultdict
 

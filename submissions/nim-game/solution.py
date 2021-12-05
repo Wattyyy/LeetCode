@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/nim-game
+# https://leetcode.com/problems/nim-game
 
 class Solution:
     def canWinNim(self, n: int) -> bool:

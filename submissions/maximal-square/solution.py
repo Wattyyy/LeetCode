@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximal-square
+# https://leetcode.com/problems/maximal-square
 
 class Solution:
     def maximalSquare(self, matrix):

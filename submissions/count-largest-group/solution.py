@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/count-largest-group
+# https://leetcode.com/problems/count-largest-group
 
 from collections import defaultdict
 class Solution:

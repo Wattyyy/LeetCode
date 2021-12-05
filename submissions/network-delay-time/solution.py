@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/network-delay-time
+# https://leetcode.com/problems/network-delay-time
 
 import heapq
 from collections import defaultdict

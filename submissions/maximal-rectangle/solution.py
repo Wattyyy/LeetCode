@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximal-rectangle
+# https://leetcode.com/problems/maximal-rectangle
 
 class Solution:
     def maximalRectangle(self, matrix):

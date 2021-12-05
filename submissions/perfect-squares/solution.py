@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/perfect-squares
+# https://leetcode.com/problems/perfect-squares
 
 class Solution:
     def numSquares(self, n):

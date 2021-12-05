@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/repeated-substring-pattern
+# https://leetcode.com/problems/repeated-substring-pattern
 
 from math import sqrt
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/increasing-triplet-subsequence
+# https://leetcode.com/problems/increasing-triplet-subsequence
 
 from bisect import bisect_left
 class Solution:

@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference
+# https://leetcode.com/problems/longest-arithmetic-subsequence-of-given-difference
 
 from collections import defaultdict
 class Solution:

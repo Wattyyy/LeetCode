@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/powerful-integers
+# https://leetcode.com/problems/powerful-integers
 
 from typing import List
 class Solution:

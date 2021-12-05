@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/add-digits
+# https://leetcode.com/problems/add-digits
 
 class Solution:
     def addDigits(self, num):

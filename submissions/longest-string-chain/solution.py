@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/longest-string-chain
+# https://leetcode.com/problems/longest-string-chain
 
 from typing import List
 from collections import deque

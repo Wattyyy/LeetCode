@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/largest-plus-sign
+# https://leetcode.com/problems/largest-plus-sign
 
 class Solution:
     def orderOfLargestPlusSign(self, N, mines):

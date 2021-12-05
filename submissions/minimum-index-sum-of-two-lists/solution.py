@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/minimum-index-sum-of-two-lists
+# https://leetcode.com/problems/minimum-index-sum-of-two-lists
 
 from collections import defaultdict
 class Solution:

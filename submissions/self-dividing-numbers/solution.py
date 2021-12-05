@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/self-dividing-numbers
+# https://leetcode.com/problems/self-dividing-numbers
 
 class Solution:
     def selfDividingNumbers(self, left, right):

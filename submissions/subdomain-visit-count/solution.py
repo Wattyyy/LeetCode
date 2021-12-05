@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/subdomain-visit-count
+# https://leetcode.com/problems/subdomain-visit-count
 
 class Solution:
     def subdomainVisits(self, cpdomains):

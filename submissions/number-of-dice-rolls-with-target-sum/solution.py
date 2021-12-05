@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/number-of-dice-rolls-with-target-sum
+# https://leetcode.com/problems/number-of-dice-rolls-with-target-sum
 
 class Solution:
     def numRollsToTarget(self, d, f, target):

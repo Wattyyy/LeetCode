@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree
+# https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree
 
 class TreeNode:
     def __init__(self, val, left=None, right=None, height=1):

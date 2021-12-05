@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/maximize-distance-to-closest-person
+# https://leetcode.com/problems/maximize-distance-to-closest-person
 
 from bisect import bisect_left
 class Solution:
