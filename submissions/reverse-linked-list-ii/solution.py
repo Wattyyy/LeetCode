@@ -7,7 +7,7 @@ class Solution:
     def reverseBetween(self, head: ListNode, left: int, right: int) -> ListNode:
         arr = []
         cur = head
-        
+
         if left == 1:
             for _ in range(1 + right - left):
                 arr.append(cur)
@@ -18,10 +18,10 @@ class Solution:
                 if i == len(arr) - 1:
                     arr[i].next = t_node
                 else:
-                    arr[i].next = arr[i+1]
-                    
+                    arr[i].next = arr[i + 1]
+
             return arr[0]
-        
+
         prev = None
         cnt = 1
         while cur:
@@ -36,11 +36,10 @@ class Solution:
                     if i == len(arr) - 1:
                         arr[i].next = t_node
                     else:
-                        arr[i].next = arr[i+1]
+                        arr[i].next = arr[i + 1]
                 return head
-            
+
             else:
                 prev = cur
                 cur = cur.next
                 cnt += 1
-                

@@ -7,6 +7,7 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def __init__(self):
         self.distance = []

@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/is-subsequence
 
+
 class Solution:
     def isSubsequence(self, s, t):
         i = 0
@@ -9,5 +10,3 @@ class Solution:
             if s[i] == t[j]:
                 i += 1
         return i == len(s)
-        
-        

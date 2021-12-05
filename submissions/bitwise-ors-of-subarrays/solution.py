@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/bitwise-ors-of-subarrays
 
+
 class Solution:
     def subarrayBitwiseORs(self, A):
         ans = {A[0]}
@@ -14,5 +15,3 @@ class Solution:
             cur = new
             ans |= cur
         return len(ans)
-                
-        

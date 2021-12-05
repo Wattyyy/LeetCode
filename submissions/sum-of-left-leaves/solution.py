@@ -9,21 +9,18 @@
 class Solution:
     def __init__(self):
         self.ans = 0
-        
+
     def sumup(self, node, state):
-        if (not node.left) and (not node.right) and (state == 'left'):
+        if (not node.left) and (not node.right) and (state == "left"):
             self.ans += node.val
             return
         if node.left:
-            self.sumup(node.left, 'left')
+            self.sumup(node.left, "left")
         if node.right:
-            self.sumup(node.right, 'right')
+            self.sumup(node.right, "right")
 
     def sumOfLeftLeaves(self, root):
         if not root:
             return 0
-        self.sumup(root, 'right')
+        self.sumup(root, "right")
         return self.ans
-        
-    
-        

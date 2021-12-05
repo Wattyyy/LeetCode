@@ -7,6 +7,8 @@
 #         self.left = None
 #         self.right = None
 from collections import deque
+
+
 class Solution:
     def preorderTraversal(self, root):
         if not root:
@@ -21,6 +23,3 @@ class Solution:
             if node.left:
                 stack.append(node.left)
         return ans
-                
-        
-        

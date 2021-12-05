@@ -3,9 +3,10 @@
 import heapq
 from collections import Counter
 
+
 class Solution:
     def sortString(self, s):
-        num_list = [ord(char)-60 for char in s]
+        num_list = [ord(char) - 60 for char in s]
         num_cnt = Counter(num_list)
 
         res = []
@@ -29,8 +30,5 @@ class Solution:
                 if num_cnt[num] == 0:
                     del num_cnt[num]
                 res.append(chr(num + 60))
-        
-        return ''.join(res)
-            
 
-        
+        return "".join(res)

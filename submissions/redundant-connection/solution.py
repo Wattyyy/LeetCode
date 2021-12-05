@@ -3,10 +3,11 @@
 
 from typing import List
 
+
 class UnionFind:
     def __init__(self, N):
-        self.node2par = {i:i for i in range(1, N+1)}
-        self.rank = {i:0 for i in range(1, N+1)}
+        self.node2par = {i: i for i in range(1, N + 1)}
+        self.rank = {i: 0 for i in range(1, N + 1)}
 
     def find_par(self, x):
         if self.node2par[x] != x:
@@ -23,8 +24,8 @@ class UnionFind:
             self.node2par[y] = x
         if self.rank[x] == self.rank[y]:
             self.rank[x] += 1
-        
-        
+
+
 class Solution:
     def findRedundantConnection(self, edges: List[List[int]]) -> List[int]:
         n = len(edges)
@@ -34,5 +35,3 @@ class Solution:
                 uf.unite(u, v)
             else:
                 return [u, v]
-
-        

@@ -7,6 +7,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def isSymmetric(self, root):
         def helper(l_node, r_node):
@@ -14,7 +15,11 @@ class Solution:
                 return True
             if (not l_node) or (not r_node):
                 return False
-            return (l_node.val == r_node.val) and helper(l_node.right, r_node.left) and helper(l_node.left, r_node.right)
-        
+            return (
+                (l_node.val == r_node.val)
+                and helper(l_node.right, r_node.left)
+                and helper(l_node.left, r_node.right)
+            )
+
         res = helper(root, root)
         return res

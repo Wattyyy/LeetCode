@@ -5,11 +5,10 @@ class Solution:
             return
         for i in range(idx, len(s)):
             if self.is_palindrome[idx][i]:
-                cur.append(s[idx:i+1])
-                self.backtrack(s, i+1, cur)
+                cur.append(s[idx : i + 1])
+                self.backtrack(s, i + 1, cur)
                 cur.pop()
-        
-        
+
     def partition(self, s: str) -> List[List[str]]:
         self.ans = []
         n = len(s)
@@ -22,10 +21,8 @@ class Solution:
                     if s[i] == s[j]:
                         self.is_palindrome[i][j] = True
                 else:
-                    if self.is_palindrome[i+1][j-1] and s[i] == s[j]:
+                    if self.is_palindrome[i + 1][j - 1] and s[i] == s[j]:
                         self.is_palindrome[i][j] = True
-        
+
         self.backtrack(s, 0, [])
         return self.ans
-        
-        

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/sort-characters-by-frequency
 
 from collections import Counter, defaultdict
+
+
 class Solution:
     def frequencySort(self, s: str) -> str:
         counter = Counter(s)
@@ -13,11 +15,4 @@ class Solution:
             for char in val2key[v]:
                 for _ in range(v):
                     ans.append(char)
-        return ''.join(ans)
-
-
-
-
-
-
-        
+        return "".join(ans)

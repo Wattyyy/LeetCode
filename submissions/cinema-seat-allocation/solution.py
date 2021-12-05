@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/cinema-seat-allocation
 
 from collections import defaultdict
+
+
 class Solution:
     def maxNumberOfFamilies(self, n, reservedSeats):
         res = n * 2
@@ -19,7 +21,7 @@ class Solution:
                     center = False
                 if idx in r_set:
                     right = False
-            
+
             if left and center and right:
                 continue
             elif left and center:
@@ -32,7 +34,5 @@ class Solution:
                     res -= 1
                 elif val == 0:
                     res -= 2
-            
+
         return res
-                
-                

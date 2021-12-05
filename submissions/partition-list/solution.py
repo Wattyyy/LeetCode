@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/partition-list
 
+
 class Solution:
     def partition(self, head: ListNode, x: int) -> ListNode:
         less_head = ListNode(-101)
@@ -15,10 +16,8 @@ class Solution:
                 more.next = node
                 more = more.next
             node = node.next
-        
+
         more.next = None
         less.next = more_head.next
 
         return less_head.next
-        
-        

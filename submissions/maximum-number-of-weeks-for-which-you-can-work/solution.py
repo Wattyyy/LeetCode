@@ -7,4 +7,3 @@ class Solution:
             return sum(arr)
         else:
             return sum(arr[:-1]) + sum(arr[:-1]) + 1
-            

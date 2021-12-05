@@ -9,19 +9,16 @@
 class Solution:
     def __init__(self):
         self.ans = 0
-        
+
     def count(self, node):
         self.ans += 1
         if node.left:
             self.count(node.left)
         if node.right:
             self.count(node.right)
-            
+
     def countNodes(self, root):
         if not root:
             return 0
         self.count(root)
         return self.ans
-        
-        
-        

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/valid-triangle-number
 
 from bisect import bisect_right
+
+
 class Solution:
     def triangleNumber(self, nums):
         if len(nums) < 3:

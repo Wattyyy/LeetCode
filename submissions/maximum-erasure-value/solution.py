@@ -2,11 +2,13 @@
 
 from collections import Counter
 from typing import List
+
+
 class Solution:
     def maximumUniqueSubarray(self, nums: List[int]) -> int:
         if len(nums) == 1:
             return nums[0]
-            
+
         num_cnt = Counter()
         num_cnt[nums[0]] += 1
         l, r = 0, 1
@@ -25,7 +27,3 @@ class Solution:
             r += 1
 
         return ans
-        
-        
-
-

@@ -7,9 +7,11 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def insertIntoBST(self, root, val):
         node = TreeNode(val)
+
         def insert(current, node):
             if current.val < node.val:
                 if current.right is None:
@@ -21,6 +23,6 @@ class Solution:
                     current.left = node
                 else:
                     insert(current.left, node)
+
         insert(root, node)
         return root
-        

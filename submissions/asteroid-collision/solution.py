@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/asteroid-collision
 
+
 class Solution:
     def asteroidCollision(self, asteroids):
         minus, plus = [], []
@@ -22,10 +23,3 @@ class Solution:
                 plus.append(size)
         ans = minus + plus
         return ans
-            
-
-            
-
-
-
-        

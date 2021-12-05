@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/online-stock-span
 
+
 class StockSpanner(object):
     def __init__(self):
         self.stack = []

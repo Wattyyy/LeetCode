@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/maximal-rectangle
 
+
 class Solution:
     def maximalRectangle(self, matrix):
         if not matrix:
@@ -11,8 +12,8 @@ class Solution:
                 if r == R - 1:
                     continue
                 if matrix[r][c] == 1:
-                    matrix[r][c] = matrix[r+1][c] + 1
-        
+                    matrix[r][c] = matrix[r + 1][c] + 1
+
         ans = 0
         for r in range(R):
             histgram = matrix[r]
@@ -28,10 +29,9 @@ class Solution:
                     ans = max(ans, (idx - (st[-1] + 1)) * histgram[l_idx])
                 st.append(idx)
                 idx += 1
-            
+
             while 1 < len(st):
                 l_idx = st.pop(-1)
                 ans = max(ans, (C - (st[-1] + 1)) * histgram[l_idx])
             ans = max(ans, C * histgram[st[-1]])
         return ans
-

@@ -7,7 +7,7 @@ class Solution:
             if 0 < h:
                 l_height, l_idx, st = h, i, i
                 break
-                
+
         for i, h in enumerate(height):
             if i <= st:
                 continue
@@ -15,13 +15,13 @@ class Solution:
                 water[i] = l_height - h
             else:
                 l_height, l_idx = h, i
-        
+
         r_height, r_idx = height[len(height) - 1], len(height) - 1
-        for i in reversed(range(l_idx+1, len(height))):
+        for i in reversed(range(l_idx + 1, len(height))):
             if height[i] < r_height:
                 water[i] = r_height - height[i]
             else:
                 r_height, r_idx = height[i], i
                 water[i] = 0
-                
+
         return sum(water)

@@ -7,6 +7,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def __init__(self):
         self.ans = False
@@ -19,11 +20,10 @@ class Solution:
                 self.ans = True
                 return
             return
-        if node.left and node.left.val == self.arr[index + 1]:     
+        if node.left and node.left.val == self.arr[index + 1]:
             self.backtrack(node.left, index + 1)
         if node.right and node.right.val == self.arr[index + 1]:
             self.backtrack(node.right, index + 1)
-        
 
     def isValidSequence(self, root, arr):
         if not root or arr[0] != root.val:
@@ -31,7 +31,3 @@ class Solution:
         self.arr = arr
         self.backtrack(root, 0)
         return self.ans
-        
-
-
-        

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/find-k-th-smallest-pair-distance
 
 import bisect
+
+
 class Solution:
     def smallestDistancePair(self, nums, k):
         nums = sorted(nums)
@@ -15,8 +17,8 @@ class Solution:
             for i in range(n):
                 j = bisect.bisect_right(nums, nums[i] + m)
                 cnt += j - i - 1
-            
-            if (cnt < k):
+
+            if cnt < k:
                 l = m + 1
             else:
                 r = m

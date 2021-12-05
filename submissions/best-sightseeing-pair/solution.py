@@ -7,6 +7,5 @@ class Solution:
                 continue
             ans = max(max_val + val, ans)
             max_val = max(max_val - 1, val - 1)
-            
+
         return ans
-            

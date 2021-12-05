@@ -9,6 +9,8 @@ class Node:
         self.next = next
         self.child = child
 """
+
+
 class Solution:
     def flatten(self, head):
         if not head:
@@ -34,9 +36,3 @@ class Solution:
             else:
                 cur = cur.next
         return head
-
-            
-
-            
-
-        

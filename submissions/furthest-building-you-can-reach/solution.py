@@ -3,6 +3,7 @@
 import heapq
 from typing import List
 
+
 class Solution:
     def furthestBuilding(self, heights: List[int], bricks: int, ladders: int) -> int:
         if len(heights) == 1:
@@ -24,7 +25,6 @@ class Solution:
                     break
             return res
 
-
         min_heap = []
         prev = heights[0]
         bricks_sum = 0
@@ -34,7 +34,7 @@ class Solution:
                 continue
             if prev < cur:
                 diff = cur - prev
-                if (len(min_heap) < ladders):
+                if len(min_heap) < ladders:
                     heapq.heappush(min_heap, diff)
                 elif diff < min_heap[0]:
                     bricks_sum += diff
@@ -48,12 +48,3 @@ class Solution:
             else:
                 break
         return res
-
-
-
-
-
-
-
-
-            

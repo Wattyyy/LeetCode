@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/find-minimum-in-rotated-sorted-array
 
+
 class Solution:
     def findMin(self, nums):
         l, r = 0, len(nums) - 1
@@ -13,7 +14,3 @@ class Solution:
                 else:
                     r = mid
         return nums[l]
-            
-                
-                
-        

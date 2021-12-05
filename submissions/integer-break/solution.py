@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/integer-break
 
+
 class Solution:
     def integerBreak(self, n):
         if n <= 3:

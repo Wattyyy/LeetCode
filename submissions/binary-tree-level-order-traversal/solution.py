@@ -3,6 +3,8 @@
 
 from collections import deque
 from typing import List
+
+
 class Solution:
     def levelOrder(self, root: TreeNode) -> List[List[int]]:
         if not root:
@@ -21,5 +23,3 @@ class Solution:
             res.append(ls[:])
             queue = next_queue
         return res
-        
-        

@@ -1,30 +1,29 @@
 # https://leetcode.com/problems/design-circular-queue
 
 from collections import deque
-class MyCircularQueue:
 
+
+class MyCircularQueue:
     def __init__(self, k: int):
         self.deque = deque([], maxlen=k)
         self.max_size = k
-        
+
     def enQueue(self, value: int) -> bool:
         if len(self.deque) == self.max_size:
             return False
         self.deque.append(value)
         return True
-        
+
     def deQueue(self) -> bool:
         if not self.deque:
             return False
         self.deque.popleft()
         return True
-        
 
     def Front(self) -> int:
         if not self.deque:
             return -1
         return self.deque[0]
-        
 
     def Rear(self) -> int:
         if not self.deque:
@@ -36,7 +35,6 @@ class MyCircularQueue:
 
     def isFull(self) -> bool:
         return len(self.deque) == self.max_size
-        
 
 
 # Your MyCircularQueue object will be instantiated and called as such:

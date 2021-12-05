@@ -3,25 +3,25 @@
 from collections import defaultdict
 from random import choice
 
-class RandomizedCollection:
 
+class RandomizedCollection:
     def __init__(self):
         self.val2idx = defaultdict(set)
         self.list = []
 
     def insert(self, val):
-        res = (val not in self.val2idx.keys())
+        res = val not in self.val2idx.keys()
         idx = len(self.list)
         self.val2idx[val].add(idx)
         self.list.append(val)
         return res
-        
+
     def remove(self, val):
         if len(self.val2idx[val]) > 0:
             last_item = self.list[-1]
             rm_idx = self.val2idx[val].pop()
             self.val2idx[last_item].add(rm_idx)
-            self.val2idx[last_item].remove(len(self.list)-1)
+            self.val2idx[last_item].remove(len(self.list) - 1)
             self.list[rm_idx] = last_item
             self.list.pop()
             return True

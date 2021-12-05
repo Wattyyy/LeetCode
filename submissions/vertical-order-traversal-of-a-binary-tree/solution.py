@@ -7,6 +7,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def verticalTraversal(self, root: TreeNode) -> List[List[int]]:
         node_list = []

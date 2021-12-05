@@ -7,6 +7,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def add(self, node, val):
         if node.val < val:
@@ -19,7 +20,7 @@ class Solution:
                 node.left = TreeNode(val)
             else:
                 self.add(node.left, val)
-        
+
     def bstFromPreorder(self, preorder):
         root = TreeNode(preorder[0])
         for i, v in enumerate(preorder):
@@ -27,5 +28,3 @@ class Solution:
                 continue
             self.add(root, v)
         return root
-
-        

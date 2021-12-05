@@ -1,11 +1,13 @@
 # https://leetcode.com/problems/count-largest-group
 
 from collections import defaultdict
+
+
 class Solution:
     def countLargestGroup(self, n: int) -> int:
         sum2group = defaultdict(list)
         max_size = 0
-        for num in range(1, n+1):
+        for num in range(1, n + 1):
             str_num = str(num)
             sum_val = 0
             for sn in str_num:
@@ -18,4 +20,3 @@ class Solution:
             if len(sum2group[key]) == max_size:
                 ans += 1
         return ans
-

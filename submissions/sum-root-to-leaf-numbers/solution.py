@@ -18,12 +18,9 @@ class Solution:
             self.traverse(node.left, val)
         if node.right:
             self.traverse(node.right, val)
-        
+
     def sumNumbers(self, root):
         if not root:
             return 0
         self.traverse(root, 0)
         return self.ans
-
-        
-        

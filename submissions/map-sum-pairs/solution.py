@@ -2,16 +2,17 @@
 
 from collections import defaultdict, deque
 
+
 class TrieNode:
     def __init__(self):
         self.childrendic = defaultdict(TrieNode)
         self.val = 0
 
-        
+
 class MapSum:
     def __init__(self):
         self.root = TrieNode()
-        
+
     def insert(self, key, val):
         cur = self.root
         for char in key:
@@ -36,8 +37,6 @@ class MapSum:
                 for key in node.childrendic.keys():
                     queue.append(node.childrendic[key])
         return res
-        
-        
 
 
 # Your MapSum object will be instantiated and called as such:

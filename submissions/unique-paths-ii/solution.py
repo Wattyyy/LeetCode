@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/unique-paths-ii
 
+
 class Solution:
     def uniquePathsWithObstacles(self, obstacleGrid: List[List[int]]) -> int:
         R, C = len(obstacleGrid), len(obstacleGrid[0])
@@ -11,9 +12,7 @@ class Solution:
                 if (r == c == 0) or (obstacleGrid[r][c] == 1):
                     continue
                 if 0 <= r - 1:
-                    dp[r][c] += dp[r-1][c]
+                    dp[r][c] += dp[r - 1][c]
                 if 0 <= c - 1:
-                    dp[r][c] += dp[r][c-1]
+                    dp[r][c] += dp[r][c - 1]
         return dp[-1][-1]
-        
-        

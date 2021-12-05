@@ -5,11 +5,12 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def backtrack(self, node) -> None:
-        '''
+        """
         convert node value into sum
-        '''
+        """
         if not node.left and not node.right:
             return
         if node.left:
@@ -19,7 +20,7 @@ class Solution:
             self.backtrack(node.right)
             node.val += node.right.val
         return
-    
+
     def solve(self, root, node) -> None:
         self.ans = max((root.val - node.val) * node.val, self.ans)
         if node.left:
@@ -27,8 +28,7 @@ class Solution:
         if node.right:
             self.solve(root, node.right)
         return
-            
-            
+
     def maxProduct(self, root: Optional[TreeNode]) -> int:
         self.ans = 0
         self.backtrack(root)
@@ -37,5 +37,3 @@ class Solution:
         if root.right:
             self.solve(root, root.right)
         return self.ans % (10 ** 9 + 7)
-        
-        

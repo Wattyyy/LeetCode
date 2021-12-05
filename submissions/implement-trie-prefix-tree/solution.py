@@ -2,10 +2,12 @@
 
 from collections import defaultdict
 
+
 class TrieNode:
     def __init__(self):
         self.nexts = defaultdict(TrieNode)
         self.is_word = False
+
 
 class Trie:
     def __init__(self):
@@ -18,8 +20,7 @@ class Trie:
                 cur.nexts[char] = TrieNode()
             cur = cur.nexts[char]
         cur.is_word = True
-        
-        
+
     def search(self, word):
         cur = self.root
         for char in word:
@@ -27,8 +28,7 @@ class Trie:
                 return False
             cur = cur.nexts[char]
         return cur.is_word
-      
-        
+
     def startsWith(self, prefix):
         cur = self.root
         for char in prefix:
@@ -36,7 +36,6 @@ class Trie:
                 return False
             cur = cur.nexts[char]
         return True
-        
 
 
 # Your Trie object will be instantiated and called as such:

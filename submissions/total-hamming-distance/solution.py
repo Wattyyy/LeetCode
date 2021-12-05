@@ -1,10 +1,12 @@
 # https://leetcode.com/problems/total-hamming-distance
 
 from collections import Counter
+
+
 class Solution:
     def __init__(self):
         self.count = Counter()
-        
+
     def bitcount(self, num):
         cnt = 0
         while num:
@@ -23,5 +25,3 @@ class Solution:
         for key in self.count:
             res += (N - self.count[key]) * self.count[key]
         return res
-
-        

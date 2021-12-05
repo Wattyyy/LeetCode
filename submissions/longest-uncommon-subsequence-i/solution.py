@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/longest-uncommon-subsequence-i
 
+
 class Solution:
     def findLUSlength(self, a: str, b: str) -> int:
         if len(a) != len(b):
@@ -9,4 +10,3 @@ class Solution:
                 return -1
             else:
                 return len(a)
-            

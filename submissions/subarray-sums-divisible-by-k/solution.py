@@ -3,6 +3,7 @@
 from collections import defaultdict
 from bisect import bisect_right
 
+
 class Solution:
     def subarraysDivByK(self, A, K):
         cum_mod_sum = [0]
@@ -27,10 +28,5 @@ class Solution:
             elif mod < 0 and mod + K in mod2idx:
                 res = bisect_right(mod2idx[mod + K], idx)
                 ans += len(mod2idx[mod + K]) - res
-                
+
         return ans
-
-
-
-            
-        

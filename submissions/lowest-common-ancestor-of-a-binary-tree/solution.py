@@ -3,6 +3,7 @@
 # Definition for a binary tree node.
 from typing import List
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -14,8 +15,8 @@ class Solution:
     def __init__(self):
         self.p_list = None
         self.q_list = None
-        
-    def search(self, node: TreeNode, target: TreeNode , ls: List, flag: bool) -> List:
+
+    def search(self, node: TreeNode, target: TreeNode, ls: List, flag: bool) -> List:
         ls.append(node)
         if node.val == target.val:
             if flag:
@@ -30,16 +31,15 @@ class Solution:
                 self.search(node.right, target, ls, flag)
                 ls.pop()
 
-            
-        
-    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+    def lowestCommonAncestor(
+        self, root: TreeNode, p: TreeNode, q: TreeNode
+    ) -> TreeNode:
         self.search(root, p, [], True)
         self.search(root, q, [], False)
         ans = self.p_list[0]
-        for i in range( min(len(self.p_list), len(self.q_list)) ):
+        for i in range(min(len(self.p_list), len(self.q_list))):
             if self.p_list[i].val == self.q_list[i].val:
                 ans = self.p_list[i]
             else:
                 break
-        return ans        
-        
+        return ans

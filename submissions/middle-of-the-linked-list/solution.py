@@ -8,6 +8,8 @@
 
 from math import ceil
 from collections import defaultdict
+
+
 class Solution:
     def middleNode(self, head):
         cur = head
@@ -23,5 +25,3 @@ class Solution:
         else:
             key = cnt // 2
             return d[key]
-            
-        

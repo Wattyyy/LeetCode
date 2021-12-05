@@ -7,6 +7,7 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def __init__(self):
         self.nums = list()
@@ -23,5 +24,4 @@ class Solution:
             return 0
         self.traverse(root)
         self.nums = sorted(self.nums)
-        return self.nums[k-1]
-        
+        return self.nums[k - 1]

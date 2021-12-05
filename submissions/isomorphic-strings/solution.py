@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/isomorphic-strings
 
+
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         mapping = {}
@@ -14,6 +15,3 @@ class Solution:
             elif mapping[s_char] != t_char:
                 return False
         return True
-                
-                
-        

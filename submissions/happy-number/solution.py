@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/happy-number
 
+
 class Solution:
     def isHappy(self, n):
         appear = set([n])

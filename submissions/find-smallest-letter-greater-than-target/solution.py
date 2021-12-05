@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/find-smallest-letter-greater-than-target
 
+
 class Solution:
     def nextGreatestLetter(self, letters, target):
         N = len(letters)
@@ -10,11 +11,7 @@ class Solution:
                 l = mid + 1
             else:
                 r = mid
-        if l==N:
+        if l == N:
             return letters[0]
         else:
             return letters[l]
-        
-        
-        
-        

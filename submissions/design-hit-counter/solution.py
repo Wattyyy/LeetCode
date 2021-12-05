@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/design-hit-counter
 
 from bisect import bisect_right
-class HitCounter:
 
+
+class HitCounter:
     def __init__(self):
         """
         Initialize your data structure here.

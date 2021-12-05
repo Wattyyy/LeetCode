@@ -10,6 +10,8 @@ class Node:
         self.next = next
 """
 from collections import deque
+
+
 class Solution:
     def connect(self, root):
         if not root:
@@ -21,16 +23,10 @@ class Solution:
                 if i == len(queue) - 1:
                     node.next = None
                 else:
-                    node.next = queue[i+1]
+                    node.next = queue[i + 1]
                 if node.left:
                     tmp.append(node.left)
                 if node.right:
                     tmp.append(node.right)
             queue = tmp
         return root
-            
-                    
-                    
-                
-        
-        

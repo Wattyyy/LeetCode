@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/counting-elements
 
 from collections import Counter
+
+
 class Solution:
     def countElements(self, arr):
         st = set(arr)
@@ -9,4 +11,3 @@ class Solution:
             if num + 1 in st:
                 res += 1
         return res
-            

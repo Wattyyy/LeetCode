@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/find-the-shortest-superstring
 
+
 class Solution(object):
     def shortestSuperstring(self, A):
         N = len(A)
@@ -16,15 +17,16 @@ class Solution(object):
                         break
 
         # dp[mask][i] = most overlap with mask, ending with ith element
-        dp = [[0 for _ in range(N)] for __ in range(1<<N)]
-        parent = [[None for _ in range(N)] for __ in range(1<<N)]
+        dp = [[0 for _ in range(N)] for __ in range(1 << N)]
+        parent = [[None for _ in range(N)] for __ in range(1 << N)]
         for mask in range(1, 1 << N):
             for bit in range(N):
                 if (mask >> bit) & 1:
                     # Let's try to find dp[mask][bit].  Previously, we had
                     # a collection of items represented by pmask.
                     pmask = mask ^ (1 << bit)
-                    if pmask == 0: continue
+                    if pmask == 0:
+                        continue
                     for i in range(N):
                         if (pmask >> i) & 1:
                             # For each bit i in pmask, calculate the value
@@ -39,11 +41,11 @@ class Solution(object):
 
         # Follow parents down backwards path that retains maximum overlap
         perm = []
-        mask = (1<<N) - 1
-        i = max(range(N), key = dp[-1].__getitem__)
+        mask = (1 << N) - 1
+        i = max(range(N), key=dp[-1].__getitem__)
         while i is not None:
             perm.append(i)
-            mask, i = mask ^ (1<<i), parent[mask][i]
+            mask, i = mask ^ (1 << i), parent[mask][i]
 
         # Reverse path to get forwards direction; add all remaining words
         perm = perm[::-1]
@@ -55,7 +57,7 @@ class Solution(object):
         # Reconstruct answer given perm = word indices in left to right order
         ans = [A[perm[0]]]
         for i in range(1, len(perm)):
-            overlap = graph[perm[i-1]][perm[i]]
+            overlap = graph[perm[i - 1]][perm[i]]
             ans.append(A[perm[i]][overlap:])
 
         return "".join(ans)

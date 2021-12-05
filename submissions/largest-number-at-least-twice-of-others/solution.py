@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/largest-number-at-least-twice-of-others
 
+
 class Solution:
     def dominantIndex(self, nums):
-        if len(nums)==1:
+        if len(nums) == 1:
             return 0
         first, second = (-1, -1), (-2, -2)
         for i in range(len(nums)):
@@ -13,9 +14,7 @@ class Solution:
                 second = (nums[i], i)
             else:
                 continue
-        if second[0]*2 <= first[0]:
+        if second[0] * 2 <= first[0]:
             return first[1]
         else:
             return -1
-        
-        

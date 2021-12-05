@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/merge-intervals
 
+
 class Solution:
     def merge(self, intervals):
         N = len(intervals)
-        if N==0:
+        if N == 0:
             return []
         intervals = sorted(intervals)
         ans = []

@@ -21,5 +21,3 @@ class Solution:
                 cur = cur.next
                 prev = prev.next
         return head
-                
-        

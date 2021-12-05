@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/minimum-cost-to-connect-sticks
 
 import heapq
+
+
 class Solution:
     def connectSticks(self, sticks):
         heapq.heapify(sticks)

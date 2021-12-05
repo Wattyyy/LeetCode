@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/count-primes
 
+
 class Solution:
     def countPrimes(self, n: int) -> int:
         arr = [True] * (n + 1)

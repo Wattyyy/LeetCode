@@ -2,6 +2,8 @@
 
 from bisect import bisect_left
 from math import log
+
+
 class Solution:
     def numSubarrayProductLessThanK(self, nums, k):
         if k == 0:
@@ -14,4 +16,4 @@ class Solution:
             target = log(k) + val
             idx = bisect_left(prefix, target)
             ans += max(0, idx - i - 1)
-        return ans 
+        return ans

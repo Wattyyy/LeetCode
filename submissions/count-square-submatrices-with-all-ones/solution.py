@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/count-square-submatrices-with-all-ones
 
+
 class Solution:
     def countSquares(self, matrix):
         R, C = len(matrix), len(matrix[0])
@@ -10,8 +11,6 @@ class Solution:
                 if r == 0 or c == 0:
                     dp[r][c] = matrix[r][c]
                 elif matrix[r][c] == 1:
-                    dp[r][c] = min(dp[r-1][c], dp[r][c-1], dp[r-1][c-1]) + 1
+                    dp[r][c] = min(dp[r - 1][c], dp[r][c - 1], dp[r - 1][c - 1]) + 1
                 ans += dp[r][c]
         return ans
-
-                     

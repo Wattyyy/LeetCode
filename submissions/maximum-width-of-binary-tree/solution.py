@@ -8,6 +8,8 @@
 #         self.right = right
 
 from collections import deque
+
+
 class Solution:
     def widthOfBinaryTree(self, root):
         if not root:
@@ -15,7 +17,7 @@ class Solution:
         ans = 1
         queue = deque([(root, 0)])
         while queue:
-            min_val, max_val = float('inf'), -float('inf')
+            min_val, max_val = float("inf"), -float("inf")
             nx = deque([])
             for node, index in queue:
                 if node.left:
@@ -31,7 +33,3 @@ class Solution:
             ans = max(ans, max_val - min_val + 1)
             queue = nx
         return ans
-        
-        
-        
-        

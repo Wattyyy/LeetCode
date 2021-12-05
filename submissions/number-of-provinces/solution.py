@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/number-of-provinces
 
-class UnionFind():
+
+class UnionFind:
     def __init__(self, N):
-        self.node2par = {i:i for i in range(N)}
-        self.rank = {i:0 for i in range(N)}
+        self.node2par = {i: i for i in range(N)}
+        self.rank = {i: 0 for i in range(N)}
         self.count = N
 
     def find_par(self, x):
@@ -34,5 +35,3 @@ class Solution:
                     continue
                 uf.unite(u, v)
         return uf.count
-
-                     

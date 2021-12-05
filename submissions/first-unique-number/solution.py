@@ -2,6 +2,7 @@
 
 from collections import OrderedDict
 
+
 class FirstUnique:
     def __init__(self, nums):
         self.duplicates = set()
@@ -14,13 +15,13 @@ class FirstUnique:
                 self.duplicates.add(num)
             else:
                 self.od[num] = num
-        
+
     def showFirstUnique(self):
         if not self.od.keys():
             return -1
         else:
-            res =  next(iter(self.od))
-            return res        
+            res = next(iter(self.od))
+            return res
 
     def add(self, value):
         if value in self.duplicates:
@@ -30,8 +31,6 @@ class FirstUnique:
             self.duplicates.add(value)
         else:
             self.od[value] = value
-
-        
 
 
 # Your FirstUnique object will be instantiated and called as such:

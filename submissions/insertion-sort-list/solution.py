@@ -6,6 +6,8 @@
 #         self.val = val
 #         self.next = next
 from bisect import bisect_left
+
+
 class Solution:
     def insertionSortList(self, head):
         if not head:
@@ -25,8 +27,3 @@ class Solution:
             cur.next = ListNode(v)
             cur = cur.next
         return res
-            
-        
-        
-        
-        

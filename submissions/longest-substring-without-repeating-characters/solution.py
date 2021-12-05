@@ -4,6 +4,7 @@
 
 from collections import defaultdict
 
+
 class Solution:
     def lengthOfLongestSubstring(self, s):
         N = len(s)
@@ -12,7 +13,7 @@ class Solution:
         ans = 0
         while rp < N:
             char = s[rp]
-            if freq_map[char]==0:
+            if freq_map[char] == 0:
                 freq_map[char] += 1
                 ans = max(ans, rp - lp + 1)
                 rp += 1
@@ -24,8 +25,3 @@ class Solution:
                     lp += 1
                 rp += 1
         return ans
-                    
-                    
-                    
-        
-        

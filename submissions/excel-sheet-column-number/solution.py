@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/excel-sheet-column-number
 
+
 class Solution:
     def titleToNumber(self, s):
         char2int = {chr(64 + i): i for i in range(1, 27)}

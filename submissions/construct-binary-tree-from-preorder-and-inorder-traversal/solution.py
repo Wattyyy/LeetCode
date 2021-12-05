@@ -1,17 +1,17 @@
 # https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
 
+
 class Solution:
     def buildTree(self, preorder: List[int], inorder: List[int]) -> TreeNode:
-
         def array_to_tree(left, right):
             nonlocal preorder_index
             # if there are no elements to construct the tree
-            if left > right: return None
+            if left > right:
+                return None
 
             # select the preorder_index element as the root and increment it
             root_value = preorder[preorder_index]
             root = TreeNode(root_value)
-
 
             preorder_index += 1
 

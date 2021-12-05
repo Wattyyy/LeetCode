@@ -3,6 +3,7 @@
 from typing import List
 from collections import defaultdict, deque
 
+
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         if len(rooms) == 1:
@@ -21,8 +22,3 @@ class Solution:
                     queue.append(nv)
 
         return len(visited) == len(rooms)
-
-
-
-
-            

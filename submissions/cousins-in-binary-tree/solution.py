@@ -8,6 +8,8 @@
 #         self.right = right
 
 from collections import defaultdict
+
+
 class Solution:
     def search(self, cur, target, parent, depth):
         if cur.val == target:
@@ -15,11 +17,10 @@ class Solution:
             return
         else:
             if cur.left is not None:
-                self.search(cur.left, target, cur, depth+1)
+                self.search(cur.left, target, cur, depth + 1)
             if cur.right is not None:
-                self.search(cur.right, target, cur, depth+1)
-            
-            
+                self.search(cur.right, target, cur, depth + 1)
+
     def isCousins(self, root, x, y):
         # x -> [parent, depth]
         # y -> [parent, depth]
@@ -27,8 +28,3 @@ class Solution:
         self.search(root, x, root, 0)
         self.search(root, y, root, 0)
         return (self.d[x][0] != self.d[y][0]) and (self.d[x][1] == self.d[y][1])
-        
-        
-        
-        
-        

@@ -8,6 +8,8 @@ class Node:
         self.children = children
 """
 from collections import deque
+
+
 class Solution:
     def postorder(self, root):
         if not root:
@@ -20,9 +22,5 @@ class Solution:
             if node.children:
                 for child in node.children:
                     st.append(child)
-        
+
         return ans[::-1]
-        
-        
-                
-        

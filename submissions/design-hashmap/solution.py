@@ -1,13 +1,12 @@
 # https://leetcode.com/problems/design-hashmap
 
-class MyHashMap:
 
+class MyHashMap:
     def __init__(self):
         """
         Initialize your data structure here.
         """
-        self.keys = [-1] * 1000001 
-        
+        self.keys = [-1] * 1000001
 
     def put(self, key: int, value: int) -> None:
         """
@@ -15,14 +14,12 @@ class MyHashMap:
         """
         self.keys[key] = value
         return
-        
 
     def get(self, key: int) -> int:
         """
         Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key
         """
         return self.keys[key]
-        
 
     def remove(self, key: int) -> None:
         """
@@ -30,7 +27,6 @@ class MyHashMap:
         """
         self.keys[key] = -1
         return
-        
 
 
 # Your MyHashMap object will be instantiated and called as such:

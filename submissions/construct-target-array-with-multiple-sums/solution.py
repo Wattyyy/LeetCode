@@ -3,6 +3,7 @@
 import heapq
 from typing import List
 
+
 class Solution:
     def isPossible(self, target: List[int]) -> bool:
         if len(target) == 1:
@@ -11,14 +12,13 @@ class Solution:
         heapq.heapify(max_heap)
         max_val = -1 * heapq.heappop(max_heap)
         cur_sum = sum(target)
-        
+
         while 1 < max_val:
             cur_sum -= max_val
             if (max_val <= cur_sum) or (cur_sum == 0):
-                return False 
+                return False
             val = max_val % cur_sum
             cur_sum += val
             heapq.heappush(max_heap, -val)
             max_val = -1 * heapq.heappop(max_heap)
         return True
-  

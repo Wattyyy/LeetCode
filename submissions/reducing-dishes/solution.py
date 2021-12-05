@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/reducing-dishes
 
+
 class Solution:
     def maxSatisfaction(self, satisfaction):
         N = len(satisfaction)
@@ -7,7 +8,7 @@ class Solution:
         res = 0
         for i, v in enumerate(satisfaction):
             res += v * (i + 1)
-        
+
         start = 1
         while satisfaction:
             tmp = 0
@@ -21,4 +22,3 @@ class Solution:
             else:
                 break
         return res
-

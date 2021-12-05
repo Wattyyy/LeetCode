@@ -7,6 +7,8 @@
 #         self.left = left
 #         self.right = right
 from collections import deque
+
+
 class Solution:
     def zigzagLevelOrder(self, root):
         if not root:
@@ -33,8 +35,3 @@ class Solution:
             queue = nx
             direction *= -1
         return ans
-            
-                
-
-
-        

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/two-sum
 
 from collections import defaultdict
+
+
 class Solution:
     def twoSum(self, nums, target):
         v2i = defaultdict(list)
@@ -12,5 +14,3 @@ class Solution:
                 for idx in v2i[nums[i]]:
                     if idx != i:
                         return sorted([i, idx])
-
-        

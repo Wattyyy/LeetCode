@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/element-appearing-more-than-25-in-sorted-array
 
 from collections import defaultdict
+
+
 class Solution:
     def findSpecialInteger(self, arr):
         cnt_dic = defaultdict(int)
@@ -9,6 +11,3 @@ class Solution:
         for k, v in cnt_dic.items():
             if v / len(arr) > 0.25:
                 return k
-            
-        
-        

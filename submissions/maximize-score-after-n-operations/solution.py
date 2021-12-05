@@ -3,7 +3,9 @@
 from itertools import combinations
 from math import gcd
 import sys
+
 sys.setrecursionlimit(10 ** 6)
+
 
 class Solution:
     def maxScore(self, nums):
@@ -17,13 +19,17 @@ class Solution:
             if bitmask == 0:
                 return 0
             idx_list = [idx for idx in range(N) if (bitmask & (1 << idx))]
-            ret = -float('INF')
+            ret = -float("INF")
             for i, j in combinations(idx_list, 2):
                 if bitmask & (1 << i) and bitmask & (1 << j):
                     new_bitmask = bitmask ^ (1 << i) ^ (1 << j)
-                    ret = max( ret, rec(new_bitmask) + gcds[(i, j)] * (1 + (N - len(idx_list)) // 2) )
+                    ret = max(
+                        ret,
+                        rec(new_bitmask)
+                        + gcds[(i, j)] * (1 + (N - len(idx_list)) // 2),
+                    )
             dp[bitmask] = ret
             return ret
-        
+
         res = rec(2 ** N - 1)
         return res

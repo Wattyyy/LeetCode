@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 class Solution(object):
     def invalidTransactions(self, transactions):
         if not transactions:
@@ -26,4 +27,4 @@ class Solution(object):
                     transaction = [name] + item[:-1]
                     string = ",".join(transaction)
                     ans.append(string)
-        return ans       
+        return ans

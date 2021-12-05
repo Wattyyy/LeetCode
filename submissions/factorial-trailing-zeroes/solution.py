@@ -8,6 +8,3 @@ class Solution:
             ans += n // (5 ** p)
             p += 1
         return ans
-        
-        
-        

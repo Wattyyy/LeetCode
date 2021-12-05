@@ -6,6 +6,7 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 class Solution:
     def oddEvenList(self, head):
         if not head:
@@ -24,7 +25,6 @@ class Solution:
                 break
             even.next = odd.next
             even = even.next
-            
+
         odd.next = even_tail
         return head
-        

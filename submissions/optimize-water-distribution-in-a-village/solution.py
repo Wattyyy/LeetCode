@@ -3,10 +3,11 @@
 from collections import defaultdict
 import heapq
 
-class UnionFind():
+
+class UnionFind:
     def __init__(self, N):
-        self.node2par = {i:i for i in range(N)}
-        self.rank = {i:0 for i in range(N)}
+        self.node2par = {i: i for i in range(N)}
+        self.rank = {i: 0 for i in range(N)}
         self.count = N
 
     def find_par(self, x):
@@ -30,14 +31,14 @@ class UnionFind():
 class Solution:
     def minCostToSupplyWater(self, n, wells, pipes):
         graph = defaultdict(list)
-        uf = UnionFind(n+1)
+        uf = UnionFind(n + 1)
         min_heap = []
         heapq.heapify(min_heap)
         for i, w in enumerate(wells):
-            heapq.heappush(min_heap, (w, 0, i+1))
+            heapq.heappush(min_heap, (w, 0, i + 1))
         for u, v, w in pipes:
             heapq.heappush(min_heap, (w, u, v))
-        
+
         ans = 0
         while 1 < uf.count and min_heap:
             w, u, v = heapq.heappop(min_heap)
@@ -45,8 +46,3 @@ class Solution:
                 uf.unite(u, v)
                 ans += w
         return ans
-
-
-
-
-        

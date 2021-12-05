@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/minimum-size-subarray-sum
 
+
 class Solution:
     def minSubArrayLen(self, s, nums):
         if not nums:
@@ -15,10 +16,10 @@ class Solution:
                 else:
                     break
             else:
-                ans = min(ans, rp-lp+1)
+                ans = min(ans, rp - lp + 1)
                 cur_sum -= nums[lp]
                 lp += 1
-        
+
         if ans == len(nums) + 1:
             return 0
         else:

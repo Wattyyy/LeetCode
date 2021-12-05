@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters
 
 from collections import Counter
+
+
 class Solution:
     def lengthOfLongestSubstringKDistinct(self, s: str, k: int) -> int:
         if not s or k == 0:

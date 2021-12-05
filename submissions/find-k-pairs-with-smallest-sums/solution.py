@@ -2,6 +2,8 @@
 
 from bisect import bisect_left
 import heapq
+
+
 class Solution:
     def kSmallestPairs(self, nums1, nums2, k):
         min_heap = []

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/hand-of-straights
 
 from collections import OrderedDict
+
+
 class Solution:
     def isNStraightHand(self, hand, W):
         if len(hand) % W != 0:
@@ -15,12 +17,12 @@ class Solution:
         tmp = []
         while od:
             if not tmp:
-                key =  next(iter(od))
+                key = next(iter(od))
                 tmp.append(key)
                 od[key] -= 1
             else:
                 key = tmp[-1] + 1
-                if key not in od: 
+                if key not in od:
                     return False
                 tmp.append(key)
                 od[key] -= 1
@@ -29,7 +31,5 @@ class Solution:
             if len(tmp) == W:
                 arranged.append(tmp)
                 tmp = []
-                
-        return True
 
-            
+        return True

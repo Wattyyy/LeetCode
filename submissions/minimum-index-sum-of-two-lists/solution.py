@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/minimum-index-sum-of-two-lists
 
 from collections import defaultdict
+
+
 class Solution:
     def findRestaurant(self, list1, list2):
         andy = defaultdict(int)
@@ -13,13 +15,11 @@ class Solution:
         for name in andy.keys():
             if name in doris:
                 dist[name] = andy[name] + doris[name]
-        
+
         ans = []
-        min_key, min_val = min(dist.items(), key=lambda x: x[1]) 
+        min_key, min_val = min(dist.items(), key=lambda x: x[1])
         ans.append(min_key)
         for name in dist.keys():
             if (name != min_key) and (dist[name] == min_val):
                 ans.append(name)
         return ans
-            
-

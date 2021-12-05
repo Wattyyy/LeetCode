@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/remove-all-adjacent-duplicates-in-string
 
+
 class Solution:
     def removeDuplicates(self, s: str) -> str:
         stack = []
@@ -8,4 +9,4 @@ class Solution:
                 stack.pop()
             else:
                 stack.append(char)
-        return ''.join(stack)
+        return "".join(stack)

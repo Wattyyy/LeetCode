@@ -1,11 +1,12 @@
 # https://leetcode.com/problems/tree-diameter
 
 from collections import defaultdict
+
+
 class Solution:
     def __init__(self):
         self.max_dist = 0
         self.max_dist_node = -1
-
 
     def calc_diameter(self, node, visited, dist):
         flag = False
@@ -17,14 +18,13 @@ class Solution:
             for nx_node in self.graph[node]:
                 if nx_node not in visited:
                     visited.add(nx_node)
-                    self.calc_diameter(nx_node, visited, dist+1)
+                    self.calc_diameter(nx_node, visited, dist + 1)
                     visited.remove(nx_node)
         else:
             if self.max_dist <= dist:
                 self.max_dist = dist
                 self.max_dist_node = node
-                return 
-
+                return
 
     def treeDiameter(self, edges):
         if len(edges) == 0:
@@ -39,8 +39,3 @@ class Solution:
         self.max_dist = 0
         self.calc_diameter(node=farthest_node, visited=set([farthest_node]), dist=0)
         return self.max_dist
-        
-
-        
-
-        

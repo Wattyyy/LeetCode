@@ -6,7 +6,10 @@ class ListNode:
         self.val = x
         self.next = None
 
+
 from collections import deque
+
+
 class Solution:
     def addTwoNumbers(self, l1, l2):
         if not l1 and not l2:
@@ -20,7 +23,7 @@ class Solution:
         while cur2:
             st2.append(cur2.val)
             cur2 = cur2.next
-        
+
         add_one = False
         sum_ls = deque([])
         while st1 or st2:
@@ -39,7 +42,7 @@ class Solution:
             else:
                 add_one = False
             sum_ls.appendleft(val % 10)
-        
+
         if add_one:
             sum_ls.appendleft(1)
         head = ListNode(sum_ls[0])
@@ -48,13 +51,3 @@ class Solution:
             cur.next = ListNode(sum_ls[i])
             cur = cur.next
         return head
-
-
-
-            
-                
-
-            
-        
-        
-        

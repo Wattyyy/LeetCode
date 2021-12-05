@@ -1,8 +1,9 @@
 # https://leetcode.com/problems/insert-delete-getrandom-o1
 
 from random import choice
-class RandomizedSet:
 
+
+class RandomizedSet:
     def __init__(self):
         self.val2idx = {}
         self.list = []
@@ -15,7 +16,6 @@ class RandomizedSet:
             return True
         else:
             return False
-        
 
     def remove(self, val):
         if val in self.val2idx.keys():
@@ -31,10 +31,8 @@ class RandomizedSet:
         else:
             return False
 
-
     def getRandom(self):
         return choice(self.list)
-        
 
 
 # Your RandomizedSet object will be instantiated and called as such:

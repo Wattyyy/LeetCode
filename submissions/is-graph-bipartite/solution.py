@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/is-graph-bipartite
 
-class UnionFind():
+
+class UnionFind:
     def __init__(self, N):
-        self.node2par = {i:i for i in range(N)}
-        self.rank = {i:0 for i in range(N)}
+        self.node2par = {i: i for i in range(N)}
+        self.rank = {i: 0 for i in range(N)}
         self.count = N
 
     def find_par(self, x):
@@ -23,6 +24,7 @@ class UnionFind():
             self.rank[x] += 1
         self.count -= 1
 
+
 class Solution:
     def isBipartite(self, graph):
         if graph == [[]]:
@@ -33,6 +35,6 @@ class Solution:
                 if uf.find_par(i) == uf.find_par(j):
                     return False
             for j in range(len(nodes)):
-                for k in range(j+1, len(nodes)):
+                for k in range(j + 1, len(nodes)):
                     uf.unite(nodes[j], nodes[k])
         return 1 < uf.count

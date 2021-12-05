@@ -1,10 +1,10 @@
 # https://leetcode.com/problems/find-and-replace-in-string
 
+
 class Solution:
     def is_src_valid(self, S, src, idx):
         length = len(src)
-        return S[idx:idx+length] == src
-        
+        return S[idx : idx + length] == src
 
     def findReplaceString(self, S, indexes, sources, targets):
         idx2source = {}

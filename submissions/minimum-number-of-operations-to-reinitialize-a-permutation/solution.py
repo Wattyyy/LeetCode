@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/minimum-number-of-operations-to-reinitialize-a-permutation
 
 from collections import defaultdict
+
+
 class Solution:
     def reinitializePermutation(self, n: int) -> int:
         ls = [i for i in range(n)]
@@ -21,6 +23,3 @@ class Solution:
                 return cnt
             else:
                 ls = new
-
-
-            

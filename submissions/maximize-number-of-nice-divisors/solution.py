@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/maximize-number-of-nice-divisors
 
+
 class Solution:
     def maxprod(self, n):
         MOD = 10 ** 9 + 7
@@ -23,4 +24,3 @@ class Solution:
     def maxNiceDivisors(self, primeFactors: int) -> int:
         res = self.maxprod(primeFactors)
         return res
-   

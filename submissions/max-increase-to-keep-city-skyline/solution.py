@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/max-increase-to-keep-city-skyline
 
+
 class Solution:
     def maxIncreaseKeepingSkyline(self, grid):
         if not grid:
@@ -15,5 +16,5 @@ class Solution:
         for r in range(R):
             for c in range(C):
                 ans += min(r_max[r], c_max[c]) - grid[r][c]
-        
+
         return ans

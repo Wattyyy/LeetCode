@@ -2,8 +2,8 @@
 
 from collections import defaultdict
 
-class Logger:
 
+class Logger:
     def __init__(self):
         self.m2t = defaultdict(int)
 
@@ -12,15 +12,13 @@ class Logger:
             self.m2t[message] = timestamp
             return True
         else:
-            if (self.m2t[message] <= timestamp - 10):
+            if self.m2t[message] <= timestamp - 10:
                 self.m2t[message] = timestamp
                 return True
             else:
                 return False
-            
-            return (self.m2t[message] < timestamp - 10)
-                
-        
+
+            return self.m2t[message] < timestamp - 10
 
 
 # Your Logger object will be instantiated and called as such:

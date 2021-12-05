@@ -7,6 +7,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def __init__(self):
         self.ans = []
@@ -27,11 +28,9 @@ class Solution:
             self.backtrack(node.right, sum, val, ls)
             val -= node.right.val
             ls.pop()
-        
 
     def pathSum(self, root, sum):
-        if not root: 
+        if not root:
             return self.ans
         self.backtrack(root, sum, root.val, [root.val])
         return self.ans
-        

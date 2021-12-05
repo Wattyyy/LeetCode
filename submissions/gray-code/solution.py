@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/gray-code
 
+
 class Solution:
     def grayCode(self, n: int) -> List[int]:
         res = [0, 1]
@@ -10,7 +11,3 @@ class Solution:
                 new.append(add + res[i])
             res = new
         return res
-            
-            
-        
-        

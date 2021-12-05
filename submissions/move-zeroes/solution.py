@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/move-zeroes
 
+
 class Solution:
     def moveZeroes(self, nums):
         zeroes = []
@@ -10,4 +11,3 @@ class Solution:
                 zero_idx = zeroes.pop(0)
                 nums[i], nums[zero_idx] = nums[zero_idx], nums[i]
                 zeroes.append(i)
-     

@@ -2,16 +2,18 @@
 
 from collections import defaultdict
 
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
+
 class Solution:
     def __init__(self):
         self.graph = defaultdict(list)
-    
+
     def create_graph(self, node, prev):
         if prev:
             self.graph[node.val].append(prev.val)
@@ -23,7 +25,6 @@ class Solution:
         if node.right:
             self.graph[node.val].append(node.right.val)
             self.create_graph(node.right, node)
-
 
     def distanceK(self, root, target, K):
         self.create_graph(root, None)
@@ -37,12 +38,5 @@ class Solution:
             visited.add(node_val)
             for next_node_val in self.graph[node_val]:
                 if next_node_val not in visited:
-                    nx_nodes.append((next_node_val, dist+1))
+                    nx_nodes.append((next_node_val, dist + 1))
         return res
-
-
-
-
-
-        
-        

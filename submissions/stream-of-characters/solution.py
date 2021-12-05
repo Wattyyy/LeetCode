@@ -2,13 +2,15 @@
 
 from collections import defaultdict, deque
 
+
 class TrieNode:
     __slots__ = ["children_dic", "is_word"]
+
     def __init__(self):
         self.children_dic = defaultdict(TrieNode)
         self.is_word = False
-        
-        
+
+
 class StreamChecker:
     def __init__(self, words):
         self.root = TrieNode()
@@ -20,7 +22,7 @@ class StreamChecker:
                     cur.children_dic[char] = TrieNode()
                 cur = cur.children_dic[char]
             cur.is_word = True
-        
+
     def query(self, letter):
         self.stack.append(letter)
         cur = self.root
@@ -33,9 +35,7 @@ class StreamChecker:
                 cur = cur.children_dic[char]
                 if cur.is_word:
                     return True
-        
-            
-            
+
 
 # Your StreamChecker object will be instantiated and called as such:
 # obj = StreamChecker(words)

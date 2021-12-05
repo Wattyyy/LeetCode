@@ -2,9 +2,10 @@
 
 from collections import defaultdict, deque
 
+
 class Solution:
     def topological_sort(self, graph):
-        in_order = {key:0 for key in graph}
+        in_order = {key: 0 for key in graph}
         for key1 in graph:
             for key2 in graph[key1]:
                 in_order[key2] += 1
@@ -24,7 +25,6 @@ class Solution:
             cnt += 1
         return res
 
-
     def longestIncreasingPath(self, matrix):
         graph = defaultdict(list)
         R, C = len(matrix), len(matrix[0])
@@ -33,23 +33,25 @@ class Solution:
             for c in range(C):
                 graph[(r, c)] = []
                 dist[(r, c)] = -1
-                for nr, nc in [(r-1, c), (r+1, c), (r, c-1), (r, c+1)]:
-                    if (0 <= nr < R) and (0 <= nc < C) and (matrix[r][c] < matrix[nr][nc]):
+                for nr, nc in [(r - 1, c), (r + 1, c), (r, c - 1), (r, c + 1)]:
+                    if (
+                        (0 <= nr < R)
+                        and (0 <= nc < C)
+                        and (matrix[r][c] < matrix[nr][nc])
+                    ):
                         graph[(r, c)].append((nr, nc))
 
         N = len(graph)
         order = self.topological_sort(graph)
+
         def dfs(key, cnt):
             if cnt <= dist[key]:
                 return
             dist[key] = cnt
             for next_key in graph[key]:
-                dfs(next_key, cnt+1)
-        
+                dfs(next_key, cnt + 1)
+
         for key in order:
             dfs(key, 0)
-        
+
         return max(dist.values()) + 1
-
-
-                

@@ -1,12 +1,12 @@
 # https://leetcode.com/problems/lru-cache
 
 from collections import OrderedDict
-class LRUCache:
 
+
+class LRUCache:
     def __init__(self, capacity):
         self.od = OrderedDict()
         self.capa = capacity
-        
 
     def get(self, key):
         if key not in self.od:
@@ -19,14 +19,12 @@ class LRUCache:
         if key in self.od:
             self.od[key] = value
             self.od.move_to_end(key)
-            return 
+            return
         if len(self.od) == self.capa:
             self.od.popitem(last=False)
             self.od[key] = value
         else:
             self.od[key] = value
-        
-        
 
 
 # Your LRUCache object will be instantiated and called as such:

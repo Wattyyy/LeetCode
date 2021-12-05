@@ -11,8 +11,10 @@ class Node:
 """
 
 from collections import deque
+
+
 class Solution:
-    def connect(self, root: 'Node') -> 'Node':
+    def connect(self, root: "Node") -> "Node":
         if not root:
             return None
         queue = deque([root])
@@ -29,6 +31,3 @@ class Solution:
                 node.next = tmp[i + 1]
             queue = tmp
         return root
-
-        
-        

@@ -6,6 +6,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def getDecimalValue(self, head):
         bin_list = []
@@ -16,7 +17,5 @@ class Solution:
         L = len(bin_list)
         ans = 0
         for i in range(L):
-            ans += bin_list[i]*2**(L-1-i)
+            ans += bin_list[i] * 2 ** (L - 1 - i)
         return ans
-            
-        

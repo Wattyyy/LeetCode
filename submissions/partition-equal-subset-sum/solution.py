@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/partition-equal-subset-sum
 
+
 class Solution:
     def canPartition(self, nums):
         S = sum(nums)
@@ -15,10 +16,7 @@ class Solution:
                     continue
                 else:
                     if 0 <= c - nums[r]:
-                        dp[r][c] = (dp[r-1][c] or dp[r-1][c - nums[r]])
+                        dp[r][c] = dp[r - 1][c] or dp[r - 1][c - nums[r]]
                     else:
-                        dp[r][c] = dp[r-1][c]
+                        dp[r][c] = dp[r - 1][c]
         return dp[-1][-1]
-                                    
-                        
-        

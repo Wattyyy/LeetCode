@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/search-in-rotated-sorted-array
 
+
 class Solution:
     def search(self, nums, target):
         N = len(nums)
@@ -10,12 +11,11 @@ class Solution:
                 return 0
             else:
                 return -1
-            
-        
+
         def find_rot_idx(l, r):
             if nums[l] < nums[r]:
                 return 0
-            
+
             while l <= r:
                 mid = (l + r) // 2
                 if nums[mid] > nums[mid + 1]:
@@ -25,7 +25,7 @@ class Solution:
                         r = mid - 1
                     else:
                         l = mid + 1
-                
+
         def search(l, r):
             while l <= r:
                 mid = (l + r) // 2
@@ -37,11 +37,9 @@ class Solution:
                     else:
                         l = mid + 1
             return -1
-        
-        
-        
+
         rot_idx = find_rot_idx(0, N - 1)
-        
+
         if nums[rot_idx] == target:
             return rot_idx
         if rot_idx == 0:

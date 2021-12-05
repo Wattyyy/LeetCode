@@ -2,6 +2,8 @@
 
 from itertools import accumulate
 from collections import defaultdict
+
+
 class Solution:
     def checkSubarraySum(self, nums, k):
         if len(nums) <= 1:
@@ -16,7 +18,7 @@ class Solution:
                 if 1 < len(sum2idx[v]) and 1 < (sum2idx[v][-1] - sum2idx[v][0]):
                     return True
             return False
-        
+
         k = abs(k)
         cum_mod = list(accumulate(nums))
         cum_mod = [num % k for num in cum_mod]

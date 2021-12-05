@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array
 
+
 class Solution:
     def findMaximumXOR(self, nums):
         if not nums:
@@ -14,11 +15,5 @@ class Solution:
                 if num ^ cur in num_set:
                     ans = cur
                     break
-                    
+
         return ans
-        
-            
-            
-                    
-            
-        

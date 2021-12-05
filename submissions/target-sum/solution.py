@@ -4,6 +4,7 @@
 
 from collections import defaultdict
 
+
 class Solution:
     def findTargetSumWays(self, nums, S):
         dp = defaultdict(int)
@@ -18,6 +19,3 @@ class Solution:
                 new[key - num] += dp[key]
             dp = new
         return dp[S]
-
-
-        

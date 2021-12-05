@@ -21,11 +21,6 @@ class Solution:
                     next_nodes.append(node.left)
                 if node.right:
                     next_nodes.append(node.right)
-            output.append( sum(node_vals) / len(node_vals) )
+            output.append(sum(node_vals) / len(node_vals))
             nodes = next_nodes
-        return output        
-        
-
-
-
-        
+        return output

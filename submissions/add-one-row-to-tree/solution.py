@@ -7,13 +7,14 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def addOneRow(self, root: TreeNode, v: int, d: int) -> TreeNode:
         if d == 1:
             new_node = TreeNode(v)
             new_node.left = root
             return new_node
-            
+
         # BFS
         roots = [root]
         cur_depth = 2
@@ -26,20 +27,18 @@ class Solution:
                     next_roots.append(node.right)
             cur_depth += 1
             roots = next_roots
-        
-        
+
         for node in roots:
             # left
             new_node = TreeNode(v)
             if node.left:
                 new_node.left = node.left
             node.left = new_node
-            
+
             # right
             new_node = TreeNode(v)
             if node.right:
                 new_node.right = node.right
             node.right = new_node
-        
+
         return root
-            

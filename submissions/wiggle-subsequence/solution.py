@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/wiggle-subsequence
 
+
 class Solution:
     def wiggleMaxLength(self, nums):
         N = len(nums)
-        down, neutral, up = [0] * N, [1] *N, [0] * N
+        down, neutral, up = [0] * N, [1] * N, [0] * N
         for i in range(1, N):
             r_num = nums[i]
             for j in range(0, i):

@@ -3,6 +3,7 @@
 from collections import deque
 from typing import List
 
+
 class Solution:
     def removeDuplicates(self, s: str, k: int) -> str:
         stack = deque([])
@@ -14,12 +15,11 @@ class Solution:
                 stack.append((char, 1))
             else:
                 cnt = stack[-1][1]
-                stack.append((char, cnt+1))
+                stack.append((char, cnt + 1))
                 if stack[-1][1] == k:
                     for _ in range(k):
                         stack.pop()
         res = []
         for item in stack:
             res.append(item[0])
-        return ''.join(res)
-        
+        return "".join(res)

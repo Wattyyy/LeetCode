@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/bulls-and-cows
 
+
 class Solution:
     def getHint(self, secret, guess):
         s_used, g_used = set(), set()
@@ -9,10 +10,10 @@ class Solution:
                 bull += 1
                 s_used.add(idx)
                 g_used.add(idx)
-        
+
         print(s_used)
         print(g_used)
-       
+
         cow = 0
         for i, s_char in enumerate(secret):
             for j, g_char in enumerate(guess):
@@ -21,15 +22,7 @@ class Solution:
                     s_used.add(i)
                     g_used.add(j)
 
-        
         print(s_used)
         print(g_used)
-        
-        return '{}A{}B'.format(bull, cow)
-                        
 
-
-
-        
-        
-        
+        return "{}A{}B".format(bull, cow)

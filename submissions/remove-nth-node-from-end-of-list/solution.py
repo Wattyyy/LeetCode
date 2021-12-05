@@ -12,7 +12,7 @@ class Solution:
         while cur:
             size += 1
             cur = cur.next
-            
+
         target = size - n + 1
         if target == 1:
             return head.next
@@ -26,18 +26,5 @@ class Solution:
             cur = cur.next
             ptr += 1
         return head
-        
-            
-            
-            
-            
-        
-            
-            
-        
-        
+
         return head
-                
-                
-        
-        

@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii
 
+
 class Solution:
     def minMoves2(self, nums: List[int]) -> int:
         nums = sorted(nums)
@@ -11,7 +12,3 @@ class Solution:
         for num in nums:
             res += abs(num - mid)
         return res
-            
-            
-        
-        

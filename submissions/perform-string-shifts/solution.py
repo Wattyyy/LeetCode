@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/perform-string-shifts
 
 from collections import deque
+
+
 class Solution:
     def stringShift(self, s: str, shift: List[List[int]]) -> str:
         deq = deque(list(s))
@@ -17,5 +19,4 @@ class Solution:
                     deq.appendleft(tmp)
                     cnt += 1
         deq = list(deq)
-        return ''.join(deq)
-                
+        return "".join(deq)

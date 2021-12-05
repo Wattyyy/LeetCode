@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/max-consecutive-ones
 
+
 class Solution:
     def findMaxConsecutiveOnes(self, nums):
         is_consec = False
@@ -14,5 +15,5 @@ class Solution:
                 ans = max(ans, cnt)
             else:
                 is_consec = False
-                
+
         return ans

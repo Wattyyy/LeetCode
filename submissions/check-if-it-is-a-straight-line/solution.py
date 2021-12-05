@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/check-if-it-is-a-straight-line
 
 import math
+
+
 class Solution:
     def checkStraightLine(self, coordinates):
         st = set()
@@ -19,6 +21,3 @@ class Solution:
             if (x_diff, y_diff) not in st and (-x_diff, -y_diff) not in st:
                 return False
         return True
-            
-            
-        

@@ -23,5 +23,3 @@ class Solution:
             if not cur:
                 break
         return res_head
-        
-        

@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/two-city-scheduling
 
 import heapq
+
+
 class Solution:
     def twoCitySchedCost(self, costs):
         min_heap = []
@@ -13,5 +15,3 @@ class Solution:
             diff = heapq.heappop(min_heap)
             cost += diff
         return cost
-
-        

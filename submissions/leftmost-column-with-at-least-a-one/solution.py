@@ -8,8 +8,9 @@
 #     def get(self, x: int, y: int) -> int:
 #     def dimensions(self) -> list[]:
 
+
 class Solution:
-    def leftMostColumnWithOne(self, binaryMatrix: 'BinaryMatrix') -> int:
+    def leftMostColumnWithOne(self, binaryMatrix: "BinaryMatrix") -> int:
         R, C = binaryMatrix.dimensions()
         ans = C
         for r in range(R):
@@ -20,13 +21,9 @@ class Solution:
                 if num == 1:
                     right = mid
                 else:
-                    left = mid+1
+                    left = mid + 1
             ans = min(ans, left)
         if ans == C:
             return -1
         else:
             return ans
-
-            
-
-

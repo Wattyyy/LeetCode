@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters
 
 from collections import Counter
+
+
 class Solution:
     def lengthOfLongestSubstringTwoDistinct(self, s):
         if not s:

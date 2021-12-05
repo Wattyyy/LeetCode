@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/nth-digit
 
+
 class Solution:
     # 10 ~ 189th digit -> (10, 99)
     # 190 ~ 2889th digit -> (100, 999)
@@ -17,5 +18,3 @@ class Solution:
         num = int(diff / i) + 10 ** (i - 1)
         str_num = str(num)
         return int(str_num[diff % i])
-
-        

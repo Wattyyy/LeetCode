@@ -6,7 +6,10 @@ class ListNode:
         self.val = val
         self.next = next
 
+
 from collections import defaultdict
+
+
 class Solution:
     def reorderList(self, head: ListNode) -> None:
         """
@@ -14,7 +17,7 @@ class Solution:
         """
         if not head or not head.next:
             return
-        
+
         idx2node = defaultdict(ListNode)
         idx = 0
         cur = head
@@ -22,15 +25,15 @@ class Solution:
             idx2node[idx] = cur
             idx += 1
             cur = cur.next
-        
+
         l, r = 0, len(idx2node) - 1
         while l < r:
             nx_node = idx2node[l].next
             idx2node[l].next = idx2node[r]
-            idx2node[r].next = idx2node[l+1]
+            idx2node[r].next = idx2node[l + 1]
             l += 1
             r -= 1
-        
+
         last_idx = len(idx2node) // 2
         idx2node[last_idx].next = None
-        return        
+        return

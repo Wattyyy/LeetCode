@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/valid-parentheses
 
 from collections import deque
+
+
 class Solution:
     def isValid(self, s: str):
         if not s:
@@ -12,12 +14,16 @@ class Solution:
                 st.append(s[i])
             else:
                 top = st[-1]
-                if (top=='(' and s[i]==')') or (top=='{' and s[i]=='}') or (top=='[' and s[i]==']'):
+                if (
+                    (top == "(" and s[i] == ")")
+                    or (top == "{" and s[i] == "}")
+                    or (top == "[" and s[i] == "]")
+                ):
                     st.pop()
                 else:
                     st.append(s[i])
 
-        if len(st)==0:
+        if len(st) == 0:
             return True
         else:
             return False

@@ -1,11 +1,13 @@
 # https://leetcode.com/problems/diagonal-traverse
 
+
 class Solution:
     def findDiagonalOrder(self, matrix):
         if not matrix or matrix == [[]]:
             return []
         R, C = len(matrix), len(matrix[0])
         ans = []
+
         def go_urd(r, c):
             ans.append(matrix[r][c])
             if c == C - 1:
@@ -17,7 +19,7 @@ class Solution:
                 go_lld(r, c + 1)
             else:
                 go_urd(r - 1, c + 1)
-    
+
         def go_lld(r, c):
             ans.append(matrix[r][c])
             if r == R - 1:

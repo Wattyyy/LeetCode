@@ -12,7 +12,7 @@ class Solution:
         while cur_node:
             length += 1
             cur_node = cur_node.next
-        
+
         cnt = 0
         cur_node = head
         while cur_node:
@@ -22,7 +22,7 @@ class Solution:
             if cnt == length + 1 - k:
                 val2 = cur_node.val
             cur_node = cur_node.next
-        
+
         cnt = 0
         cur_node = head
         while cur_node:
@@ -32,11 +32,5 @@ class Solution:
             if cnt == length + 1 - k:
                 cur_node.val = val1
             cur_node = cur_node.next
-        
+
         return head
-        
-        
-        
-            
-            
-        

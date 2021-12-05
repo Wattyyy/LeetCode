@@ -7,16 +7,17 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def postorderTraversal(self, root):
         self.ans = []
+
         def helper(node):
             if not node:
-                return 
+                return
             helper(node.left)
             helper(node.right)
             self.ans.append(node.val)
+
         helper(root)
         return self.ans
-            
-            

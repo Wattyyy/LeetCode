@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/minimum-operations-to-make-array-equal
 
+
 class Solution:
     def minOperations(self, n: int) -> int:
         res = 0
@@ -11,6 +12,3 @@ class Solution:
             res += val
             val += 2
         return res
-    
-
-            

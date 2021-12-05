@@ -2,6 +2,7 @@
 
 from itertools import product
 
+
 class Solution:
     def ambiguousCoordinates(self, S):
         def generate(s):
@@ -12,11 +13,11 @@ class Solution:
                 if (s[:i] == "0" or s[0] != "0") and s[-1] != "0":
                     ans.append(s[:i] + "." + s[i:])
             return ans
-        
+
         ans = []
-        for i in range(2, len(S)-1):
-            cand_l, cand_r = generate(S[1:i]), generate(S[i:-1])     
+        for i in range(2, len(S) - 1):
+            cand_l, cand_r = generate(S[1:i]), generate(S[i:-1])
             for l, r in product(cand_l, cand_r):
                 ans.append("(" + l + ", " + r + ")")
-                
+
         return ans

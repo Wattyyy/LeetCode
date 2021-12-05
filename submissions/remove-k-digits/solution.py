@@ -4,6 +4,8 @@
 
 from collections import deque
 from bisect import bisect_right
+
+
 class Solution:
     def removeKdigits(self, num, k):
         ls_num = list(map(int, list(num)))
@@ -29,17 +31,17 @@ class Solution:
         remain = k
         while 0 < remain and rm_queue:
             idx = rm_queue.popleft()
-            ls_num[idx] = '-'    
+            ls_num[idx] = "-"
             remain -= 1
 
         for _, v in enumerate(ls_num):
-            if v == '-' or (len(ans) == 0 and v == 0):
+            if v == "-" or (len(ans) == 0 and v == 0):
                 continue
             ans.append(v)
-        
+
         while 0 < remain and ans:
             ans.pop()
             remain -= 1
         if not ans:
-            return '0'
-        return ''.join(list(map(str, ans)))
+            return "0"
+        return "".join(list(map(str, ans)))

@@ -3,8 +3,16 @@
 from collections import defaultdict
 import heapq
 
+
 class Solution:
-    def maxProbability(self, n: int, edges: List[List[int]], succProb: List[float], start: int, end: int) -> float:
+    def maxProbability(
+        self,
+        n: int,
+        edges: List[List[int]],
+        succProb: List[float],
+        start: int,
+        end: int,
+    ) -> float:
         graph = defaultdict(list)
         for i, (u, v) in enumerate(edges):
             prob = succProb[i]
@@ -17,11 +25,8 @@ class Solution:
             val, node = heapq.heappop(max_heap)
             dist[node] = max(dist[node], abs(val))
             for nv, prob in graph[node]:
-                if (dist[nv] < abs(val) * prob):
+                if dist[nv] < abs(val) * prob:
                     dist[nv] = abs(val) * prob
                     heapq.heappush(max_heap, (-1 * abs(val) * prob, nv))
 
         return dist[end]
-
-        
-        

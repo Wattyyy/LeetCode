@@ -5,6 +5,7 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     @lru_cache
     def dp(self, node: Optional[TreeNode]) -> int:
@@ -37,5 +38,3 @@ class Solution:
 
     def rob(self, root: Optional[TreeNode]) -> int:
         return self.dp(root)
-
-

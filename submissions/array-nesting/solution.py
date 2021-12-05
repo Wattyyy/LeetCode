@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def dfs(self, node, cnt):
         next_node = self.graph[node]
@@ -7,12 +8,12 @@ class Solution:
             return cnt
         else:
             self.visited.add(next_node)
-            return self.dfs(next_node, cnt+1)
+            return self.dfs(next_node, cnt + 1)
 
     def arrayNesting(self, nums: List[int]) -> int:
         self.graph = {}
         for node in nums:
-            self.graph[node] = nums[node]  
+            self.graph[node] = nums[node]
         ans = 1
         self.visited = set()
         for node in nums:
@@ -22,7 +23,3 @@ class Solution:
                 ans = max(ans, res)
 
         return ans
-        
-
-
-

@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/min-stack
 
-class MinStack:
 
+class MinStack:
     def __init__(self):
         self.min_stack = []
 
@@ -15,18 +15,14 @@ class MinStack:
             min_val = self.min_stack[-1][1]
             self.min_stack.append((x, min_val))
 
-
     def pop(self):
         self.min_stack.pop(-1)
-        
 
     def top(self):
         return self.min_stack[-1][0]
 
-        
     def getMin(self):
         return self.min_stack[-1][1]
-        
 
 
 # Your MinStack object will be instantiated and called as such:

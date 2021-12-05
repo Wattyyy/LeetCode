@@ -2,17 +2,18 @@
 
 from typing import List
 
+
 class Solution:
     def helper(self, r, c, i, grid):
         if i == 0:
             return grid[r][c]
 
         R, C = len(grid), len(grid[0])
-        if r-i < 0 or R <= r+i or c-i < 0 or C <= c+i:
+        if r - i < 0 or R <= r + i or c - i < 0 or C <= c + i:
             return 0
 
         cand = set()
-        for dr in range(i+1):
+        for dr in range(i + 1):
             dc = i - dr
             cand.add((r + dr, c + dc))
             cand.add((r - dr, c + dc))
@@ -23,7 +24,6 @@ class Solution:
         for nr, nc in cand:
             res += grid[nr][nc]
         return res
-
 
     def getBiggestThree(self, grid: List[List[int]]) -> List[int]:
         R, C = len(grid), len(grid[0])
@@ -36,7 +36,7 @@ class Solution:
                         continue
                     else:
                         sum_set.add(res)
-        
+
         sum_set = sorted(list(sum_set), reverse=True)
         if len(sum_set) == 1:
             return [sum_set[0]]
@@ -44,4 +44,3 @@ class Solution:
             return sum_set[:2]
         else:
             return sum_set[:3]
-        

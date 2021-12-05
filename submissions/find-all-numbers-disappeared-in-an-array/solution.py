@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array
 
+
 class Solution:
     def findDisappearedNumbers(self, nums):
         for num in nums:
@@ -12,5 +13,3 @@ class Solution:
             if num > 0:
                 res.append(idx + 1)
         return res
-                
-        

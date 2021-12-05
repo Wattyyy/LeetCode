@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/sort-array-by-parity
 
+
 class Solution:
     def sortArrayByParity(self, A: List[int]) -> List[int]:
         even_list, odd_list = [], []
@@ -9,5 +10,3 @@ class Solution:
             else:
                 odd_list.append(num)
         return even_list + odd_list
-        
-        

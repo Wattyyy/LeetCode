@@ -5,8 +5,8 @@ class Solution:
             if i == 0:
                 cum_sum[0] = nums[0]
             else:
-                cum_sum[i] = cum_sum[i-1] + num
-        
+                cum_sum[i] = cum_sum[i - 1] + num
+
         min_val = min(cum_sum)
         if 0 < min_val:
             return 1

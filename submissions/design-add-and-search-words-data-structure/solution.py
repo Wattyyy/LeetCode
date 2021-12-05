@@ -2,15 +2,14 @@
 
 from collections import defaultdict
 
+
 class TrieNode:
     def __init__(self):
         self.is_word = False
         self.children = defaultdict(TrieNode)
 
 
-
 class WordDictionary:
-
     def __init__(self):
         self.root = TrieNode()
 
@@ -27,27 +26,22 @@ class WordDictionary:
             if cur.is_word:
                 self.res = True
             return
-        if word[index] == '.':
+        if word[index] == ".":
             for _, next_node in cur.children.items():
-                self.backtrack(word, index+1, next_node)
+                self.backtrack(word, index + 1, next_node)
         elif word[index] in cur.children:
             char = word[index]
             next_node = cur.children[char]
-            self.backtrack(word, index+1, next_node)
+            self.backtrack(word, index + 1, next_node)
         else:
             return
-        
-
-
 
     def search(self, word):
         self.res = False
         cur = self.root
         self.backtrack(word, 0, cur)
         return self.res
-        
-        
-    
+
 
 # Your WordDictionary object will be instantiated and called as such:
 # obj = WordDictionary()

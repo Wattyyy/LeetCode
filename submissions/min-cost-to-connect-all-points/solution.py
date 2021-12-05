@@ -2,19 +2,20 @@
 
 import heapq
 
+
 class UnionFind:
     def __init__(self, N):
         self.node2parent = {i: i for i in range(N)}
         self.rank = {i: 0 for i in range(N)}
         self.count = N
-    
+
     def find_parent(self, x):
         parent = self.node2parent[x]
         if parent != x:
             return self.find_parent(parent)
         else:
             return parent
-    
+
     def unite(self, x, y):
         x, y = self.find_parent(x), self.find_parent(y)
         if x == y:
@@ -50,5 +51,4 @@ class Solution:
                 uf.unite(node1, node2)
                 ret += val
 
-        return ret            
-            
+        return ret

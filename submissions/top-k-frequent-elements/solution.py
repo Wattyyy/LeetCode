@@ -2,6 +2,8 @@
 
 import heapq
 from collections import Counter
+
+
 class Solution:
     def topKFrequent(self, nums, k):
         cnt = Counter(nums)
@@ -14,9 +16,8 @@ class Solution:
                 if min_heap[0][0] < val:
                     heapq.heappop(min_heap)
                     heapq.heappush(min_heap, (val, key))
-            
+
         res = []
         for v, k in min_heap:
             res.append(k)
         return res
-                

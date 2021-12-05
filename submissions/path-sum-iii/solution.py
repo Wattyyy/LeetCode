@@ -7,6 +7,7 @@
 #         self.left = None
 #         self.right = None
 
+
 class Solution:
     def __init__(self):
         self.ans = 0
@@ -31,8 +32,7 @@ class Solution:
         self.traverse(node, node.val, sum)
         self.dfs(node.left, sum)
         self.dfs(node.right, sum)
-        
+
     def pathSum(self, root, sum):
         self.dfs(root, sum)
         return self.ans
-        

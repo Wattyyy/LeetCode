@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/mirror-reflection
 
+
 class Solution:
     def mirrorReflection(self, p, q):
         if q == 0:
@@ -17,8 +18,3 @@ class Solution:
                 return 1
             else:
                 continue
-
-                
-
-            
-        

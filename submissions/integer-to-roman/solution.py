@@ -1,9 +1,15 @@
 # https://leetcode.com/problems/integer-to-roman
 
+
 class Solution:
     def intToRoman(self, num: int) -> str:
         divs = [1000, 100, 10, 1]
-        div2symbols = {1000: ['M', 'M', 'M'], 100: ['M', 'D', 'C'], 10: ['C', 'L', 'X'], 1: ['X', 'V', 'I']}
+        div2symbols = {
+            1000: ["M", "M", "M"],
+            100: ["M", "D", "C"],
+            10: ["C", "L", "X"],
+            1: ["X", "V", "I"],
+        }
         output = []
         for d in divs:
             q = num // d
@@ -20,13 +26,4 @@ class Solution:
                 output.append(o_symbol + t_symbol)
             num = num % d
 
-        return ''.join(output)
-
-                
-
-
-
-        
-
-
-        
+        return "".join(output)

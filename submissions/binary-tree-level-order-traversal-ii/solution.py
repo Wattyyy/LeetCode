@@ -9,6 +9,7 @@
 
 from collections import deque
 
+
 class Solution:
     def levelOrderBottom(self, root):
         if not root:
@@ -27,5 +28,3 @@ class Solution:
             self.ans.appendleft(tmp[:])
             queue = next_queue
         return self.ans
-
-        

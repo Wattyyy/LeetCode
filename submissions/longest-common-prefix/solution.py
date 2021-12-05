@@ -2,10 +2,12 @@
 
 from collections import defaultdict
 
+
 class TrieNode:
     def __init__(self):
         self.children_dic = defaultdict(TrieNode)
         self.is_word = False
+
 
 class Solution:
     def longestCommonPrefix(self, strs):
@@ -19,11 +21,11 @@ class Solution:
                     cur.children_dic[char] = TrieNode()
                 cur = cur.children_dic[char]
             cur.is_word = True
-        
+
         cur = self.root
         ans = []
         while True:
-            if cur.is_word or len(cur.children_dic.keys())!=1:
+            if cur.is_word or len(cur.children_dic.keys()) != 1:
                 return "".join(ans)
             else:
                 key = list(cur.children_dic.keys())[0]

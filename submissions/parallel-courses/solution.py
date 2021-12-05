@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/parallel-courses
 
 from collections import defaultdict, deque
+
+
 class Solution:
     def topological_sort(self, n, graph):
         in_order = [0 for _ in range(n)]
@@ -22,8 +24,8 @@ class Solution:
             cnt += 1
         if cnt != n:
             return -1
-        return res        
-        
+        return res
+
     def minimumSemesters(self, N, relations):
         graph = defaultdict(list)
         for u, v in relations:

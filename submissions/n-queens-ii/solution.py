@@ -2,6 +2,7 @@
 
 from collections import Counter
 
+
 class Solution:
     def __init__(self):
         self.vertical = set()
@@ -21,7 +22,7 @@ class Solution:
             self.diagonal[(r, c)] += 1
             r += 1
             c += 1
-    
+
     def subtract_diag(self, row, col, n):
         # lower left
         r, c = row + 1, col - 1
@@ -51,9 +52,3 @@ class Solution:
     def totalNQueens(self, n: int) -> int:
         self.recursion(0, n)
         return self.ans
-        
-
-        
-        
-
-        

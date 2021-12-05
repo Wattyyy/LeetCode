@@ -2,6 +2,7 @@
 
 from collections import defaultdict
 
+
 class Solution:
     def fourSum(self, nums, target):
         N = len(nums)
@@ -13,7 +14,7 @@ class Solution:
                 key = target - nums[i] - nums[j]
                 tmp_list = [i, j]
                 d[key].append(tmp_list)
-        
+
         ans_set = set()
         for k in range(N):
             for l in range(N):
@@ -21,18 +22,10 @@ class Solution:
                     continue
                 key = nums[k] + nums[l]
                 for item in d[key]:
-                    tmp = [k ,l] + item
+                    tmp = [k, l] + item
                     if len(set(tmp)) == 4:
                         set_elem = sorted([nums[idx] for idx in tmp])
                         ans_set.add(tuple(set_elem))
-                        
+
         ans_list = [list(item) for item in ans_set]
         return ans_list
-                        
-
-
-
-
-        
-
-

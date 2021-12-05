@@ -2,6 +2,8 @@
 
 from collections import Counter
 import heapq
+
+
 class Solution:
     def rearrangeBarcodes(self, barcodes):
         barcodes = [str(val) for val in barcodes]
@@ -17,6 +19,3 @@ class Solution:
                 heapq.heappush(max_heap, (prev_v + 1, prev_k))
             prev_v, prev_k = v, k
         return ans
-
-
-

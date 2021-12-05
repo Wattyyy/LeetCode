@@ -2,6 +2,8 @@
 
 from sortedcontainers import SortedList
 from collections import deque
+
+
 class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
         rev = nums[::-1]
@@ -12,6 +14,3 @@ class Solution:
             ans.appendleft(idx)
             s.add(num)
         return list(ans)
-                
-            
-        

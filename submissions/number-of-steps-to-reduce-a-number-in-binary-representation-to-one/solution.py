@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one
 
+
 class Solution:
     def numSteps(self, s):
         N = len(s)
@@ -14,7 +15,3 @@ class Solution:
                 num = num // 2
             res += 1
         return res
-
-        
-        
-        

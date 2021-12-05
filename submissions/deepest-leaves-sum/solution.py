@@ -9,6 +9,7 @@
 
 from collections import defaultdict, deque
 
+
 class Solution:
     def deepestLeavesSum(self, root):
         d = defaultdict(list)
@@ -17,11 +18,9 @@ class Solution:
             node, depth = queue.popleft()
             d[depth].append(node.val)
             if node.left:
-                queue.append((node.left, depth+1))
+                queue.append((node.left, depth + 1))
             if node.right:
-                queue.append((node.right, depth+1))
+                queue.append((node.right, depth + 1))
 
         max_depth = max(d.keys())
         return sum(d[max_depth])
-            
-        

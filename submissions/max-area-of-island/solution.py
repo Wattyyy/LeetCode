@@ -2,6 +2,7 @@
 
 from typing import List
 
+
 class Solution:
     def __init__(self) -> None:
         self.cnt = 0
@@ -10,7 +11,7 @@ class Solution:
         grid[r][c] = 0
         self.cnt += 1
         R, C = len(grid), len(grid[0])
-        for nr, nc in [(r+1, c), (r-1, c), (r, c+1), (r, c-1)]:
+        for nr, nc in [(r + 1, c), (r - 1, c), (r, c + 1), (r, c - 1)]:
             if 0 <= nr < R and 0 <= nc < C and grid[nr][nc] == 1:
                 self.helper(nr, nc, grid)
         return
@@ -25,9 +26,3 @@ class Solution:
                     ans = max(ans, self.cnt)
                     self.cnt = 0
         return ans
-
-
-                    
-
-        
-        

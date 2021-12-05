@@ -3,6 +3,7 @@
 from itertools import accumulate
 from collections import defaultdict
 
+
 class Solution:
     def findMaxLength(self, nums):
         for i, v in enumerate(nums):
@@ -18,5 +19,3 @@ class Solution:
             if 2 <= len(dp[v]):
                 ans = max(ans, dp[v][-1] - dp[v][0])
         return ans
-
-        

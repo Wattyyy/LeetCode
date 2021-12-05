@@ -3,6 +3,7 @@
 from collections import Counter
 from itertools import accumulate
 
+
 class Solution:
     def leastBricks(self, wall: List[List[int]]) -> int:
         cnt = Counter()
@@ -12,13 +13,7 @@ class Solution:
                 if i == len(cum_arr) - 1:
                     break
                 cnt[cum_sum] += 1
-                
+
         if len(cnt) == 0:
             return len(wall)
         return len(wall) - max(cnt.values())
-
-            
-                    
-                
-            
-        

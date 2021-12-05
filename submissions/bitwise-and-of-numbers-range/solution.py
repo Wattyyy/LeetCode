@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/bitwise-and-of-numbers-range
 
 import math
+
+
 class Solution:
     def count_onezero(self, n, x=None):
         if n > 0:
@@ -9,7 +11,7 @@ class Solution:
             p = 0
         if x:
             p = int(math.log(x, 2))
-        zero_count, one_count = [0] * (p + 1),  [0] * (p + 1)
+        zero_count, one_count = [0] * (p + 1), [0] * (p + 1)
         for i in range(p + 1):
             div = 2 ** i
             quot = n // div
@@ -20,7 +22,6 @@ class Solution:
                 one_count[i] = (quot // 2) * div + (n % div + 1)
                 zero_count[i] = (n + 1) - one_count[i]
         return zero_count, one_count
-
 
     def rangeBitwiseAnd(self, m, n):
         ans = 0
@@ -40,4 +41,3 @@ class Solution:
                     ans += 2 ** p
 
         return ans
-  

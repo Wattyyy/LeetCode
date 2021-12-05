@@ -2,18 +2,23 @@
 
 from collections import defaultdict
 from typing import List
+
+
 class Solution:
-    def criticalConnections(self, n: int, connections: List[List[int]]) -> List[List[int]]:
+    def criticalConnections(
+        self, n: int, connections: List[List[int]]
+    ) -> List[List[int]]:
         edge_set = {tuple(edge) for edge in connections}
         graph = defaultdict(list)
         for u, v in connections:
             graph[u].append(v)
             graph[v].append(u)
-        tin = [float('inf')] * n
-        low = [float('inf')] * n
+        tin = [float("inf")] * n
+        low = [float("inf")] * n
         visited = [False] * n
         self.time = 0
         res = []
+
         def dfs(node, par):
             tin[node] = self.time
             low[node] = self.time
@@ -32,11 +37,8 @@ class Solution:
                             res.append([child, node])
                         else:
                             res.append([node, child])
+
         for v in range(n):
             if not visited[v]:
                 dfs(v, -1)
         return res
-
-
-         
-        

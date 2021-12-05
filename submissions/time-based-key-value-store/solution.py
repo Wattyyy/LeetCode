@@ -4,18 +4,16 @@
 
 from collections import defaultdict
 from bisect import bisect_right
-class TimeMap:
 
+
+class TimeMap:
     def __init__(self):
         self.key2value = defaultdict(list)
         self.key2time = defaultdict(list)
-        
 
     def set(self, key, value, timestamp):
         self.key2value[key].append(value)
         self.key2time[key].append(timestamp)
-        
-        
 
     def get(self, key, timestamp):
         if key not in self.key2value:
@@ -26,7 +24,6 @@ class TimeMap:
                 return ""
             else:
                 return self.key2value[key][idx]
-
 
 
 # Your TimeMap object will be instantiated and called as such:

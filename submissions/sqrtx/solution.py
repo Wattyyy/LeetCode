@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/sqrtx
 
+
 class Solution:
     def mySqrt(self, x):
         l, r = 0, x
@@ -16,7 +17,3 @@ class Solution:
             return l - 1
         else:
             return l
-        
-        
-            
-        

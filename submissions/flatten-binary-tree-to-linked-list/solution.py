@@ -16,6 +16,5 @@ class Solution:
                     last = last.right
                 last.right = cur.right
                 cur.right = cur.left
-                cur.left = None                
+                cur.left = None
             cur = cur.right
-            

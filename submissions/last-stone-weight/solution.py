@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/last-stone-weight
 
 import heapq
+
+
 class Solution:
     def lastStoneWeight(self, stones):
         max_heap = []
@@ -8,7 +10,7 @@ class Solution:
             heapq.heappush(max_heap, (-v, i))
         while 1 < len(max_heap):
             x, x_idx = heapq.heappop(max_heap)
-            y, y_idx= heapq.heappop(max_heap)
+            y, y_idx = heapq.heappop(max_heap)
             x, y = abs(x), abs(y)
             if x > y:
                 x = x - y
@@ -20,4 +22,3 @@ class Solution:
             return abs(max_heap[0][0])
         else:
             return 0
-        

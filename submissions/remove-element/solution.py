@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/remove-element
 
+
 class Solution:
     def removeElement(self, nums, val):
         lp, rp = 0, len(nums) - 1
@@ -8,7 +9,7 @@ class Solution:
                 nums.pop()
                 rp -= 1
                 if (not nums) or (rp < lp):
-                    return len(nums)    
+                    return len(nums)
             if nums[lp] != val:
                 lp += 1
             else:

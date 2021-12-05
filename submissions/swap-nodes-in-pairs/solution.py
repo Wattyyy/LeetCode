@@ -8,6 +8,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def swapPairs(self, head):
         if head is None:
@@ -17,11 +18,8 @@ class Solution:
         first = head
         second = head.next
         third = second.next
-        
+
         second.next = first
         first.next = self.swapPairs(third)
-        
+
         return second
-        
-        
-        

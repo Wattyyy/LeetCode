@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/super-pow
 
+
 class Solution:
     def superPow(self, a, b):
         res = 1

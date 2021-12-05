@@ -2,9 +2,10 @@
 
 from collections import defaultdict
 
+
 class Solution:
     def gardenNoAdj(self, N, paths):
-        ans = [0 for _ in range(N+1)]
+        ans = [0 for _ in range(N + 1)]
         graph = defaultdict(list)
         color_map = defaultdict(int)
         for path in paths:
@@ -14,7 +15,7 @@ class Solution:
 
         # coloring
         color_set = set([1, 2, 3, 4])
-        for v in range(1, N+1):
+        for v in range(1, N + 1):
             used_color = set()
             neighbors = graph[v]
             for nv in neighbors:
@@ -25,5 +26,5 @@ class Solution:
             available = list(color_set - used_color)
             color_map[v] = available[0]
             ans[v] = available[0]
-            
+
         return ans[1:]

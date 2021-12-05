@@ -1,11 +1,13 @@
 # https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree
 
+
 class TreeNode:
     def __init__(self, val, left=None, right=None, height=1):
         self.val = val
         self.left = left
         self.right = right
         self.height = height
+
 
 class AVLTree:
     # Function to insert a node
@@ -17,8 +19,7 @@ class AVLTree:
         else:
             root.right = self.insert_node(root.right, val)
 
-        root.height = 1 + max(self.getHeight(root.left),
-                              self.getHeight(root.right))
+        root.height = 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
         # Update the balance factor and balance the tree
         balanceFactor = self.getBalance(root)
@@ -57,14 +58,12 @@ class AVLTree:
                 return temp
             temp = self.getMinValueNode(root.right)
             root.val = temp.val
-            root.right = self.delete_node(root.right,
-                                          temp.val)
+            root.right = self.delete_node(root.right, temp.val)
         if root is None:
             return root
 
         # Update the balance factor of nodes
-        root.height = 1 + max(self.getHeight(root.left),
-                              self.getHeight(root.right))
+        root.height = 1 + max(self.getHeight(root.left), self.getHeight(root.right))
 
         balanceFactor = self.getBalance(root)
 
@@ -89,10 +88,8 @@ class AVLTree:
         T2 = y.left
         y.left = z
         z.right = T2
-        z.height = 1 + max(self.getHeight(z.left),
-                           self.getHeight(z.right))
-        y.height = 1 + max(self.getHeight(y.left),
-                           self.getHeight(y.right))
+        z.height = 1 + max(self.getHeight(z.left), self.getHeight(z.right))
+        y.height = 1 + max(self.getHeight(y.left), self.getHeight(y.right))
         return y
 
     # Function to perform right rotation
@@ -101,10 +98,8 @@ class AVLTree:
         T3 = y.right
         y.right = z
         z.left = T3
-        z.height = 1 + max(self.getHeight(z.left),
-                           self.getHeight(z.right))
-        y.height = 1 + max(self.getHeight(y.left),
-                           self.getHeight(y.right))
+        z.height = 1 + max(self.getHeight(z.left), self.getHeight(z.right))
+        y.height = 1 + max(self.getHeight(y.left), self.getHeight(y.right))
         return y
 
     # Get the height of the node
@@ -134,7 +129,7 @@ class Solution:
         while ptr:
             vals.append(ptr.val)
             ptr = ptr.next
-        
+
         myTree = AVLTree()
         root = None
         for val in vals:

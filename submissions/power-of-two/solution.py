@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/power-of-two
 
+
 class Solution:
     def isPowerOfTwo(self, n):
         if n <= 0:
@@ -9,4 +10,3 @@ class Solution:
         if n % 2 == 1:
             return False
         return self.isPowerOfTwo(n // 2)
-        

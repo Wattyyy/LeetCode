@@ -11,6 +11,8 @@ class Node:
 """
 
 from collections import deque
+
+
 class Solution:
     def levelOrder(self, root):
         if not root:

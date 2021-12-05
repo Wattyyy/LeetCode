@@ -2,8 +2,12 @@
 
 from typing import List
 import heapq
+
+
 class Solution:
-    def maxPerformance(self, n: int, speed: List[int], efficiency: List[int], k: int) -> int:
+    def maxPerformance(
+        self, n: int, speed: List[int], efficiency: List[int], k: int
+    ) -> int:
         if k == 1:
             res = 0
             for e, s in zip(efficiency, speed):
@@ -29,19 +33,3 @@ class Solution:
                     heapq.heappush(pq, s)
                     sp_sum = sp_sum + s - rm_s
         return ans % (7 + 10 ** 9)
-
-
-
-
-                
-
-
-            
-
-
-
-
-
-
-
-        

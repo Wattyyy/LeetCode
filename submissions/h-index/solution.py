@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/h-index
 
+
 class Solution:
     def hIndex(self, citations):
         l, r = 0, len(citations)
@@ -20,5 +21,3 @@ class Solution:
                 ans.append(h)
                 l = h + 1
         return max(ans)
-            
-        

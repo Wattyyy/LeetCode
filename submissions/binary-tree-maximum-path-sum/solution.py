@@ -9,9 +9,10 @@ class TreeNode:
         self.left = left
         self.right = right
 
+
 class Solution:
     def __init__(self):
-        self.max = -float('inf')
+        self.max = -float("inf")
 
     def calc_sum(self, node):
         if (not node.left) and (not node.right):
@@ -29,15 +30,13 @@ class Solution:
             res = max(node.val + right_val, node.val)
             self.max = max(self.max, res)
             return res
-        
+
         else:
             left_val, right_val = self.calc_sum(node.left), self.calc_sum(node.right)
             res = max(left_val + node.val, node.val, node.val + right_val)
             self.max = max(self.max, res, left_val + node.val + right_val)
             return res
-    
+
     def maxPathSum(self, root):
         _ = self.calc_sum(root)
         return self.max
-
-        

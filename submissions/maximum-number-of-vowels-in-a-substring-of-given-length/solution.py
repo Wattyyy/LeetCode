@@ -1,9 +1,10 @@
 # https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length
 
+
 class Solution:
     def maxVowels(self, s, k):
         cnt = 0
-        vowels = set(['a', 'e', 'i', 'o', 'u'])
+        vowels = set(["a", "e", "i", "o", "u"])
         for i in range(k):
             if s[i] in vowels:
                 cnt += 1
@@ -14,5 +15,4 @@ class Solution:
             if s[i] in vowels:
                 cnt += 1
             ans = max(ans, cnt)
-        return ans    
-        
+        return ans

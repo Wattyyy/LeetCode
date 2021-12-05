@@ -8,12 +8,13 @@
 #         self.right = None
 
 from collections import defaultdict
+
+
 class Solution:
     def __init__(self):
         self.graph = defaultdict(list)
         self.max_dist = 0
         self.max_dist_node = None
-
 
     def create_graph(self, node):
         if not node.left and not node.right:
@@ -27,7 +28,6 @@ class Solution:
             self.graph[node.right].append(node)
             self.create_graph(node.right)
 
-
     def calc_diameter(self, node, visited, dist):
         flag = False
         for nx_node in self.graph[node]:
@@ -38,15 +38,14 @@ class Solution:
             for nx_node in self.graph[node]:
                 if nx_node not in visited:
                     visited.add(nx_node)
-                    self.calc_diameter(nx_node, visited, dist+1)
+                    self.calc_diameter(nx_node, visited, dist + 1)
                     visited.remove(nx_node)
         else:
             if self.max_dist <= dist:
                 self.max_dist = dist
                 self.max_dist_node = node
-                return 
-            
-    
+                return
+
     def diameterOfBinaryTree(self, root):
         if not root or (not root.left and not root.right):
             return 0
@@ -55,4 +54,3 @@ class Solution:
         self.max_dist = 0
         self.calc_diameter(self.max_dist_node, set([self.max_dist_node]), 0)
         return self.max_dist
-        

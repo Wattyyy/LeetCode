@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/repeated-substring-pattern
 
 from math import sqrt
+
+
 class Solution:
     def repeatedSubstringPattern(self, s):
         ans = False
@@ -20,13 +22,10 @@ class Solution:
             for j in range(0, N, i):
                 if j == 0:
                     tmp.add(s[:i])
-                elif s[j:j+i] not in tmp:
+                elif s[j : j + i] not in tmp:
                     flag = False
                     break
             if flag:
                 ans = True
 
         return ans
-
-
-        

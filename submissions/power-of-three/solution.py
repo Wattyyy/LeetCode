@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/power-of-three
 
+
 class Solution:
     def isPowerOfThree(self, n: int) -> bool:
         i = 0
@@ -9,6 +10,4 @@ class Solution:
         while val <= max_val:
             p_set.add(val)
             val *= 3
-        return (n in p_set)
-            
-        
+        return n in p_set

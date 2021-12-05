@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/number-of-squareful-arrays
 
+
 class Solution:
     def __init__(self):
         self.ans = 0
@@ -12,7 +13,7 @@ class Solution:
             mid = (l + r) // 2
             if mid ** 2 == num:
                 return True
-            elif mid **2 < num:
+            elif mid ** 2 < num:
                 l = mid + 1
             else:
                 r = mid - 1
@@ -27,7 +28,11 @@ class Solution:
         i = 0
         while i < N:
             val = (used >> i) & 1
-            if (val == 0) and (arr[i] not in next_num) and (self.is_square(end + arr[i])):
+            if (
+                (val == 0)
+                and (arr[i] not in next_num)
+                and (self.is_square(end + arr[i]))
+            ):
                 next_num.add(arr[i])
                 next_idx.append(i)
             i += 1
@@ -35,7 +40,7 @@ class Solution:
             used = used | 2 ** idx
             self.backtrack(arr[idx], used, arr)
             used = used ^ 2 ** idx
-        
+
     def numSquarefulPerms(self, A):
         N = len(A)
         used = set()
@@ -44,6 +49,3 @@ class Solution:
                 self.backtrack(v, 2 ** i, A)
                 used.add(v)
         return self.ans
-        
-        
-        

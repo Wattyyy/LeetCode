@@ -1,10 +1,12 @@
 # https://leetcode.com/problems/replace-words
 
+
 class TrieNode:
     def __init__(self):
         self.neighbors = {}
         self.is_word = False
-        
+
+
 class Solution:
     def replaceWords(self, dict, sentence):
         root = TrieNode()
@@ -15,7 +17,7 @@ class Solution:
                     cur.neighbors[char] = TrieNode()
                 cur = cur.neighbors[char]
             cur.is_word = True
-            
+
         sentence_list = sentence.split(" ")
         N = len(sentence_list)
         for i in range(N):
@@ -31,8 +33,3 @@ class Solution:
                     sentence_list[i] = tmp_word
                     break
         return " ".join(sentence_list)
-
-
-
-                
-            

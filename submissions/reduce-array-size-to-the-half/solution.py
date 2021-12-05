@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/reduce-array-size-to-the-half
 
 from collections import Counter
+
+
 class Solution:
     def minSetSize(self, arr: List[int]) -> int:
         ls = []
@@ -14,5 +16,3 @@ class Solution:
             if len(arr) // 2 <= val:
                 return cnt
             cnt += 1
-            
-        

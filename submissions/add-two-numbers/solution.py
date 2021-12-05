@@ -3,10 +3,12 @@
 # Definition for singly-linked list.
 from collections import deque
 
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
+
 
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
@@ -19,9 +21,9 @@ class Solution:
         while cur:
             queue2.append(cur.val)
             cur = cur.next
-        
+
         vals = []
-        while (queue1 or queue2):
+        while queue1 or queue2:
             v1, v2 = 0, 0
             if queue1:
                 v1 = queue1.popleft()
@@ -38,8 +40,8 @@ class Solution:
             else:
                 if 10 <= vals[i]:
                     vals[i] = vals[i] % 10
-                    vals[i+1] += 1
-        
+                    vals[i + 1] += 1
+
         head = ListNode(vals[0])
         cur = head
         for i, v in enumerate(vals):
@@ -48,5 +50,3 @@ class Solution:
             cur.next = ListNode(v)
             cur = cur.next
         return head
-
-

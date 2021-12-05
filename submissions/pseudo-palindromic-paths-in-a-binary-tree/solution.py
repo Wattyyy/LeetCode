@@ -1,12 +1,14 @@
 # https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree
 
 from collections import Counter
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 
 class Solution:
     def __init__(self):
@@ -20,7 +22,7 @@ class Solution:
                     tmp += 1
             if tmp <= 1:
                 self.ans += 1
-            return 
+            return
 
         if node.left:
             cnt[node.left.val] += 1
@@ -31,10 +33,9 @@ class Solution:
             cnt[node.right.val] += 1
             self.backtrack(node.right, cnt)
             cnt[node.right.val] -= 1
-        
-    def pseudoPalindromicPaths (self, root):
+
+    def pseudoPalindromicPaths(self, root):
         cnt = Counter()
         cnt[root.val] += 1
         self.backtrack(root, cnt)
         return self.ans
-        

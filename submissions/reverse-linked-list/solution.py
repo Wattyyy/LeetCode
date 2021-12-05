@@ -6,6 +6,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def reverseList(self, head):
         if head is None:
@@ -14,6 +15,7 @@ class Solution:
             return head
         next_node = head.next
         head.next = None
+
         def helper(node, head):
             nx = node.next
             if nx is None:
@@ -22,12 +24,5 @@ class Solution:
             else:
                 node.next = head
                 return helper(nx, node)
-        
+
         return helper(next_node, head)
-            
-            
-            
-        
-        
-        
-        

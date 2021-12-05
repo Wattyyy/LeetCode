@@ -2,6 +2,7 @@
 
 from collections import deque
 
+
 class Solution:
     def decodeString(self, s):
         nums = set([str(i) for i in range(10)])
@@ -12,11 +13,11 @@ class Solution:
                 # get string between "[" and "]"
                 while stack:
                     char = stack.pop()
-                    if char=="[":
+                    if char == "[":
                         break
                     else:
                         char_deque.appendleft(char)
-                
+
                 # get number before "["
                 num_deque = deque([])
                 while stack:
@@ -30,10 +31,8 @@ class Solution:
                 num = int("".join(num_deque))
                 string = "".join(char_deque * num)
                 stack.append(string)
-                
+
             else:
                 stack.append(item)
 
-        return "".join(stack)    
-        
-        
+        return "".join(stack)

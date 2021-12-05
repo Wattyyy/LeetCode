@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/course-schedule
 
 from collections import defaultdict, deque
+
+
 class Solution:
     def topological_sort(self, graph, N):
         in_degree = [0] * N
@@ -26,12 +28,9 @@ class Solution:
         else:
             return res
 
-    
     def canFinish(self, numCourses, prerequisites):
         graph = defaultdict(list)
         for v, u in prerequisites:
             graph[u].append(v)
         res = self.topological_sort(graph, numCourses)
         return len(res) == numCourses
-        
-        

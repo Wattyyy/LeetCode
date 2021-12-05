@@ -7,6 +7,8 @@
 #         self.next = None
 
 import heapq
+
+
 class Solution:
     def mergeKLists(self, lists):
         if not lists:

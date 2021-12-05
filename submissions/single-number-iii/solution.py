@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/single-number-iii
 
 from collections import Counter
+
+
 class Solution:
     def singleNumber(self, nums):
         cnt = Counter(nums)
@@ -9,4 +11,3 @@ class Solution:
             if v == 1:
                 res.append(k)
         return res
-        

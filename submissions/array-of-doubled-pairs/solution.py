@@ -2,6 +2,7 @@ from bisect import bisect
 from collections import Counter
 from typing import List
 
+
 class Solution:
     def canReorderDoubled(self, arr: List[int]) -> bool:
         cnt = Counter(arr)
@@ -31,5 +32,5 @@ class Solution:
                         del cnt[val]
                 else:
                     return False
-        
+
         return True

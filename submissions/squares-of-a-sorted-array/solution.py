@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/squares-of-a-sorted-array
 
 from collections import deque
+
+
 class Solution:
     def sortedSquares(self, A):
         ans = deque([])
@@ -17,6 +19,3 @@ class Solution:
                 ans.appendleft(L)
                 lp += 1
         return ans
-                
-
-            

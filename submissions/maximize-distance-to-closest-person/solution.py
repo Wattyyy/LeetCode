@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/maximize-distance-to-closest-person
 
 from bisect import bisect_left
+
+
 class Solution:
     def maxDistToClosest(self, seats):
         num_set = set()
@@ -9,7 +11,7 @@ class Solution:
             if v == 1:
                 sorted_arr.append(i)
                 num_set.add(i)
-        
+
         res = -1
         for i, _ in enumerate(seats):
             if i in num_set:
@@ -24,4 +26,3 @@ class Solution:
                 res = max(res, min(sorted_arr[idx] - mid, mid - sorted_arr[idx - 1]))
         print(sorted_arr)
         return res
-

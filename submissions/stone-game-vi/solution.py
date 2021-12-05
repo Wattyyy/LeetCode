@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/stone-game-vi
 
+
 class Solution:
     def stoneGameVI(self, aliceValues: List[int], bobValues: List[int]) -> int:
         alice, bob = 0, 0
@@ -16,4 +17,3 @@ class Solution:
             return 0
         else:
             return -1
-            

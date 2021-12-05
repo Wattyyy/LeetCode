@@ -1,10 +1,11 @@
 # https://leetcode.com/problems/balanced-binary-tree
 
+
 class Solution:
     def isBalanced(self, root):
         class NotBalanced(Exception):
             pass
-        
+
         def is_balanced(node):
             if not node:
                 return 0

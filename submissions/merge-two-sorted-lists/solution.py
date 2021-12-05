@@ -6,6 +6,7 @@
 #         self.val = x
 #         self.next = None
 
+
 class Solution:
     def mergeTwoLists(self, l1, l2):
         if l1 is None:
@@ -16,11 +17,10 @@ class Solution:
             return None
         else:
             if l1.val > l2.val:
-                nx = l2.next 
+                nx = l2.next
                 l2.next = self.mergeTwoLists(l1, nx)
                 return l2
             else:
                 nx = l1.next
                 l1.next = self.mergeTwoLists(nx, l2)
                 return l1
-        

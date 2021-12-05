@@ -12,7 +12,7 @@ class Solution:
 
     def traverse(self, node, cur):
         if not node.left and not node.right:
-            self.ans += int(''.join(cur), 2)
+            self.ans += int("".join(cur), 2)
             return
         if node.left:
             cur.append(str(node.left.val))
@@ -22,10 +22,9 @@ class Solution:
             cur.append(str(node.right.val))
             self.traverse(node.right, cur)
             cur.pop()
-        
+
     def sumRootToLeaf(self, root):
         if not root:
             return 0
         self.traverse(root, [str(root.val)])
         return self.ans
-        

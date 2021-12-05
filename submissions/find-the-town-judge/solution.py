@@ -1,11 +1,13 @@
 # https://leetcode.com/problems/find-the-town-judge
 
 from collections import defaultdict
+
+
 class Solution:
     def findJudge(self, N, trust):
         graph = defaultdict(set)
         for a, b in trust:
-            graph[a].add(b)     
+            graph[a].add(b)
         judges = []
         for j in range(1, N + 1):
             if len(graph[j]) == 0:
@@ -20,8 +22,3 @@ class Solution:
             if cnt == N - 1:
                 return j
         return -1
-                    
-
-            
-        
-        

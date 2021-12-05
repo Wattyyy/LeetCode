@@ -7,6 +7,7 @@
 #         self.left = left
 #         self.right = right
 
+
 class Solution:
     def swap(self, node):
         node.left, node.right = node.right, node.left
@@ -17,9 +18,6 @@ class Solution:
 
     def invertTree(self, root):
         if not root:
-            return 
+            return
         self.swap(root)
         return root
-        
-
-        

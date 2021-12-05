@@ -1,14 +1,15 @@
 # https://leetcode.com/problems/two-sum-iii-data-structure-design
 
 from collections import defaultdict
-class TwoSum:
 
+
+class TwoSum:
     def __init__(self):
         self.list = []
-        
+
     def add(self, number):
         self.list.append(number)
-        
+
     def find(self, value):
         N = len(self.list)
         target_idx = defaultdict(list)
@@ -20,9 +21,9 @@ class TwoSum:
                 for idx in indices:
                     if idx != i:
                         return True
-        return False 
+        return False
 
-        
+
 # Your TwoSum object will be instantiated and called as such:
 # obj = TwoSum()
 # obj.add(number)

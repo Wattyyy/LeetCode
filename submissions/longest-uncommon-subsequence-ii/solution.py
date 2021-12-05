@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def isSubsequence(self, src, target) -> bool:
         i = 0
@@ -31,6 +32,5 @@ class Solution:
                         else:
                             tmp = max(tmp, len1)
             ans = max(ans, tmp)
-            
+
         return ans
-                    

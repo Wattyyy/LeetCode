@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/moving-average-from-data-stream
 
 from collections import deque
+
+
 class MovingAverage:
     def __init__(self, size: int):
         self.cum = 0
@@ -18,10 +20,6 @@ class MovingAverage:
             self.queue.append(val)
             self.cum += self.queue[-1]
             return self.cum / len(self.queue)
-        
-
-            
-        
 
 
 # Your MovingAverage object will be instantiated and called as such:

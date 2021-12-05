@@ -24,7 +24,5 @@ class Solution:
                 plus_len[i] = max(plus_len[i - 1] + 1, 1)
                 if 0 < minus_len[i - 1]:
                     minus_len[i] = minus_len[i - 1] + 1
-                    
+
         return max(plus_len)
-
-

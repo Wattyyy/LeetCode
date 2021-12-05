@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/product-of-array-except-self
 
+
 class Solution:
     def productExceptSelf(self, nums):
         N = len(nums)
@@ -23,6 +24,3 @@ class Solution:
             else:
                 output[i] = L[i - 1] * R[i + 1]
         return output
-            
-        
-        

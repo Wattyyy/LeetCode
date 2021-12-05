@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/maximum-gap
 
 from typing import List
+
+
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
         if len(nums) < 2:
@@ -15,7 +17,7 @@ class Solution:
             if not len(b):
                 continue
             prevhi, currlo = currhi or b[0], b[0]
-            for n in b: 
+            for n in b:
                 currhi, currlo = max(currhi, n), min(currlo, n)
             ans = max(ans, currlo - prevhi)
         return ans

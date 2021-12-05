@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/prison-cells-after-n-days
 
 from collections import defaultdict
+
+
 class Solution:
     def prisonAfterNDays(self, cells: List[int], N: int) -> List[int]:
         state2day, day2state = defaultdict(int), defaultdict(tuple)
@@ -13,7 +15,7 @@ class Solution:
             for i, v in enumerate(cur):
                 if i == 0 or i == 7:
                     nx[i] = 0
-                elif (cur[i-1] == cur[i+1] == 0) or (cur[i-1] == cur[i+1] == 1):
+                elif (cur[i - 1] == cur[i + 1] == 0) or (cur[i - 1] == cur[i + 1] == 1):
                     nx[i] = 1
                 else:
                     nx[i] = 0
@@ -34,6 +36,3 @@ class Solution:
                 day2state[d] = key
                 cur = nx
                 d += 1
-            
-            
-

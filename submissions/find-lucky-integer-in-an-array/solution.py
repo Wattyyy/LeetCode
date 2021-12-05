@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/find-lucky-integer-in-an-array
 
 from collections import Counter
+
+
 class Solution:
     def findLucky(self, arr: List[int]) -> int:
         cnt = Counter(arr)

@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/remove-all-occurrences-of-a-substring
 
+
 class Solution:
     def removeOccurrences(self, s: str, part: str) -> str:
         N = len(part)
@@ -10,6 +11,4 @@ class Solution:
             if N <= len(st) and st[-N:] == part_ls:
                 for _ in range(N):
                     st.pop(-1)
-        return ''.join(st)
-                
-            
+        return "".join(st)

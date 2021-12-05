@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/binary-tree-cameras
 
+
 class Solution(object):
     def minCameraCover(self, root):
         def solve(node):
@@ -8,7 +9,7 @@ class Solution(object):
             # 2: Placed camera; All nodes below this are covered, plus camera here
 
             if not node:
-                return 0, 0, float('inf')
+                return 0, 0, float("inf")
             L = solve(node.left)
             R = solve(node.right)
 

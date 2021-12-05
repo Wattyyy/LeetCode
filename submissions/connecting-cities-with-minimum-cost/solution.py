@@ -2,10 +2,11 @@
 
 import heapq
 
-class UnionFind():
+
+class UnionFind:
     def __init__(self, N):
-        self.node2par = {i:i for i in range(1, N+1)}
-        self.rank = {i:0 for i in range(1, N+1)}
+        self.node2par = {i: i for i in range(1, N + 1)}
+        self.rank = {i: 0 for i in range(1, N + 1)}
         self.count = N
 
     def find_par(self, x):
@@ -22,7 +23,7 @@ class UnionFind():
         else:
             self.node2par[y] = x
         if self.rank[x] == self.rank[y]:
-            self.rank[x]+=1
+            self.rank[x] += 1
         self.count -= 1
 
 
@@ -34,16 +35,14 @@ class Solution:
         heapq.heapify(min_heap)
         for u, v, w in connections:
             heapq.heappush(min_heap, (w, u, v))
-        
+
         while min_heap:
             w, u, v = heapq.heappop(min_heap)
             if uf.find_par(u) != uf.find_par(v):
                 total_cost += w
                 uf.unite(u, v)
-        
+
         if uf.count == 1:
             return total_cost
         else:
             return -1
-        
-        

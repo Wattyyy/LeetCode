@@ -1,6 +1,8 @@
 # https://leetcode.com/problems/find-k-closest-elements
 
 import heapq
+
+
 class Solution:
     def findClosestElements(self, arr: List[int], k: int, x: int) -> List[int]:
         min_heap = []
@@ -11,4 +13,3 @@ class Solution:
             diff, v = heapq.heappop(min_heap)
             res.append(v)
         return sorted(res)
-        
