@@ -34,5 +34,3 @@ class Solution:
             for r in range(l + 1, col_len):
                 ans = max(ans, dp[row_len - 1][l][r])
         return ans
-
-

@@ -17,7 +17,5 @@ class Solution:
                 continue
             else:
                 p_trends[i] += p_trends[i - 1]
-                
+
         return all([p <= capacity for p in p_trends])
-
-
