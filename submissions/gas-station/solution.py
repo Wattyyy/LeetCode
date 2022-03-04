@@ -18,5 +18,3 @@ class Solution:
         for i, v in enumerate(cum_arr):
             if v == min_val:
                 return (i + 1) % len(cum_arr)
-
-

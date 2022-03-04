@@ -15,4 +15,3 @@ class Solution:
             counter[r] -= 1
 
         return ans
-

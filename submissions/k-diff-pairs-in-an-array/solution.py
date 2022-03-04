@@ -21,4 +21,3 @@ class Solution:
             if num + k in st:
                 ans += 1
         return ans
-
