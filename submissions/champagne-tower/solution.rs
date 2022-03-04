@@ -8,19 +8,16 @@ impl Solution {
         
         for r in 1..length {
             for c in 0..(r + 1) {
+                let mut p = 0.0;
                 if c == 0 {
-                    let p = excess[r - 1][c] / 2.0;
-                    amount[r][c] = p.min(1.0);
-                    excess[r][c] = (p - 1.0).max(0.0);
+                    p = excess[r - 1][c] / 2.0;
                 } else if c == r {
-                    let p = excess[r - 1][c - 1] / 2.0;
-                    amount[r][c] = p.min(1.0);
-                    excess[r][c] = (p - 1.0).max(0.0);
+                    p = excess[r - 1][c - 1] / 2.0;
                 } else {
-                    let p = (excess[r - 1][c - 1] / 2.0) + (excess[r - 1][c] / 2.0);
-                    amount[r][c] = p.min(1.0);
-                    excess[r][c] = (p - 1.0).max(0.0);
+                    p = (excess[r - 1][c - 1] / 2.0) + (excess[r - 1][c] / 2.0);
                 }
+                amount[r][c] = p.min(1.0);
+                excess[r][c] = (p - 1.0).max(0.0);
             }
         }
 
