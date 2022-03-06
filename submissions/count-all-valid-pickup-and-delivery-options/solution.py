@@ -6,4 +6,3 @@ class Solution:
         for i in range(2, n + 1):
             dp[i] = (((i * 2) * (i * 2 - 1) // 2) * dp[i - 1]) % MOD
         return dp[n]
-
